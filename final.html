@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MCQ Quiz</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --surface-2: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #ffffff;
+      --text-secondary: #888888;
+      --accent: #ffffff;
+      --success: #22c55e;
+      --success-bg: rgba(34, 197, 94, 0.1);
+      --error: #ef4444;
+      --error-bg: rgba(239, 68, 68, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 40px 20px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 180px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      color: var(--text);
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 13px;
+      resize: vertical;
+      transition: border-color 0.2s;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #444;
+    }
+
+    textarea::placeholder {
+      color: var(--text-secondary);
+    }
+
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 16px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .status {
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+    }
+
+    button {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    button:hover:not(:disabled) {
+      background: var(--border);
+      border-color: #444;
+    }
+
+    button.primary {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    button.primary:hover:not(:disabled) {
+      background: #e0e0e0;
+    }
+
+    button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+
+    .warning {
+      background: var(--error-bg);
+      border: 1px solid var(--error);
+      color: var(--error);
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      margin-top: 12px;
+      display: none;
+    }
+
+    .quiz-area {
+      opacity: 0.3;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .quiz-area.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Progress */
+    .progress-bar {
+      height: 2px;
+      background: var(--border);
+      border-radius: 1px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--text);
+      transition: width 0.3s;
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 32px;
+      font-size: 14px;
+    }
+
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stat.correct { color: var(--success); }
+    .stat.wrong { color: var(--error); }
+
+    /* Question */
+    .question-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .question-num {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tag.easy { border-color: var(--success); color: var(--success); }
+    .tag.medium { border-color: #f59e0b; color: #f59e0b; }
+    .tag.hard { border-color: var(--error); color: var(--error); }
+
+    .question-text {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    pre {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 16px;
+      overflow-x: auto;
+      margin: 16px 0;
+      font-size: 13px;
+    }
+
+    code {
+      font-family: "SF Mono", "Fira Code", monospace;
+    }
+
+    /* Options */
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+      position: relative;
+    }
+
+    .option:hover:not(.disabled) {
+      border-color: #444;
+      background: var(--surface-2);
+    }
+
+    .option.correct {
+      border-color: var(--success);
+      background: var(--success-bg);
+    }
+
+    .option.incorrect {
+      border-color: var(--error);
+      background: var(--error-bg);
+    }
+
+    .option.show-correct {
+      border-color: var(--success);
+      background: var(--success-bg);
+    }
+
+    .option.disabled {
+      cursor: default;
+    }
+
+    .option-letter {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .option.correct .option-letter,
+    .option.show-correct .option-letter {
+      background: var(--success);
+      border-color: var(--success);
+      color: white;
+    }
+
+    .option.incorrect .option-letter {
+      background: var(--error);
+      border-color: var(--error);
+      color: white;
+    }
+
+    .option-text {
+      flex: 1;
+      padding-top: 3px;
+    }
+
+    .option-icon {
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+    }
+
+    /* Feedback */
+    .feedback {
+      margin-top: 20px;
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      display: none;
+    }
+
+    .feedback.show { display: block; }
+    .feedback.correct { background: var(--success-bg); color: var(--success); border: 1px solid var(--success); }
+    .feedback.incorrect { background: var(--error-bg); color: var(--error); border: 1px solid var(--error); }
+
+    /* Navigation */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 32px;
+      gap: 12px;
+    }
+
+    .nav-left {
+      display: flex;
+      gap: 12px;
+    }
+
+    /* Input Section Collapsed */
+    .input-section {
+      transition: all 0.3s ease;
+    }
+
+    .input-section.collapsed {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .input-section.collapsed textarea {
+      display: none;
+    }
+
+    .input-section.collapsed .actions {
+      margin-top: 0;
+    }
+
+    .collapsed-header {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .input-section.collapsed .collapsed-header {
+      display: flex;
+    }
+
+    .collapsed-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .collapsed-badge {
+      background: var(--success);
+      color: white;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .expand-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 13px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+
+    .expand-btn:hover {
+      color: var(--text);
+    }
+
+    /* Results */
+    #results {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+
+    .results-header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .results-header h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .score {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -2px;
+    }
+
+    .score-pct {
+      color: var(--text-secondary);
+      font-size: 16px;
+      margin-top: 4px;
+    }
+
+    /* Stats Grid */
+    .results-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 32px 0;
+    }
+
+    .results-stat {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .results-stat-value {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .results-stat-label {
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .results-stat.easy .results-stat-value { color: var(--success); }
+    .results-stat.medium .results-stat-value { color: #f59e0b; }
+    .results-stat.hard .results-stat-value { color: var(--error); }
+
+    /* Difficulty Sections */
+    .difficulty-section {
+      margin-bottom: 24px;
+    }
+
+    .difficulty-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    .difficulty-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
+
+    .difficulty-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .difficulty-dot.easy { background: var(--success); }
+    .difficulty-dot.medium { background: #f59e0b; }
+    .difficulty-dot.hard { background: var(--error); }
+
+    .difficulty-score {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      background: var(--surface);
+      border-radius: 6px;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .result-row.correct { border-left: 3px solid var(--success); }
+    .result-row.incorrect { border-left: 3px solid var(--error); }
+    .result-row.skipped { border-left: 3px solid var(--text-secondary); }
+
+    .result-q {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .result-q-num {
+      font-weight: 600;
+    }
+
+    .result-q-type {
+      font-size: 11px;
+      color: var(--text-secondary);
+      background: var(--surface-2);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .result-answers {
+      display: flex;
+      gap: 20px;
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+
+    .result-answers .yours {
+      color: var(--text);
+    }
+
+    .result-answers .correct-ans {
+      color: var(--success);
+    }
+
+    /* Retry Button */
+    .results-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 20px 16px; }
+      h1 { font-size: 20px; }
+      .question-text { font-size: 16px; }
+      .actions { flex-direction: column; align-items: stretch; }
+      .btn-group { justify-content: center; }
+      .nav { flex-direction: column; }
+    }
+  </style>
+
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <div class="container">
+    <h1>MCQ Quiz</h1>
+    <p class="subtitle">Paste questions, get instant feedback</p>
+
+    <div class="input-section" id="input-section">
+      <div class="collapsed-header" id="collapsed-header">
+        <div class="collapsed-info">
+          <span class="collapsed-badge" id="collapsed-badge">99 Questions</span>
+          <span style="color: var(--text-secondary); font-size: 13px;">Quiz loaded and ready</span>
+        </div>
+        <button class="expand-btn" id="expand-btn">Edit Questions ↓</button>
+      </div>
+      <textarea id="raw-input" placeholder="Paste your MCQs here...
+
+Format:
+Unit: 1
+CO: CO1
+Q1. Your question?
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Correct Answer: C
+Type: Theory
+Difficulty: Easy"></textarea>
+
+      <div class="actions" id="input-actions">
+        <span class="status" id="status">Paste your questions and click Start</span>
+        <div class="btn-group">
+          <button id="load-sample">Load Sample</button>
+          <button id="start-btn" class="primary">Start Quiz</button>
+        </div>
+      </div>
+      <div class="warning" id="warning"></div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="quiz-area" id="quiz-area">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+
+      <div class="stats">
+        <div class="stat correct">✓ <span id="correct-count">0</span> correct</div>
+        <div class="stat wrong">✗ <span id="wrong-count">0</span> wrong</div>
+        <div class="stat" style="margin-left: auto; color: var(--text-secondary);">
+          <span id="answered-count">0</span>/<span id="total-count">0</span> answered
+        </div>
+      </div>
+
+      <div class="question-header">
+        <span class="question-num" id="question-num">Question 1</span>
+      </div>
+
+      <div class="tags" id="tags"></div>
+      <div class="question-text" id="question-text"></div>
+      <div class="options" id="options"></div>
+
+      <div class="feedback" id="feedback"></div>
+
+      <div class="nav">
+        <div class="nav-left">
+          <button id="prev-btn" disabled>← Prev</button>
+          <button id="next-btn" disabled>Next →</button>
+        </div>
+        <button id="submit-btn" class="primary" disabled>View Results</button>
+      </div>
+
+      <div id="results"></div>
+    </div>
+  </div>
+
+  <script>
+    // Parser
+    function escapeHTML(str) {
+      return str.replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]);
+    }
+
+    function parseQuestions(text) {
+      const lines = text.split(/\r?\n/);
+      const questions = [];
+      let unit = '-', co = '-', q = null, inCode = false, code = [], optStarted = false, lastOpt = -1;
+
+      function push() {
+        if (q && typeof q.correctIndex === 'number' && q.options.length >= 2) {
+          questions.push(q);
+        }
+        q = null; optStarted = false; lastOpt = -1;
+      }
+
+      for (let line of lines) {
+        const t = line.trim();
+        
+        if (t.startsWith('```')) {
+          if (!inCode) { inCode = true; code = []; }
+          else {
+            inCode = false;
+            if (q) q.text += `<pre><code>${escapeHTML(code.join('\n'))}</code></pre>`;
+          }
+          continue;
+        }
+        if (inCode) { code.push(line); continue; }
+        if (!t) continue;
+
+        let m;
+        if ((m = t.match(/^Unit:\s*(.+)$/i))) { unit = m[1].trim(); continue; }
+        if ((m = t.match(/^CO:\s*(.+)$/i))) { co = m[1].trim(); continue; }
+        if ((m = t.match(/^Q(\d+)\.\s*(.+)$/i))) {
+          push();
+          q = { unit, co, num: +m[1], text: m[2], options: [], correctIndex: undefined, type: '-', difficulty: '-' };
+          optStarted = false; lastOpt = -1;
+          continue;
+        }
+        if ((m = t.match(/^([ABCD])\.\s*(.+)$/))) {
+          if (!q) continue;
+          optStarted = true;
+          const idx = m[1].charCodeAt(0) - 65;
+          q.options[idx] = m[2].trim();
+          lastOpt = idx;
+          continue;
+        }
+        if ((m = t.match(/^Correct Answer:\s*([ABCD])/i))) {
+          if (q) q.correctIndex = m[1].toUpperCase().charCodeAt(0) - 65;
+          continue;
+        }
+        if ((m = t.match(/^Type:\s*(.+)$/i))) { if (q) q.type = m[1].trim(); continue; }
+        if ((m = t.match(/^Difficulty:\s*(.+)$/i))) { if (q) q.difficulty = m[1].trim(); continue; }
+        
+        if (q && !optStarted) { q.text += '<br>' + t; continue; }
+        if (q && optStarted && lastOpt >= 0) { q.options[lastOpt] += '<br>' + t; continue; }
+      }
+      push();
+      
+      for (const q of questions) {
+        q.options = q.options.filter(o => typeof o === 'string');
+      }
+      return questions;
+    }
+
+    // State
+    let questions = [], idx = 0, answers = [], answered = new Set(), correct = 0, wrong = 0;
+
+    // Elements
+    const $ = id => document.getElementById(id);
+    const rawInput = $('raw-input'), status = $('status'), warning = $('warning');
+    const inputSection = $('input-section'), inputActions = $('input-actions');
+    const collapsedBadge = $('collapsed-badge'), expandBtn = $('expand-btn');
+    const quizArea = $('quiz-area'), progressFill = $('progress-fill');
+    const correctEl = $('correct-count'), wrongEl = $('wrong-count');
+    const answeredEl = $('answered-count'), totalEl = $('total-count');
+    const qNum = $('question-num'), tags = $('tags'), qText = $('question-text');
+    const options = $('options'), feedback = $('feedback');
+    const prevBtn = $('prev-btn'), nextBtn = $('next-btn'), submitBtn = $('submit-btn');
+    const results = $('results');
+
+    function updateStats() {
+      const pct = questions.length ? (answered.size / questions.length) * 100 : 0;
+      progressFill.style.width = pct + '%';
+      correctEl.textContent = correct;
+      wrongEl.textContent = wrong;
+      answeredEl.textContent = answered.size;
+      totalEl.textContent = questions.length;
+    }
+
+    function render() {
+      if (!questions.length) return;
+      const q = questions[idx];
+      const done = answered.has(idx);
+      const userAns = answers[idx];
+
+      qNum.textContent = `Question ${idx + 1} of ${questions.length}`;
+
+      // Tags
+      tags.innerHTML = '';
+      const tagData = [
+        { text: `Unit ${q.unit}`, cls: '' },
+        { text: q.co, cls: '' },
+        { text: q.type, cls: '' },
+        { text: q.difficulty, cls: q.difficulty.toLowerCase() }
+      ];
+      tagData.forEach(t => {
+        const span = document.createElement('span');
+        span.className = 'tag ' + t.cls;
+        span.textContent = t.text;
+        tags.appendChild(span);
+      });
+
+      qText.innerHTML = q.text;
+
+      // Options
+      options.innerHTML = '';
+      q.options.forEach((opt, i) => {
+        const div = document.createElement('div');
+        div.className = 'option';
+        
+        const letter = document.createElement('span');
+        letter.className = 'option-letter';
+        letter.textContent = String.fromCharCode(65 + i);
+
+        const text = document.createElement('span');
+        text.className = 'option-text';
+        text.innerHTML = opt;
+
+        div.appendChild(letter);
+        div.appendChild(text);
+
+        if (done) {
+          div.classList.add('disabled');
+          if (i === q.correctIndex) {
+            div.classList.add(userAns === i ? 'correct' : 'show-correct');
+            const icon = document.createElement('span');
+            icon.className = 'option-icon';
+            icon.textContent = '✓';
+            div.appendChild(icon);
+          }
+          if (i === userAns && userAns !== q.correctIndex) {
+            div.classList.add('incorrect');
+            const icon = document.createElement('span');
+            icon.className = 'option-icon';
+            icon.textContent = '✗';
+            div.appendChild(icon);
+          }
+        } else {
+          div.onclick = () => selectAnswer(i);
+        }
+
+        options.appendChild(div);
+      });
+
+      // Feedback
+      feedback.className = 'feedback';
+      if (done) {
+        const isCorrect = userAns === q.correctIndex;
+        feedback.classList.add('show', isCorrect ? 'correct' : 'incorrect');
+        feedback.textContent = isCorrect 
+          ? '✓ Correct!' 
+          : `✗ Wrong. Answer: ${String.fromCharCode(65 + q.correctIndex)}`;
+      }
+
+      prevBtn.disabled = idx === 0;
+      nextBtn.disabled = idx === questions.length - 1;
+
+      if (window.MathJax?.typesetPromise) {
+        MathJax.typesetPromise([qText, options]).catch(() => {});
+      }
+    }
+
+    function selectAnswer(i) {
+      if (answered.has(idx)) return;
+      answers[idx] = i;
+      answered.add(idx);
+      
+      if (i === questions[idx].correctIndex) correct++;
+      else wrong++;
+
+      updateStats();
+      render();
+    }
+
+    function go(delta) {
+      const next = idx + delta;
+      if (next >= 0 && next < questions.length) {
+        idx = next;
+        render();
+      }
+    }
+
+    function showResults() {
+      results.innerHTML = '';
+      
+      // Calculate stats by difficulty
+      const byDiff = { easy: { total: 0, correct: 0, questions: [] }, medium: { total: 0, correct: 0, questions: [] }, hard: { total: 0, correct: 0, questions: [] } };
+      
+      questions.forEach((q, i) => {
+        const diff = q.difficulty.toLowerCase();
+        const key = ['easy', 'medium', 'hard'].includes(diff) ? diff : 'medium';
+        const ans = answers[i];
+        const isCorrect = ans === q.correctIndex;
+        byDiff[key].total++;
+        if (isCorrect) byDiff[key].correct++;
+        byDiff[key].questions.push({ q, i, ans, isCorrect });
+      });
+
+      const pct = questions.length ? Math.round((correct / questions.length) * 100) : 0;
+      
+      // Header
+      results.innerHTML = `
+        <div class="results-header">
+          <h2>Quiz Complete</h2>
+          <div class="score">${correct}/${questions.length}</div>
+          <div class="score-pct">${pct}% accuracy</div>
+        </div>
+        
+        <div class="results-stats">
+          <div class="results-stat easy">
+            <div class="results-stat-value">${byDiff.easy.correct}/${byDiff.easy.total}</div>
+            <div class="results-stat-label">Easy</div>
+          </div>
+          <div class="results-stat medium">
+            <div class="results-stat-value">${byDiff.medium.correct}/${byDiff.medium.total}</div>
+            <div class="results-stat-label">Medium</div>
+          </div>
+          <div class="results-stat hard">
+            <div class="results-stat-value">${byDiff.hard.correct}/${byDiff.hard.total}</div>
+            <div class="results-stat-label">Hard</div>
+          </div>
+        </div>
+      `;
+
+      // Difficulty sections
+      ['easy', 'medium', 'hard'].forEach(diff => {
+        if (byDiff[diff].total === 0) return;
+        
+        const section = document.createElement('div');
+        section.className = 'difficulty-section';
+        
+        const diffLabel = diff.charAt(0).toUpperCase() + diff.slice(1);
+        section.innerHTML = `
+          <div class="difficulty-header">
+            <div class="difficulty-title">
+              <span class="difficulty-dot ${diff}"></span>
+              <span>${diffLabel}</span>
+            </div>
+            <span class="difficulty-score">${byDiff[diff].correct}/${byDiff[diff].total} correct</span>
+          </div>
+        `;
+        
+        byDiff[diff].questions.forEach(({ q, i, ans, isCorrect }) => {
+          const row = document.createElement('div');
+          const status = ans == null ? 'skipped' : (isCorrect ? 'correct' : 'incorrect');
+          row.className = 'result-row ' + status;
+          
+          const userLetter = ans != null ? String.fromCharCode(65 + ans) : '–';
+          const correctLetter = String.fromCharCode(65 + q.correctIndex);
+          
+          row.innerHTML = `
+            <div class="result-q">
+              <span class="result-q-num">Q${i + 1}</span>
+              <span class="result-q-type">${q.type}</span>
+            </div>
+            <div class="result-answers">
+              <span class="yours">You: ${userLetter}</span>
+              <span class="correct-ans">Ans: ${correctLetter}</span>
+            </div>
+          `;
+          section.appendChild(row);
+        });
+        
+        results.appendChild(section);
+      });
+
+      // Actions
+      const actions = document.createElement('div');
+      actions.className = 'results-actions';
+      actions.innerHTML = `
+        <button id="retry-btn">↻ Retry Quiz</button>
+        <button id="new-quiz-btn" class="primary">New Quiz</button>
+      `;
+      results.appendChild(actions);
+
+      // Bind retry buttons
+      $('retry-btn').onclick = retryQuiz;
+      $('new-quiz-btn').onclick = newQuiz;
+
+      results.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function retryQuiz() {
+      idx = 0;
+      answers = new Array(questions.length).fill(null);
+      answered = new Set();
+      correct = 0;
+      wrong = 0;
+      results.innerHTML = '';
+      updateStats();
+      render();
+      quizArea.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function newQuiz() {
+      // Reset everything
+      questions = [];
+      idx = 0;
+      answers = [];
+      answered = new Set();
+      correct = 0;
+      wrong = 0;
+      results.innerHTML = '';
+      
+      // Expand input section
+      inputSection.classList.remove('collapsed');
+      inputActions.style.display = '';
+      rawInput.value = '';
+      status.textContent = 'Paste your questions and click Start';
+      quizArea.classList.remove('active');
+      
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Events
+    prevBtn.onclick = () => go(-1);
+    nextBtn.onclick = () => go(1);
+    submitBtn.onclick = showResults;
+
+    $('start-btn').onclick = () => {
+      const parsed = parseQuestions(rawInput.value);
+      
+      if (!parsed.length) {
+        warning.textContent = 'No valid questions found. Check format.';
+        warning.style.display = 'block';
+        return;
+      }
+
+      questions = parsed;
+      idx = 0;
+      answers = new Array(questions.length).fill(null);
+      answered = new Set();
+      correct = 0;
+      wrong = 0;
+
+      warning.style.display = 'none';
+      status.textContent = `${questions.length} questions loaded`;
+      quizArea.classList.add('active');
+      
+      // Collapse input section
+      inputSection.classList.add('collapsed');
+      inputActions.style.display = 'none';
+      collapsedBadge.textContent = `${questions.length} Questions`;
+      
+      prevBtn.disabled = false;
+      nextBtn.disabled = questions.length <= 1;
+      submitBtn.disabled = false;
+      
+      results.innerHTML = '';
+      updateStats();
+      render();
+    };
+
+    $('load-sample').onclick = () => {
+      rawInput.value = `Unit: 1
+CO: CO1
+Q1. Deep Learning uses which key architectural feature?
+A. Statistical regression only
+B. Decision trees
+C. Neural networks with multiple hidden layers
+D. Small structured datasets only
+Correct Answer: C
+Type: Theory
+Difficulty: Easy
+
+Unit: 1
+CO: CO1
+Q2. What does the optimizer do in training?
+A. Define network complexity
+B. Select input features manually
+C. Refine parameters to minimize loss
+D. Convert text to tokens
+Correct Answer: C
+Type: Theory
+Difficulty: Easy
+
+Unit: 1
+CO: CO1
+Q3. Sigmoid activation function range?
+A. $(-\\infty, \\infty)$
+B. $[-1, 1]$
+C. $(0, 1)$
+D. $[0, \\infty)$
+Correct Answer: C
+Type: Theory
+Difficulty: Medium
+
+Unit: 1
+CO: CO1
+Q4. Tanh activation function range?
+A. $(-\\infty, \\infty)$
+B. $(0, 1)$
+C. $[0, \\infty)$
+D. $(-1, 1)$
+Correct Answer: D
+Type: Theory
+Difficulty: Medium
+
+Unit: 1
+CO: CO1
+Q5. Output shape after this layer with input (784,)?
+\`\`\`python
+model.add(Dense(64, activation='relu', input_shape=(784,)))
+\`\`\`
+A. (784,)
+B. (64,)
+C. (10,)
+D. (784, 64)
+Correct Answer: B
+Type: Code
+Difficulty: Easy`;
+      status.textContent = 'Sample loaded. Click Start Quiz.';
+    };
+
+    // Expand/collapse input
+    expandBtn.onclick = () => {
+      inputSection.classList.remove('collapsed');
+      inputActions.style.display = '';
+    };
+  </script>
+</body>
+</html>
