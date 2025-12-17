@@ -1,1160 +1,1085 @@
-Here are 100 MCQs covering Unit 5 – Autoencoders & Generative Models for Unsupervised Deep Learning, aligned with Course Outcome 5 (CO5).
+## Unit 5 & Unit 7: Climate Change, Ozone Depletion, Acid Rain, Environmental Movements, and Ethics
 
-Unit: 5
-CO: CO5
-Q1. Which of the following best describes the primary goal of a basic autoencoder?
-A. To classify input images into distinct categories.
-B. To learn a compressed representation of the input data and reconstruct it.
-C. To generate completely new data samples from random noise without input.
-D. To predict the next word in a sequence using attention mechanisms.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
+### Single Correct MCQs (96 Total)
 
-Unit: 5
-CO: CO5
-Q2. In the context of machine learning, what is the fundamental difference between discriminative and generative models?
-A. Discriminative models model $P(X|Y)$, while generative models model $P(Y|X)$.
-B. Discriminative models learn the decision boundary between classes, while generative models model the distribution of the data itself.
-C. Generative models are always supervised, while discriminative models are always unsupervised.
-D. Discriminative models require less data than generative models.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q3. Which component of an autoencoder is responsible for mapping the input data to a lower-dimensional latent space?
-A. The Decoder
-B. The Discriminator
-C. The Encoder
-D. The Generator
+Q1. Climate change is attributed largely to the increased levels of atmospheric carbon dioxide produced by which specific activity?
+A. Natural volcanic activity
+B. Decay from landfills
+C. The use of fossil fuels
+D. Rice cultivation and ranching
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q4. In a standard autoencoder, the layer between the encoder and decoder that holds the compressed representation is commonly called the:
-A. Output layer
-B. Bottleneck or latent vector
-C. Softmax layer
-D. Attention head
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q5. If an autoencoder has a latent dimension larger than the input dimension, it is referred to as:
-A. Undercomplete
-B. Overcomplete
-C. Sparse
-D. Variational
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q6. Which loss function is most commonly used for a standard autoencoder trained on continuous image pixel data?
-A. Categorical Crossentropy
-B. Hinge Loss
-C. Mean Squared Error (MSE)
-D. Kullback-Leibler Divergence
+Q2. What is the approximate average atmospheric residence time for Methane ($\text{CH}_4$)?
+A. 500 years
+B. 140–190 years
+C. 7–10 years
+D. Since 1750
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q7. Consider the following Keras code snippet for an encoder. What is the number of parameters in the `Dense` layer?
-```python
-input_img = tf.keras.Input(shape=(784,))
-encoded = tf.keras.layers.Dense(32, activation='relu')(input_img)
-```
-A. 25,088
-B. 25,120
-C. 784
-D. 32
-Correct Answer: B
-Type: Numerical
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q8. What is the output shape of the `encoded` tensor in the code below?
-```python
-model = tf.keras.Sequential([
-    tf.keras.layers.Flatten(input_shape=(28, 28)),
-    tf.keras.layers.Dense(64, activation='relu')
-])
-```
-A. (None, 28, 28)
-B. (None, 784)
-C. (None, 64)
-D. (None, 128)
+Q3. What is the approximate anthropogenic increase percentage cited for Nitrous Oxide ($\text{N}_2\text{O}$) concentration?
+A. 30%
+B. 145%
+C. 15%
+D. 36%
 Correct Answer: C
-Type: Code
 Difficulty: Easy
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q9. In a Denoising Autoencoder (DAE), what is the input to the network during training?
-A. The original clean image.
-B. A corrupted version of the original image (e.g., with added noise).
-C. Random Gaussian noise unrelated to the image.
-D. The target class label of the image.
+Q4. Since the Industrial Revolution (starting 1750), by what percentage had the concentration of Carbon Dioxide ($\text{CO}_2$) increased?
+A. 148%
+B. 36%
+C. 145%
+D. 15%
 Correct Answer: B
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q10. What is the target output (ground truth) used to calculate the loss for a Denoising Autoencoder?
-A. The corrupted input image.
-B. The original clean image.
-C. A vector of zeros.
-D. The class label.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q11. Which layer is typically used in the decoder of a Convolutional Autoencoder to increase the spatial dimensions of the feature maps?
-A. `Conv2D` with `strides=2`
-B. `MaxPooling2D`
-C. `Conv2DTranspose` (or UpSampling2D)
-D. `Flatten`
+Q5. How much warmer, in Celsius, would the air temperature near the Earth's surface be due to naturally occurring amounts of greenhouse gases, compared to their absence?
+A. $36^\circ\text{C}$
+B. $59^\circ\text{F}$
+C. $33^\circ\text{C}$
+D. $148^\circ\text{C}$
 Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q12. Look at the following decoder snippet. What is the shape of `x` after the reshape layer?
-```python
-decoder = tf.keras.Sequential([
-    tf.keras.layers.Dense(7 * 7 * 32, activation='relu', input_shape=(64,)),
-    tf.keras.layers.Reshape((7, 7, 32))
-])
-```
-A. (None, 1568)
-B. (None, 7, 7, 32)
-C. (None, 32, 7, 7)
-D. (None, 49, 32)
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q13. In a Variational Autoencoder (VAE), the encoder outputs:
-A. A single fixed vector $z$.
-B. Parameters of a probability distribution (mean $\mu$ and log-variance $\log\sigma^2$).
-C. A reconstruction of the input.
-D. A binary classification score.
-Correct Answer: B
-Type: Theory
 Difficulty: Medium
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q14. The loss function of a VAE consists of two terms: the reconstruction loss and the:
-A. Adversarial loss.
-B. Perceptual loss.
-C. Kullback-Leibler (KL) Divergence.
-D. Mean Absolute Error.
+Q6. Global warming is formally described as the observed century-scale rise in the average temperature of the Earth's climate system and its related effects, often referred to as:
+A. Ocean acidification
+B. Climate change
+C. External forcing
+D. Stratospheric depletion
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q7. According to scientific evidence, the largest human influence on global warming has been the emission of which gases?
+A. Aerosols and soot
+B. CFCs and methyl bromide
+C. $\text{CO}_2$, methane, and nitrous oxide
+D. Oxygen and water vapor
 Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q15. Why is the "reparameterization trick" ($z = \mu + \sigma \odot \epsilon$) used in VAEs?
-A. To increase the capacity of the model.
-B. To allow backpropagation through the stochastic sampling process.
-C. To ensure the latent space is perfectly Gaussian.
-D. To reduce the number of parameters in the decoder.
-Correct Answer: B
-Type: Theory
 Difficulty: Medium
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q16. Calculate the total number of parameters in this simple autoencoder:
-Input size: 10
-Encoder Dense Layer: 5 units (with bias)
-Decoder Dense Layer: 10 units (with bias)
-A. 50
-B. 105
-C. 115
-D. 65
+Q8. Regarding geographical impact, warming is expected to be greatest in which specific region?
+A. Subtropics
+B. Over the oceans
+C. The Arctic
+D. Over the continents
 Correct Answer: C
-Type: Numerical
-Difficulty: Medium
+Difficulty: Easy
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q17. Which Keras layer is usually used to implement the reparameterization trick in a VAE?
-A. `tf.keras.layers.Sampling`
-B. `tf.keras.layers.Lambda`
-C. `tf.keras.layers.GaussianNoise`
-D. `tf.keras.layers.Dense`
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q18. In a Generative Adversarial Network (GAN), what is the goal of the Generator?
-A. To classify images as real or fake.
-B. To compress the input data.
-C. To create synthetic data that is indistinguishable from real data.
-D. To minimize the KL divergence.
+Q9. Which long-term change is cited as emanating only from "external forcing" factors rather than random climate system generation?
+A. Changing precipitation
+B. Retreat of glaciers
+C. Long-term changes in global temperatures
+D. More frequent heavy snowfall
 Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q19. In a GAN, what is the goal of the Discriminator?
-A. To generate realistic images.
-B. To distinguish between real data samples and fake samples produced by the generator.
-C. To encode data into a latent space.
-D. To maximize the generator's loss.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q20. If a GAN is trained successfully to equilibrium, what should the discriminator's output probability be for both real and fake inputs?
-A. 1.0 (100% confidence)
-B. 0.0 (0% confidence)
-C. 0.5 (Random guessing)
-D. 0.9 for real, 0.1 for fake
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q21. What is the "min-max" game in GANs?
-A. The generator minimizes the error, while the discriminator minimizes the accuracy.
-B. The generator tries to minimize the probability that the discriminator is correct, while the discriminator tries to maximize it.
-C. Both networks try to maximize the likelihood of the data.
-D. The generator maximizes the reconstruction loss.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q22. Consider the following Generator code. What is the shape of the output image?
-```python
-model = tf.keras.Sequential()
-model.add(tf.keras.layers.Dense(7*7*128, input_dim=100))
-model.add(tf.keras.layers.Reshape((7, 7, 128)))
-model.add(tf.keras.layers.Conv2DTranspose(64, (4,4), strides=(2,2), padding='same'))
-model.add(tf.keras.layers.Conv2DTranspose(1, (4,4), strides=(2,2), padding='same'))
-```
-A. (7, 7, 1)
-B. (14, 14, 64)
-C. (28, 28, 1)
-D. (28, 28, 64)
-Correct Answer: C
-Type: Numerical
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q23. In the code above (Q22), if the input `latent_dim` is 100, how many parameters does the first `Dense` layer have (including bias)?
-A. $100 \times 128$
-B. $100 \times (7 \times 7 \times 128)$
-C. $(100 + 1) \times (7 \times 7 \times 128)$
-D. $7 \times 7 \times 128$
-Correct Answer: C
-Type: Numerical
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q24. A common problem in GAN training where the generator produces only a limited variety of samples (e.g., only one type of digit) is called:
-A. Overfitting
-B. Mode Collapse
-C. Vanishing Gradient
-D. Exploding Gradient
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q25. Which activation function is typically used in the final layer of a Generator producing images normalized to the range [-1, 1]?
-A. Sigmoid
-B. ReLU
-C. Tanh
-D. Softmax
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q26. Which activation function is typically used in the final layer of a standard Discriminator (binary classifier)?
-A. Sigmoid
-B. ReLU
-C. Tanh
-D. Linear
-Correct Answer: A
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q27. Identify the error in this Discriminator model definition for a standard GAN.
-```python
-discriminator = tf.keras.Sequential([
-    tf.keras.layers.Flatten(input_shape=(28, 28, 1)),
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dense(1, activation='softmax') # Error is here
-])
-```
-A. Flatten layer cannot take input shape.
-B. Dense layer units should be higher.
-C. Final activation should be 'sigmoid' for binary classification, not 'softmax'.
-D. There is no error.
-Correct Answer: C
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q28. What is the purpose of `LeakyReLU` in a GAN Discriminator?
-A. To ensure outputs are always positive.
-B. To allow a small gradient when the unit is not active, preventing "dead" neurons.
-C. To normalize the batch.
-D. To output probabilities.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q29. In a Convolutional Autoencoder, if an input of shape (28, 28, 1) is passed through `Conv2D(16, (3,3), strides=2, padding='same')`, what is the output shape?
-A. (14, 14, 16)
-B. (28, 28, 16)
-C. (13, 13, 16)
-D. (12, 12, 16)
-Correct Answer: A
-Type: Numerical
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q30. If the bottleneck layer of an autoencoder has 2 neurons and the input has 784 neurons, the compression ratio is:
-A. 2 : 1
-B. 392 : 1
-C. 784 : 1
-D. 1 : 392
-Correct Answer: B
-Type: Numerical
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q31. Which of the following is a generative model architecture based on attention mechanisms?
-A. ResNet
-B. Transformer (e.g., GPT)
-C. Random Forest
-D. Support Vector Machine
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q32. In the context of VAEs, the KL divergence term forces the learned latent distribution to be close to:
-A. A Uniform distribution.
-B. A Standard Normal distribution ($\mathcal{N}(0, I)$).
-C. The distribution of the input data.
-D. A Bernoulli distribution.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q33. What does the following TensorFlow/Keras code snippet calculate?
-```python
-# z_mean and z_log_var are outputs from encoder
-kl_loss = -0.5 * tf.reduce_mean(
-    1 + z_log_var - tf.square(z_mean) - tf.exp(z_log_var)
-)
-```
-A. Binary Crossentropy Loss
-B. Mean Squared Error
-C. KL Divergence Loss for VAE
-D. GAN Discriminator Loss
-Correct Answer: C
-Type: Code
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q34. In a VAE, if `z_mean` has shape (32, 2) and `z_log_var` has shape (32, 2), what is the shape of the sampled latent vector `z`?
-A. (32, 4)
-B. (32, 2)
-C. (64, 1)
-D. (1, 2)
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q35. Which of the following is NOT an application of Generative AI?
-A. Image Super-resolution
-B. Text-to-Image Synthesis
-C. Linear Regression for house price prediction
-D. Music Composition
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q36. What is the role of `UpSampling2D` in an autoencoder decoder?
-A. To reduce the spatial dimensions.
-B. To increase the spatial dimensions by repeating rows and columns.
-C. To add noise to the image.
-D. To apply a convolution operation.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q37. Calculate the number of parameters in a `Conv2D` layer with:
-Filters: 10
-Kernel size: 3x3
-Input channels: 1
-Biases: True
-A. 90
-B. 91
-C. 100
-D. 10
-Correct Answer: C
-Type: Numerical
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q38. Why is `Conv2DTranspose` often preferred over `UpSampling2D` followed by `Conv2D` in GAN generators?
-A. It is computationally cheaper.
-B. It has learnable parameters that perform upsampling and convolution simultaneously.
-C. It strictly repeats pixels without learning.
-D. It reduces the number of channels.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q39. What is the primary disadvantage of a basic autoencoder compared to a VAE for generating new data?
-A. Basic autoencoders are harder to train.
-B. The latent space of a basic AE is often discontinuous, making interpolation poor.
-C. Basic autoencoders cannot reconstruct images.
-D. Basic autoencoders require labelled data.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q40. In a GAN, if the discriminator becomes too strong too quickly (perfect accuracy), what happens to the generator?
-A. It learns very fast.
-B. It stops learning because the gradients vanish (become near zero).
-C. It overfits the data.
-D. It collapses to a single mode.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q41. Which code snippet correctly instantiates a Keras optimizer commonly used for GANs?
-A. `optimizer = tf.keras.optimizers.Adam(learning_rate=0.0002, beta_1=0.5)`
-B. `optimizer = tf.keras.losses.BinaryCrossentropy()`
-C. `optimizer = tf.keras.layers.Dense(1)`
-D. `optimizer = tf.keras.optimizers.SGD(momentum=2.0)`
-Correct Answer: A
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q42. What represents the "noise" input to a GAN generator?
-A. Real images from the dataset.
-B. A vector of random numbers (e.g., from a normal distribution).
-C. The labels of the dataset.
-D. The gradients from the discriminator.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q43. A Conditional GAN (cGAN) differs from a standard GAN by:
-A. Removing the discriminator.
-B. Feeding label information to both generator and discriminator.
-C. Using only fully connected layers.
-D. Training the generator only.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q44. Given a batch of 64 images of size 28x28 flattened to 784 vectors, what is the shape of the input tensor to a dense autoencoder?
-A. (28, 28, 64)
-B. (64, 784)
-C. (784, 64)
-D. (64, 28, 28)
-Correct Answer: B
-Type: Numerical
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q45. In the context of Autoencoders, "reconstruction error" refers to:
-A. The difference between the encoder input and the latent vector.
-B. The difference between the original input and the decoder output.
-C. The difference between real and fake images.
-D. The accuracy of the classifier.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q46. Which function is used to calculate the binary crossentropy loss in a GAN using TensorFlow?
-A. `tf.keras.losses.MeanSquaredError()`
-B. `tf.keras.losses.BinaryCrossentropy(from_logits=True)`
-C. `tf.keras.losses.CategoricalCrossentropy()`
-D. `tf.keras.losses.KLDivergence()`
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q47. If a VAE encoder outputs `z_mean` and `z_log_var` of dimension 10, how many values does the network output in total for these parameters?
-A. 10
-B. 20
-C. 100
-D. 2
-Correct Answer: B
-Type: Numerical
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q48. Which of the following is a "Generative" task?
-A. Predicting if an email is spam.
-B. Creating a new portrait in the style of Van Gogh.
-C. Identifying objects in a video feed.
-D. Forecasting stock prices.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q49. When training a GAN, the labels for the "real" images passed to the discriminator are usually set to:
-A. 0
-B. 1
-C. 0.5
-D. -1
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q50. When training the Generator in a GAN, what label is passed to the Discriminator to calculate the generator's loss?
-A. 0 (Fake)
-B. 1 (Real) - to trick the discriminator
-C. 0.5 (Unsure)
-D. Random labels
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q51. Consider this autoencoder code. What is the compression factor of the latent space relative to the input?
-```python
-input_dim = 1000
-latent_dim = 10
-encoder = tf.keras.layers.Dense(latent_dim)(input)
-```
-A. 10x
-B. 100x
-C. 50x
-D. 1000x
-Correct Answer: B
-Type: Numerical
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q52. In an autoencoder used for anomaly detection, anomalies are identified by:
-A. High classification confidence.
-B. High reconstruction error.
-C. Low reconstruction error.
-D. The encoder output being zero.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q53. Which TensorFlow operation is used to sample random noise from a normal distribution?
-A. `tf.random.uniform`
-B. `tf.random.normal`
-C. `tf.zeros`
-D. `tf.ones`
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q54. What is the correct way to define a custom training step in Keras for a GAN?
-A. Override the `train_step` method in a subclass of `tf.keras.Model`.
-B. Use `model.fit()` with default settings.
-C. Use `model.evaluate()`.
-D. Override the `call` method only.
-Correct Answer: A
-Type: Code
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q55. In a VAE, if the KL divergence weight is too high during training, what happens?
-A. The reconstruction quality becomes perfect.
-B. The latent distribution collapses to the prior (Posterior collapse), ignoring the input data.
-C. The model generates extremely diverse images.
-D. The training diverges immediately.
-Correct Answer: B
-Type: Theory
 Difficulty: Hard
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q56. Which of the following architectures is explicitly designed to handle sequential data generation (like text)?
-A. Convolutional Autoencoder
-B. Transformer (Decoder-only or Encoder-Decoder)
-C. Standard GAN
-D. Multilayer Perceptron
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q57. In a WGAN (Wasserstein GAN), the discriminator is often referred to as a:
-A. Classifier
-B. Critic
-C. Encoder
-D. Decoder
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q58. Code Calculation: A decoder has an input size of (4, 4, 128) and applies `Conv2DTranspose(64, (3,3), strides=(2,2), padding='same')`. What is the output height/width?
-A. 4x4
-B. 6x6
-C. 8x8
-D. 16x16
+Q10. Which greenhouse gas listed has an average atmospheric residence time of 500 years?
+A. Methane ($\text{CH}_4$)
+B. Nitrous Oxide ($\text{N}_2\text{O}$)
+C. Carbon Dioxide ($\text{CO}_2$)
+D. Tropospheric ozone ($\text{O}_3$)
 Correct Answer: C
-Type: Numerical
-Difficulty: Medium
+Difficulty: Easy
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q59. How many parameters does a standard BatchNormalization layer have if the input feature map has 64 channels? (Consider Gamma, Beta, Moving Mean, Moving Variance).
-A. 64
-B. 128
-C. 256
-D. 4
+Q11. Which factor is listed as affecting climate but is related to the movement of water masses?
+A. Latitude
+B. Topography
+C. Ocean Currents
+D. Evaporation
 Correct Answer: C
-Type: Numerical
-Difficulty: Hard
-
-Unit: 5
-CO: CO5
-Q60. Which technique helps stabilize GAN training by smoothing the labels (e.g., using 0.9 instead of 1.0 for real data)?
-A. Gradient Clipping
-B. Label Smoothing
-C. Batch Normalization
-D. Dropout
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q61. In the context of Deepfakes, which technology is primarily used?
-A. Linear Regression
-B. GANs (Generative Adversarial Networks)
-C. K-Means Clustering
-D. PCA
-Correct Answer: B
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q62. What is the output of `tf.keras.layers.Flatten()(x)` if `x` has shape `(None, 10, 10, 3)`?
-A. (None, 30)
-B. (None, 100)
-C. (None, 300)
-D. (None, 1000)
+Q12. The increasing frequency of extreme weather events due to global warming includes heat waves, droughts, heavy rainfall with floods, and which other extreme event?
+A. Increased volcanic activity
+B. Heavy snowfall
+C. Increased solar activity
+D. Expansion of deserts in the subtropics
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 5.pdf
+
+Q13. Acid rain consists of water droplets that are unusually acidic because of what underlying cause?
+A. Orbital variations
+B. Atmospheric pollution
+C. Natural phenomena only
+D. Ocean acidification
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q14. Acid rains appear when Sulphur dioxide and Nitrogen oxide release which specific substances?
+A. Carbon dioxide and methane
+B. Ozone and oxygen
+C. Sulphuric acid and nitric acid
+D. Calcium carbonate and calcium nitrate
 Correct Answer: C
-Type: Code
-Difficulty: Easy
+Difficulty: Medium
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q63. What is the main benefit of using a VAE over a GAN?
-A. VAEs generate sharper images.
-B. VAEs provide an explicit density estimation and a structured latent space.
-C. VAEs are faster to train.
-D. VAEs do not use neural networks.
+Q15. On the famous monument mentioned, Acid Rain (Sulphuric acid + Nitric acid) reacts with Marble (Calcium carbonate) to form which specific products?
+A. Carbon dioxide and water
+B. Calcium Nitrate and Calcium sulphate
+C. Sulphur dioxide and nitrogen oxide
+D. Atomic oxygen and $\text{O}_2$
 Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q64. In TensorFlow, how do you prevent the discriminator weights from updating while training the generator?
-A. Set `discriminator.trainable = False` before compiling the combined GAN model.
-B. Set `generator.trainable = False`.
-C. Use `tf.stop_gradient`.
-D. It happens automatically.
-Correct Answer: A
-Type: Code
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q65. Which loss function is used in WGAN to replace binary crossentropy?
-A. Wasserstein Loss (difference between average scores).
-B. Mean Squared Error.
-C. Categorical Crossentropy.
-D. Hinge Loss.
-Correct Answer: A
-Type: Theory
 Difficulty: Hard
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q66. Which architecture is typically used for "seq2seq" tasks like translation in Generative AI?
-A. Encoder-Decoder Transformer
-B. CNN
-C. Dense Autoencoder
-D. Isolation Forest
-Correct Answer: A
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q67. A code snippet for a Dense layer is `Dense(100, activation='relu', input_shape=(50,))`. How many trainable parameters (weights + biases)?
-A. 500
-B. 5000
-C. 5100
-D. 50100
+Q16. Acid rains take part in the gradual death of plants because polluting factors alter the permeability of which parts of the plants?
+A. Roots and stems
+B. Flowers and fruits
+C. Leaves and needles
+D. Pollen and seeds
 Correct Answer: C
-Type: Numerical
 Difficulty: Medium
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q68. What is "Mode Collapse" in GANs?
-A. The generator produces a single or very few types of outputs regardless of noise input.
-B. The discriminator accuracy drops to 0.
-C. The training takes too long.
-D. The model parameters become NaN.
-Correct Answer: A
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q69. Which layer is typically used to flatten the 2D output of a Convolutional Discriminator before the final classification?
-A. `GlobalAveragePooling2D` or `Flatten`
-B. `UpSampling2D`
-C. `Conv2DTranspose`
-D. `Reshape`
-Correct Answer: A
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q70. In a VAE, the "Encoder" is often probabilistically referred to as the:
-A. Prior network
-B. Inference network (approximating posterior $q_\phi(z|x)$)
-C. Generative network
-D. Discriminator
+Q17. The primary reason fish can't breathe properly and different species disappear due to acid rain in lakes is that:
+A. The water turns yellow due to Calcium sulphate.
+B. The water looks more transparent because plankton has disappeared.
+C. The $\text{pH}$ increases drastically.
+D. UV-B radiation penetrates the water.
 Correct Answer: B
-Type: Theory
 Difficulty: Hard
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q71. Calculate the size of the latent vector if the encoder output is a feature map of $4 \times 4 \times 512$ and is flattened.
-A. 2048
-B. 8192
-C. 512
-D. 16
+Q18. Ozone ($\text{O}_3$) in the stratosphere is created when atomic oxygen combines with which molecule?
+A. $\text{O}_3$
+B. $\text{O}_2$
+C. CFCs
+D. $\text{CO}_2$
 Correct Answer: B
-Type: Numerical
 Difficulty: Easy
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q72. What is the purpose of the `padding='same'` argument in `Conv2D`?
-A. To discard the borders of the image.
-B. To ensure the output spatial dimensions match the input (if stride=1).
-C. To reduce the output size.
-D. To add random noise to the borders.
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q73. Which of the following is an "autoregressive" generative model?
-A. GPT (Generative Pre-trained Transformer)
-B. GAN
-C. VAE
-D. K-Nearest Neighbors
-Correct Answer: A
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q74. In Keras, what does `model.summary()` display?
-A. The training graphs.
-B. The layer architecture, output shapes, and parameter counts.
-C. The predictions on test data.
-D. The loss values.
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q75. Why is a "bottleneck" necessary in an autoencoder?
-A. To speed up training.
-B. To force the model to learn meaningful features/compression rather than copying the input.
-C. To increase the number of parameters.
-D. To allow for classification.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q76. If you want to generate images of digits 0-9 specifically on command using a GAN, which variant should you use?
-A. Basic GAN
-B. Conditional GAN (cGAN)
-C. Denoising Autoencoder
-D. WGAN
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q77. Code snippet:
-```python
-x = tf.keras.layers.Conv2D(32, 3, activation='relu')(input)
-x = tf.keras.layers.MaxPooling2D()(x)
-```
-If input is (28, 28, 1), what is the shape after `MaxPooling2D` (default pool size 2x2)?
-A. (26, 26, 32)
-B. (14, 14, 32)
-C. (13, 13, 32)
-D. (28, 28, 32)
+Q19. The continuing process where ultraviolet light splits ozone ($\text{O}_3$) into a molecule of $\text{O}_2$ and an atom of atomic oxygen is called the:
+A. Stratospheric vortex
+B. Atomic oxygen formation
+C. Ozone-oxygen cycle
+D. Radiative forcing mechanism
 Correct Answer: C
-Type: Numerical
-Difficulty: Hard
+Difficulty: Easy
+Source PPT: Unit 5.pdf,
 
-Unit: 5
-CO: CO5
-Q78. What is the typical range of pixel values for images fed into a GAN Generator using `tanh` activation?
-A.
-B.
-C. [-1, 1]
-D. [-∞, +∞]
+Q20. Excessive exposure to UV-B radiation is cited as potentially causing genetic damage, which can result in problems such as:
+A. Sunburn
+B. Cardiac arrest
+C. Skin cancer
+D. Ocean acidification
 Correct Answer: C
-Type: Theory
-Difficulty: Easy
+Difficulty: Medium
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q79. Which metric is commonly used to evaluate the quality of GAN-generated images?
-A. Accuracy
-B. F1-Score
-C. Fréchet Inception Distance (FID)
-D. Mean Squared Error
+Q21. Which specific chemical compound is listed as being phased out by 2005 under the Montreal Protocol?
+A. Halons
+B. Carbon tetrachloride
+C. Chlorofluorocarbons ($\text{CFCs}$)
+D. Methyl chloroform
+Correct Answer: D
+Difficulty: Hard
+Source PPT: Unit 5.pdf
+
+Q22. The Montreal Protocol stipulates that the production and consumption of ozone-depleting compounds like $\text{CFCs}$ and halons are to be phased out by which year?
+A. 2005
+B. 1998
+C. 2015
+D. 1974
 Correct Answer: C
-Type: Theory
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q23. Which gas is listed as a source of Greenhouse Gas but is primarily sourced from Industry and agriculture (fertilizers)?
+A. Carbon Dioxide
+B. Methane
+C. Nitrous Oxide
+D. Tropospheric Ozone
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q24. In the Arctic, the continuing retreat of which specific factors are listed as evidence of warming?
+A. Aerosols and soot, and solar activity
+B. Glaciers, permafrost, and sea ice
+C. Volcanic activity and orbital variations
+D. Ocean currents and topography
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 5.pdf
+
+Q25. Which specific type of extreme weather event is likely to become more frequent due to global warming?
+A. Solar flares
+B. Heat waves
+C. Coastal erosion
+D. Tectonic plate shifts
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q26. Which specific type of clouds form in the stratosphere over Antarctica when temperatures drop below $-78^\circ\text{C}$ during winter?
+A. Nacreous clouds
+B. Thin clouds of ice, nitric acid, and sulphuric acid mixtures
+C. Cirrus clouds
+D. Photochemical smog
+Correct Answer: B
 Difficulty: Hard
+Source PPT: Unit 5.pdf,
 
-Unit: 5
-CO: CO5
-Q80. In the TensorFlow/Keras Functional API, how do you connect two layers `L1` and `L2`?
-A. `L2(L1)`
-B. `L2.connect(L1)`
-C. `L1.output = L2`
-D. `model.add(L1, L2)`
-Correct Answer: A
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q81. A Sparse Autoencoder achieves sparsity by:
-A. Removing connections randomly.
-B. Adding a regularization term (e.g., L1) to the loss function penalizing activations in the hidden layer.
-C. Using only 1 hidden neuron.
-D. Using dropout.
-Correct Answer: B
-Type: Theory
+Q27. The Bhopal Gas Tragedy, Minamata, Itai-Itai, and Blue Baby Syndrome are generally considered consequences of:
+A. Ozone depletion
+B. Climate change
+C. Pollution
+D. Stratospheric clouds
+Correct Answer: C
 Difficulty: Medium
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q82. Which statement is TRUE about Discriminative models?
-A. They model the joint probability $P(X, Y)$.
-B. They focus on finding the decision boundary between classes.
-C. They can generate new data samples.
-D. Autoencoders are discriminative models.
-Correct Answer: B
-Type: Theory
+Q28. What is the fundamental concept that challenges humans to think about how they interact with one another in the neighborhood, in the context of environmental ethics?
+A. Justice
+B. Sufficiency
+C. Solidarity
+D. Compassion
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q29. What is the primary source of the $\text{CO}_2$ increase attributed to humans?
+A. Decay from landfills
+B. Rice cultivation
+C. Fossil fuel burning
+D. Industry and agriculture (fertilizers)
+Correct Answer: C
 Difficulty: Easy
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q83. Given `inputs = Input(shape=(784,))` and `h = Dense(64)(inputs)`, which line creates the decoding layer back to original size?
-A. `outputs = Dense(64)(h)`
-B. `outputs = Dense(784)(h)`
-C. `outputs = Flatten()(h)`
-D. `outputs = Conv2D(784)(h)`
-Correct Answer: B
-Type: Code
+Q30. Which external forcing factor, besides greenhouse gases, aerosols/soot, and solar activity, is cited as potentially causing long-term changes in global temperatures?
+A. Tectonic movements
+B. Evaporation changes
+C. Variation in earth's orbit
+D. Ocean currents
+Correct Answer: C
 Difficulty: Easy
+Source PPT: Unit 5.pdf
 
-Unit: 5
-CO: CO5
-Q84. What is the gradient penalty used for in WGAN-GP?
-A. To enforce the 1-Lipschitz constraint on the critic/discriminator.
-B. To penalize the generator for bad images.
-C. To reduce the learning rate.
-D. To increase sparsity.
+Q31. The Bishnoi movement started approximately 290 years ago in Rajasthan during which century?
+A. 17th century
+B. 18th century
+C. 19th century
+D. 20th century
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q32. The Bishnoi community was led by a lady named Amrita Devi, who campaigned against the cutting of which specific tree?
+A. State tree of Uttar Pradesh
+B. KHEJRI (State plant of Rajasthan)
+C. Banyan
+D. Deodar
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q33. What specific location was the first Chipko action (March 1974) recorded in?
+A. Khejarli village
+B. Gopeshwar
+C. Reni village
+D. Jodhpur
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q34. The Chipko Movement achieved a major victory in 1980 through an order by India's then Prime Minister, Indira Gandhi, resulting in what specific measure?
+A. Cancelling the Silent Valley Project
+B. A 15-year ban on green felling in the Himalayan forests of Uttar Pradesh
+C. Declaring KHEJRI as the state plant
+D. Mandating local-based industries
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf,
+
+Q35. The Chipko Movement originated from the word ‘embrace’ or ‘Hugging’, a strategy first started in the 18th century in which earlier movement?
+A. Silent Valley Movement
+B. Narmada Bachao Andolan
+C. Bishnoi Andolan
+D. Khejarli Movement
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q36. Who is cited as a prominent Gandhian activist and philosopher who gave wider leadership to the Chipko Movement?
+A. Amrita Devi Bishnoi
+B. Indira Gandhi
+C. Chandi Prasad Bhatt
+D. Sunderlal Bahuguna
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q37. The Bishnoi movement utilized the strategy of hugging and embracing trees for protection, making it significant because:
+A. It involved a 15-year ban.
+B. It was the first organized proponent of eco-conservation.
+C. It was the first time this strategy was used in the history of environmental movements.
+D. It resulted in the cancellation of a hydroelectric project.
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q38. What was the specific order given by King Abhay Singh of Jodhpur in the 1730s that led to the Bishnoi movement protest?
+A. Cutting down trees for wood to build his new palace
+B. Establishing a hydroelectric project in the area
+C. Clearing the forest for cattle ranching
+D. Starting forestry operations in the reserve
 Correct Answer: A
-Type: Theory
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q39. According to the source, how many Bishnois laid down their lives for the protection of Khejri trees in Khejarli village?
+A. 300
+B. 363
+C. 84
+D. 2,246
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q40. The prime reason behind opposing tree cutting by the Bishnoi community was embedded in their cultural beliefs, which advocated for:
+A. Promoting personal hygiene
+B. Wildlife conservation and protection of trees
+C. Advocating against hunting
+D. Promoting decentralized industries
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q41. The Silent Valley Movement was initiated to save an evergreen tropical forest in the Palakkad district of Kerala from being flooded by what specific type of project?
+A. Green felling operations
+B. A thermal power plant
+C. A hydroelectric project
+D. A mining operation
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q42. The British named the area ‘Silent Valley’ due to a perceived absence of which specific animal?
+A. Gaur
+B. Moths
+C. Cicadas
+D. Lion-tailed Macaque
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q43. Which river flows 15 km southwest from Silent Valley and takes its origin in the forest?
+A. Narmada
+B. Kunthipuzha
+C. Godavari
+D. Ganga
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q44. In 1928, the location on the Kunthipuzha River at **Sairandhri** was identified as an ideal site for which activity?
+A. Forest research
+B. Electricity generation
+C. Wildlife protection
+D. Satellite tracking
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q45. The Silent Valley forests were subjected to forestry operations during which period?
+A. 1970s to 1980s
+B. 1914 to 1928
+C. 1927 to 1976
+D. 1985 onwards
+Correct Answer: C
 Difficulty: Hard
+Source PPT: Unit 7_Environmental movements and awareness.pdf
 
-Unit: 5
-CO: CO5
-Q85. In a VAE, if the latent dimension is 2, what allows us to visualize the generation capabilities?
-A. Plotting the loss curve.
-B. Traversing the 2D latent plane (grid walk) and decoding points.
-C. Checking the accuracy.
-D. Using a confusion matrix.
+Q46. The organization that first initiated the Silent Valley Movement and subsequently published a techno-economic and socio-political assessment report was the:
+A. Indian Council of Agricultural Research ($\text{ICAR}$)
+B. Kerala Sastra Sahitya Parishad ($\text{KSSP}$)
+C. Kerala State Electricity Board ($\text{KSEB}$)
+D. Birdlife International
 Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q86. Transformers revolutionized Generative AI primarily because of:
-A. The use of Convolutional layers.
-B. The Self-Attention mechanism allowing parallel processing of sequences.
-C. The use of Sigmoid activations.
-D. Small model sizes.
-Correct Answer: B
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf,
 
-Unit: 5
-CO: CO5
-Q87. Code: `tf.keras.layers.GaussianNoise(0.1)(x)` is commonly used in:
-A. Basic Autoencoders
-B. Denoising Autoencoders (at input)
-C. The output layer of a Classifier
-D. The loss function
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q88. Calculate the number of output neurons needed for a decoder generating an RGB image of size 64x64.
-A. 4096
-B. 12288
-C. 64
-D. 3
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q89. Which component in a GAN is analogous to an "Art Forger"?
-A. Discriminator
-B. Generator
-C. Loss function
-D. Optimizer
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 5
-CO: CO5
-Q90. Which component in a GAN is analogous to an "Art Critic"?
-A. Discriminator
-B. Generator
-C. Latent Vector
-D. Activation Function
+Q47. The Silent Valley National Park was formally inaugurated on which date?
+A. September 7, 1985
+B. November 15, 1983
+C. 1914
+D. 1979
 Correct Answer: A
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
 
-Unit: 5
-CO: CO5
-Q91. What is "Posterior Collapse" in VAEs?
-A. The decoder ignores the latent code and generates generic data.
-B. The encoder outputs NaNs.
-C. The discriminator overpowers the generator.
-D. The training loss becomes negative.
-Correct Answer: A
-Type: Theory
+Q48. Which principle of environmental ethics focuses on the requirement that all living things must have access to enough resources to survive and thrive?
+A. Justice
+B. Sustainability
+C. Sufficiency
+D. Solidarity
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q49. The ethical principle of **Justice** is in play because it supports the requirement to properly balance the interests of the current generation with those of:
+A. The affluent community
+B. The government and agencies
+C. Future generations
+D. Non-human parties
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q50. The ethical principle of **Sufficiency** is expanded by which related principle to include the entire planet?
+A. Justice
+B. Sustainability
+C. Compassion
+D. Participation
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q51. The principle of **Participation** requires us to acknowledge that every party, human and non-human, that may be impacted by a decision has a right to participate in what process?
+A. The planning of resource allocation
+B. The process of decision making
+C. The definition of environmental ethics
+D. The calculation of resource sufficiency
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q52. Which religion emphasizes that the Supreme God has absolute sovereignty over all creatures and that human beings have no dominion over other creatures?
+A. Buddhism
+B. Jainism
+C. Hinduism
+D. Sikhism
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q53. According to Hindu scriptures, what rights do all lives possess?
+A. Dominion over nature
+B. The right to absolute sovereignty
+C. The same right to existence
+D. The right to exploit nature
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q54. The basic tenets of Buddhism are listed as simplicity and what other key principle?
+A. Compassion
+B. Ahimsa
+C. Justice
+D. Solidarity
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q55. In Buddhism, which specific text set down rules forbidding the pollution of rivers, ponds, and wells?
+A. Theory of Karma
+B. Sutta-Nipata
+C. Guru Granth Sahib
+D. Holy Qur'an
+Correct Answer: B
 Difficulty: Hard
+Source PPT: Unit 7_Environmental movements and awareness.pdf
 
-Unit: 5
-CO: CO5
-Q92. For a latent vector `z` of shape (Batch, 100), which layer is best suited to reshape it for the start of a Conv2DTranspose generator?
-A. `Flatten`
-B. `Dense` followed by `Reshape`
-C. `MaxPooling2D`
-D. `Dropout`
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q93. If a Dense layer has 10 inputs and 5 outputs, the weight matrix shape is:
-A. (10, 5)
-B. (5, 10)
-C. (10, 1)
-D. (5, 5)
-Correct Answer: A
-Type: Numerical
+Q56. Which religion places great emphasis on the principle that one should reprise from avoidable acts that are harmful to oneself or others?
+A. Islam
+B. Sikhism
+C. Jainism
+D. Hinduism
+Correct Answer: C
 Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
 
-Unit: 5
-CO: CO5
-Q94. Which of these is an example of an "Implicit Density" model?
-A. VAE (approximates density)
-B. GAN (does not explicitly define density function)
-C. PixelRNN
-D. Gaussian Mixture Model
-Correct Answer: B
-Type: Theory
-Difficulty: Hard
-
-Unit: 5
-CO: CO5
-Q95. In text generation with Transformers, what is "temperature"?
-A. A parameter that controls the randomness of predictions (higher = more random).
-B. The heat generated by the GPU.
-C. The learning rate schedule.
-D. The number of attention heads.
-Correct Answer: A
-Type: Theory
+Q57. The Jain way of bringing environmental harmony is achieved by being benevolent towards all living organisms, compassionate for the weak, tolerant of the insolent, and joyful at which kind of person?
+A. The powerful
+B. The wealthy
+C. The virtuous
+D. The affluent
+Correct Answer: C
 Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
 
-Unit: 5
-CO: CO5
-Q96. Code Debug: The following VAE loss returns an error. Why?
-```python
-def vae_loss(y_true, y_pred):
-    recon = mse(y_true, y_pred)
-    # kl_loss is calculated globally
-    return recon + kl_loss
-```
-A. Keras losses must accept exactly two arguments (y_true, y_pred) and return a tensor per sample.
-B. You cannot add losses.
-C. MSE is not supported.
-D. No error.
-Correct Answer: A
-Type: Code
-Difficulty: Hard
-
-Unit: 5
-CO: CO5
-Q97. What is the output shape of `Conv2DTranspose(32, (3,3), strides=(2,2), padding='same')` applied to input `(16, 16, 64)`?
-A. (8, 8, 32)
-B. (32, 32, 32)
-C. (16, 16, 32)
-D. (32, 32, 64)
+Q58. According to Sikhism, Guru Nanak assigned which attributes to nature?
+A. Necessary limits
+B. Divine attributes
+C. Integral part
+D. Trustee role
 Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q98. A "U-Net" architecture, often used in diffusion models and segmentation, is essentially:
-A. A GAN.
-B. An Autoencoder with skip connections between encoder and decoder levels.
-C. A standard CNN classifier.
-D. A Recurrent Neural Network.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 5
-CO: CO5
-Q99. What is the purpose of `noise = tf.random.normal([batch_size, 100])` in a GAN training loop?
-A. To add regularization to weights.
-B. To serve as the input seed for the Generator to create fake images.
-C. To corrupt the real images for the Discriminator.
-D. To initialize the biases.
-Correct Answer: B
-Type: Code
 Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
 
-Unit: 5
-CO: CO5
-Q100. Which type of Autoencoder learns to map inputs to a binary code (0s and 1s)?
-A. Variational Autoencoder
-B. Semantic Hashing / Binary Autoencoder
-C. Denoising Autoencoder
-D. Linear Autoencoder
+Q59. The Guru Granth Sahib proclaims the glory of God in which context?
+A. In the cities and factories
+B. In nature and the environment
+C. In the three precepts of Jainism
+D. In the five pillars of Islam
 Correct Answer: B
-Type: Theory
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q60. According to Islam, which entity is considered the owner of the land, while mankind is designated as the trustee or guardian?
+A. Prophet Mohammed
+B. Allah
+C. Nature
+D. The Imam
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q61. What is the role assigned to other living creatures according to Islam, given that mankind is the trustee of the land?
+A. Owners
+B. Guardians
+C. Beneficiaries
+D. Sovereign
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q62. Indian tradition considered the earth in which specific metaphorical role?
+A. Guardian
+B. Trustee
+C. Mother
+D. Beneficiary
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q63. Indian culture describes rivers using which specific term?
+A. Divine attributes
+B. Lokamata
+C. Mother Earth
+D. Sustainable source
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q64. Indian culture articulated the need to sustain ecological balances through sacred incarnations and systematized how many rituals for the sustenance of life on Earth?
+A. 3
+B. 7
+C. 52
+D. 290
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q65. The cultural lessons applied by Indians operated at two levels: relationship between society and nature, and relationship between which other entities?
+A. Between the affluent and the poor
+B. Between people within the society
+C. Between the city and the forest
+D. Between the trustees and beneficiaries
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q66. The concept of renewability and sustainability in Indian culture is based on the recognition that sustenance comes from the forest, not from:
+A. Man made cities
+B. The fields
+C. The rivers
+D. The sacred incarnations
+Correct Answer: A
 Difficulty: Hard
+Source PPT: Unit 7_Environmental movements and awareness.pdf,
+
+Q67. The Chipko protests spread over the next five years (after April 1973) to many districts of the Himalaya in which specific state?
+A. Uttarakhand
+B. Rajasthan
+C. Uttar Pradesh
+D. Kerala
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q68. Which prominent Chipko figure fostered locally-based industries?
+A. Sunderlal Bahuguna
+B. Indira Gandhi
+C. Amrita Devi
+D. Chandi Prasad Bhatt
+Correct Answer: D
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q69. Silent Valley is identified as a region with high biodiversity and an important Gene Pool resource for Recombinant DNA innovations by which organization?
+A. KSEB
+B. KSSP
+C. ICAR (India)
+D. Birdlife International
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q70. In 1986, the Silent Valley National Park was designated as the core area of which specific reserve?
+A. Kerala Reserve Forest
+B. Palakkad Reserve
+C. Nilgiri Biosphere Reserve
+D. Chamoli District Reserve
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q71. According to the sufficiency principle, what action should no one perform with resources meant for everyone's sufficiency?
+A. Conserve or participate
+B. Waste or hoard
+C. Sustain or renew
+D. Utilize or transform
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q72. According to Buddhism, what belief system teaches that man should not over exploit the natural resources?
+A. Theory of Karma
+B. Principle of Ahimsa
+C. Principle of simplicity based on sustainability
+D. Theory of cause and effect
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q73. What is the fundamental tenet of the Jain way of life that is allied with realism, common sense, personal worth, and responsibility?
+A. Right conduct
+B. Ahimsa (non-violence)
+C. Right belief
+D. Compassion for the weak
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q74. In Sikhism, what is necessary for the continuation of the universe, the disruption of which brings distress and disaster?
+A. Divine attributes
+B. The five virtues
+C. A balance between all the elements of nature
+D. The eternal truth regarding their place
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q75. The Holy Qur’an declares that everything is created from which element?
+A. Earth
+B. Water
+C. Fire
+D. Air
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q76. Global warming is extremely likely to have been dominated by human influence since what period?
+A. Since 1750
+B. Since the mid-20th century
+C. Since 1998
+D. Since the Industrial Revolution
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 5.pdf
+
+Q77. The greenhouse effect is the process by which absorption and emission of infrared radiation by gases in a planet's atmosphere performs which action?
+A. Splits oxygen molecules ($\text{O}_2$)
+B. Cools the upper atmosphere
+C. Warms its lower atmosphere and surface
+D. Increases volcanic activity
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q78. In the context of global warming causes, random changes in global temperatures generated by the climate system itself typically last for what duration?
+A. Decades to centuries
+B. For years to decades at a time
+C. Only during the mid-20th century
+D. 500 years
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 5.pdf
+
+Q79. Which specific kind of damage can be caused by excessive exposure to UV-B radiation?
+A. Sunburn
+B. Genetic damage
+C. Melting glaciers
+D. Ocean acidification
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q80. The Bishnois are considered the first environmentalists of India because they are categorized as:
+A. Gandhian activists
+B. Born nature lovers
+C. Resource trustees
+D. Wildlife beneficiaries
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q81. What is the definition of **Ethical Standards**?
+A. The study of ethical questions regarding human interactions with the environment
+B. The study of good and bad, right and wrong
+C. Criteria that help differentiate right from wrong
+D. A set of beliefs advocated by the Bishnoi community
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q82. Which core principle pairing of environmental ethics links inequitable access to resources (clean food, air, water) with concern for the well-being of animals?
+A. Sufficiency and compassion
+B. Justice and sustainability
+C. Solidarity and participation
+D. Right belief and right conduct
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q83. Which specific organism in Silent Valley is cited as the largest of all wild cattle?
+A. Cicadas
+B. Moths
+C. Gaur
+D. Butterflies
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q84. What is the fundamental idea that motivates concern for the well-being of animals under the principle of Justice?
+A. Sustainability
+B. Fairness
+C. Compassion
+D. Sufficiency
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q85. Which compound, besides $\text{CFCs}$, $\text{HCFCs}$, and $\text{Halons}$, is listed as an ozone-depleting substance?
+A. Carbon dioxide
+B. Methyl bromide
+C. $\text{CO}_2$
+D. Nitrous oxide
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q86. What is the major consequence of pollution listed immediately after the general list of consequences?
+A. Global warming
+B. Ozone depletion
+C. Acid rain
+D. Changing precipitation
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q87. The second lesson of Indian culture, based on renewability and sustainability, recognizes that sustenance comes from the fields, not from which source?
+A. The forest
+B. Factories
+C. Rivers
+D. Man made cities
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q88. Which specific gases are listed as being at the origin of acid rains due to human activities?
+A. Sulphur dioxide, Carbon dioxide, and Nitrogen oxide
+B. $\text{CO}_2$, $\text{CH}_4$, and $\text{N}_2\text{O}$
+C. Halons, $\text{CFCs}$, and Methyl chloroform
+D. Atomic oxygen and $\text{O}_2$
+Correct Answer: A
+Difficulty: Medium
+Source PPT: Unit 5.pdf
+
+Q89. What percentage increase is cited for Methane ($\text{CH}_4$) concentration since 1750?
+A. 36%
+B. 148%
+C. 15%
+D. 30%
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q90. Which religious tradition requires adherents to seek peace and live in harmony with nature and forbids exploitation of nature?
+A. Jainism
+B. Islam
+C. Hinduism
+D. Buddhism
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q91. What caused the white marble of the famous monument to begin turning yellow, as observed in 1998?
+A. Solar activity
+B. Wind erosion
+C. Acid rain (Rain + Nitric acid + Sulphuric acid)
+D. Particulate matter deposition
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 5.pdf
+
+Q92. What natural factor is listed as having affected climate but is defined as involving the curvature/ellipticity of Earth's path around the Sun?
+A. Latitude
+B. Evaporation
+C. Orbital Variations
+D. Topography
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q93. The Silent Valley forest area was declared a Reserve Forest in which year?
+A. 1973
+B. 1914
+C. 1983
+D. 1979
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q94. According to environmental ethics, humans have a duty to take action to ensure the requirements of other creatures, plants, and the elements are met, based on the expansion of which ethical principle?
+A. Justice
+B. Solidarity
+C. Sufficiency
+D. Sustainability
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q95. The need for **Solidarity** drives us to the principle of **Participation** in order to prevent decisions being made without awareness from whom?
+A. The government and agencies
+B. Those who would be most impacted
+C. The affluent in society
+D. Future generations
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q96. The teachings of Buddhism concentrated on the theory of Karma and which other key theory to demonstrate that neglect of principles of right living leads to crisis?
+A. Theory of Ahimsa
+B. Theory of cause and effect
+C. Theory of dominion
+D. Theory of sufficiency
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+### Multiple Correct MCQs (24 Total)
+
+Q97. Which factors are listed as affecting Earth's climate? (Choose ALL correct options)
+A. Latitude
+B. Topography
+C. Global Warming
+D. Volcanic Activity
+Correct Answers: A, B, C, D
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q98. Which gases are listed as Greenhouse Gases that have increased in the atmosphere due to human activity since the Industrial Revolution? (Choose ALL correct options)
+A. $\text{CO}_2$
+B. Methane
+C. Tropospheric ozone
+D. Nitrogen oxide
+Correct Answers: A, B, C, D
+Difficulty: Easy
+Source PPT: Unit 5.pdf,
+
+Q99. Which gases are listed as being at the origin of acid rains due to human activities? (Choose ALL correct options)
+A. Sulphur dioxide
+B. Carbon dioxide
+C. Nitrogen oxide
+D. Methane
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 5.pdf
+
+Q100. What consequences can acid rains have on the environment? (Choose ALL correct options)
+A. Water
+B. Ground
+C. Materials
+D. Plants
+Correct Answers: A, B, C, D
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q101. Which substances are listed as potentially causing the depletion of ozone in the stratosphere? (Choose ALL correct options)
+A. $\text{CFCs}$
+B. Halons
+C. Methyl chloroform
+D. $\text{N}_2\text{O}$
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 5.pdf,
+
+Q102. What measures are suggested for individuals to implement a lifestyle change to combat climate change? (Choose ALL correct options)
+A. Conserve Hot Water
+B. Conserve in the Car
+C. Conserve Electricity
+D. Reduce waste
+Correct Answers: A, B, C, D
+Difficulty: Easy
+Source PPT: Unit 5.pdf
+
+Q103. Which compounds are listed under the Montreal Protocol for mandatory phase-out? (Choose ALL correct options)
+A. Chlorofluorocarbons ($\text{CFCs}$)
+B. Halons
+C. Carbon tetrachloride
+D. Methyl bromide
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 5.pdf,
+
+Q104. What are the anthropogenic sources cited for Methane ($\text{CH}_4$)? (Choose ALL correct options)
+A. Fossil fuel burning
+B. Rice cultivation
+C. Cattle and sheep ranching
+D. Decay from landfills
+Correct Answers: B, C, D
+Difficulty: Medium
+Source PPT: Unit 5.pdf
+
+Q105. According to the source, what were the consequences for Amrita Devi’s family when they protested the tree cutting? (Choose ALL correct options)
+A. Her three daughters (Asu, Ratni, and Bhagu) stood by their mother.
+B. They stood against the soldiers and fought for the life of trees.
+C. They convinced the King to issue a ban on felling.
+D. They laid down their lives for the protection of trees.
+Correct Answers: A, B, D
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf,
+
+Q106. Which were the major objectives of the Bishnoi Movement? (Choose ALL correct options)
+A. Conservation of bio-diversity
+B. Promoting personal hygiene
+C. Advocacy against cutting of trees
+D. Preservation of animal husbandry
+Correct Answers: A, B, C, D
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf,
+
+Q107. Which groups were identified as the primary leaders and activists of the decentralized and autonomous Chipko Movement initiatives? (Choose ALL correct options)
+A. Village women
+B. Village men
+C. Contractors
+D. Government scientists
+Correct Answers: A, B
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q108. Which specific types of wildlife are cited as residing in Silent Valley? (Choose ALL correct options)
+A. Gaur (largest wild cattle)
+B. Threatened species of mammals
+C. Over 128 species of butterflies
+D. Over 400 species of moths
+Correct Answers: A, B, C, D
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf,
+
+Q109. Which actions were taken by the Government of Kerala regarding Silent Valley in 1979? (Choose ALL correct options)
+A. Passed legislation (Protection of Ecological Balance Act)
+B. Identified Sairandhri as an ideal site for electricity
+C. Issued a notification excluding the hydroelectric project area from the proposed national park
+D. Declared the forest a Reserve Forest
+Correct Answers: A, C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q110. Which are the three main pairings of principles identified in Environmental Ethics? (Choose ALL correct options)
+A. Justice and sustainability
+B. Sufficiency and compassion
+C. Solidarity and participation
+D. Ahimsa and non-violence
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q111. The principle of **Justice and sustainability** addresses which concerns? (Choose ALL correct options)
+A. Inequitable access to environmental resources
+B. Concern for the well-being of animals
+C. Compromising the ability of future generations to meet their needs
+D. Ensuring sufficiency for all living things
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q112. The principle of **Ahimsa** in Buddhism demonstrates which aspects? (Choose ALL correct options)
+A. Simplicity based on sustainability
+B. Non-violence of not killing the animals
+C. Love for fauna
+D. Emphasis on right belief and knowledge
+Correct Answers: B, C
+Difficulty: Medium
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q113. According to Jainism, environmental harmony through spirituality should be pursued by adhering to which three precepts? (Choose ALL correct options)
+A. The right belief
+B. The right knowledge
+C. The right conduct
+D. The principle of Ahimsa
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q114. Which details are cited regarding the Chipko movement's introduction history? (Choose ALL correct options)
+A. Birth place was Gopeshwar in District Chamoli
+B. Started in 1973
+C. Name originated from the word ‘embrace’ or ‘Hugging’
+D. First action took place in Reni village in March 1974
+Correct Answers: A, B, C, D
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q115. Which phenomena are listed as highly respected and regarded as bliss bestowers by Buddhists? (Choose ALL correct options)
+A. Rivers
+B. Forests
+C. Mountains
+D. Sun, Moon and other planets
+Correct Answers: A, B, C, D
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf
+
+Q116. Which health problems are cited as likely changes resulting from increasing global temperatures? (Choose ALL correct options)
+A. Species extinctions due to shifting temperature regimes
+B. Ocean acidification
+C. More frequent droughts
+D. Continuing retreat of sea ice
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 5.pdf,
+
+Q117. What evidence sources are cited for the widespread melting away of glaciers? (Choose ALL correct options)
+A. Agassiz Glacier, Montana, in 1913
+B. Agassiz Glacier, Montana, in 2015
+C. Retreat of glaciers in the Arctic
+D. Retreat of permafrost
+Correct Answers: A, B
+Difficulty: Medium
+Source PPT: Unit 5.pdf,
+
+Q118. Which components listed in the sources can act as dry or humid deposits that can influence the impact of acid rains? (Choose ALL correct options)
+A. Natural phenomena
+B. Human activities
+C. Chemical substances
+D. Stratospheric clouds
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 5.pdf
+
+Q119. What specific conditions related to the polar stratosphere contribute to the rapid destruction of atmospheric ozone over Antarctica each spring? (Choose ALL correct options)
+A. A vortex of winds develops around the pole isolating the stratosphere
+B. Temperatures drop below $-78^\circ\text{C}$
+C. Thin clouds form of ice, nitric acid, and sulphuric acid mixtures
+D. Chemical reactions on the surfaces of ice crystals release active forms of $\text{CFCs}$
+Correct Answers: A, B, C, D
+Difficulty: Medium
+Source PPT: Unit 5.pdf,
+
+Q120. Which concepts define the basis of the Indian cultural lessons applied to the relationship between society and nature? (Choose ALL correct options)
+A. Peace to all elements of nature and mankind
+B. Harmony between elements of nature
+C. Ecoculturally socialized society
+D. Renewability and sustainability
+Correct Answers: A, B, C, D
+Difficulty: Easy
+Source PPT: Unit 7_Environmental movements and awareness.pdf,,
