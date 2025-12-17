@@ -1,1121 +1,1082 @@
-Unit: 3
-CO: CO3
-Q1. Which statement best describes the primary advantage of using a Long Short-Term Memory (LSTM) network over an elementary Recurrent Neural Network (RNN) for multi-class text classification tasks?
-A. LSTMs are simpler and faster to train on short texts.
-B. LSTMs exclusively use convolutional filters to capture word relationships.
-C. LSTMs utilize specialized "gates" to mitigate the vanishing gradient problem, allowing them to retain context over very long sequences.
-D. LSTMs process sequential data (text) by treating the order of words as irrelevant.
-Correct Answer: C
-Type: Theory
+Q1. A nonrenewable resource is defined as a natural resource that cannot be re-made or re-grown at a scale comparable to its consumption, indicating that it is:
+A. Extracted slower than the rate at which it formed
+B. Exhaustible and extracted faster than its formation rate
+C. Continuously supplied, but finite in quantity
+D. Similar to a mythical source of energy that never runs out
+Correct Answer: B
 Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q2. What is the fundamental step in the Text Preprocessing phase where raw text is broken down into smaller manageable units like words or punctuation symbols?
-A. Stemming.
-B. Lemmatization.
-C. Tokenization.
-D. Vectorization.
+Q2. What is the fundamental characteristic of renewable energy sources, as described in the source material?
+A. They require special panels for capturing energy
+B. Their supply will eventually run out
+C. They are like a magic trick because they keep on coming and never run out
+D. They are used primarily for heating homes and generating electricity
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q3. In the typical NLP pipeline for building a sentiment classification model, what immediate output is produced after the "Model" phase?
-A. The raw corpus text (string).
-B. A preprocessed list of stopwords.
-C. A set of weights representing word embeddings.
-D. A prediction (e.g., positive or negative class label).
+Q3. Coal is often referred to as "the dirty fuel" due to the release of hazardous substances upon burning, including:
+A. Methane, Carbon Monoxide, and fine dust
+B. Nitrogen oxides, sulphur dioxide, and minute particles
+C. Carbon Dioxide, Carbon Monoxide, and steam
+D. Methane, nitrogen oxides, and waste ash
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q4. Which major greenhouse gas is released in large amounts during coal burning, contributing significantly to climate change by trapping heat in the atmosphere?
+A. Methane ($\text{CH}_4$)
+B. Sulphur Dioxide ($\text{SO}_2$)
+C. Nitrogen Oxide ($\text{NO}$)
+D. Carbon Dioxide ($\text{CO}_2$)
 Correct Answer: D
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q4. Consider a simple scenario for Term Frequency (TF) calculation where Document A contains: "The cat sat on the cat." Using the raw count method for $f_{t,d}$, what is the TF value for the term "cat" in Document A?
-A. 1.
-B. 2.
-C. 5.
-D. 0.4.
-Correct Answer: B
-Type: Numerical
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q5. Which issue, common in basic RNNs, is primarily mitigated by the enhanced memory capabilities (gates) of Long Short-Term Memory (LSTM) networks, particularly when processing long texts?
-A. Overfitting to training data.
-B. Exploding activation functions.
-C. Vanishing gradients, leading to "forgetting" earlier words.
-D. Arbitrary integer encoding.
+Q5. What is the significant environmental impact associated with the necessity of acquiring coal, as mentioned in the source material?
+A. Release of potent greenhouse gases during transportation
+B. Accumulation of difficult-to-control ash and other waste products
+C. Excavating the entire surface of the planet and clearing huge mountains or forests
+D. The depletion of a finite resource leading to geopolitical tensions
 Correct Answer: C
-Type: Theory
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q6. Which text preprocessing step involves converting characters to a uniform case (e.g., lowercase) and removing special characters or numbers from the tokens?
-A. Lemmatization.
-B. Standardization and Cleansing.
-C. N-gram generation.
-D. Inverse Document Frequency calculation.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q7. A common real-world application of NLP in the insurance industry involves analyzing claims for patterns. What is the primary benefit this provides?
-A. Detecting financial market risks.
-B. Automating information extraction and detecting fraud indicators in claims management.
-C. Virtual therapy support.
-D. Generating marketing copy.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q8. In the formula for Term Frequency-Inverse Document Frequency (TF-IDF), $tfidf(t, d, D) = tf(t, d) \cdot idf(t, D)$, what is the primary purpose of the $idf(t, D)$ component?
-A. To measure the raw count of term $t$ in document $d$.
-B. To ensure words are assigned unique integer encodings.
-C. To measure how common or rare term $t$ is across the entire corpus $D$.
-D. To convert the term $t$ to its root form.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q9. The process of converting words like "running," "ran," and "runs" to the base form "run" is called:
-A. Tokenization.
-B. Stop word removal.
-C. Stemming or Lemmatization.
-D. Feature Extraction.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q10. A model is defined using the following Keras layers. If the `vocab_size` is 10,000, `sequence_length` is 100, and `embedding_dim` is 16, what is the exact output shape of the `Embedding` layer?
-
-```python
-model = Sequential([
-    Embedding(vocab_size, embedding_dim),
-    GlobalAveragePooling1D(),
-    Dense(1)
-])
-```
-A. (None, 16).
-B. (None, 100).
-C. (None, 100, 16).
-D. (None, 100, 10000).
-Correct Answer: C
-Type: Code
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q11. What conceptual issue does the TF-IDF measure attempt to solve regarding term importance in a document?
-A. High-frequency terms (like "the") should be filtered out entirely (like stop words).
-B. The importance of a word should be proportional to its frequency only within a single document.
-C. Terms that appear frequently in specific documents but are rare across the entire corpus should have a high weight.
-D. Term importance must always be represented by a dense, floating-point vector.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q12. In the KerasNLP architecture for a BERT Classifier, what primary role does the `BertPreprocessor` serve?
-A. It performs simple lowercasing and punctuation removal.
-B. It loads the ready-to-use pre-trained classification weights.
-C. It maps input strings to a dictionary of tensors by performing tokenization and additional preprocessing like padding.
-D. It calculates the classification loss and accuracy.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q13. The text preprocessing technique that reduces words to a valid dictionary form, often incorporating the word's part-of-speech, is called:
-A. Stemming.
-B. Lemmatization.
-C. Tokenization.
-D. Stop word removal.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q14. The Keras `TextVectorization` layer is utilized in the NLP pipeline for classification models. What essential function does this layer perform on the input text?
-A. It calculates the TF-IDF weight for every word.
-B. It transforms raw input strings into numerical integer indices corresponding to the vocabulary.
-C. It applies backpropagation to update the embedding weights.
-D. It ensures all input sequences have variable lengths.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q15. Why is the "one-hot encoding" approach inefficient for text representation, especially when dealing with large vocabularies?
-A. It fails to capture semantic relationships between words.
-B. The resulting vectors are dense, consuming excessive memory.
-C. The integer-encoding is arbitrary and hard to interpret.
-D. The resulting vectors are extremely sparse (mostly zeros) and high-dimensional.
+Q6. Oil is characterized as "liquid energy" and the energy industry's superpower for versatility because it is utilized for all of the following applications EXCEPT:
+A. Fueling aircraft
+B. Heating houses
+C. Powering cars and trucks
+D. Generating electricity using geothermal reservoirs
 Correct Answer: D
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q16. If a corpus $D$ consists of two documents, $D_1$ and $D_2$, and the term "this" appears in both documents ($n_t=2$). Using the standard $idf(t, D) = \log(N/n_t)$ formula (where $N=2$), what is the $idf$ value for the term "this"?
-A. $\log(2)$.
-B. $\log(1/2)$.
-C. $0$.
-D. $1$.
-Correct Answer: C
-Type: Numerical
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf, Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q17. A Word Embedding is fundamentally a representation of a word, typically a real-valued vector, designed so that:
-A. Words are mapped to vectors based purely on their alphabetical order.
-B. Words closer in the vector space are expected to be similar in meaning.
-C. The vector space dimensionality must equal the vocabulary size.
-D. The vectors are manually specified before model training.
+Q7. What major environmental problem is primarily caused by the release of carbon dioxide ($\text{CO}_2$) and other air pollutants when burning oil?
+A. Geopolitical tensions
+B. Ecosystem harm from oil spills
+C. Climate change
+D. Disturbance of the environment through mining impact
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q8. Accidents during oil extraction or transportation can lead to oil spills, which severely harm ecosystems and primarily affect:
+A. Large mountains and forests
+B. Coastal communities and marine animals
+C. Heating and cooling systems
+D. Geothermal reservoirs
 Correct Answer: B
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q18. Which statement accurately captures the distinction between stemming and lemmatization?
-A. Stemming uses part-of-speech tagging; lemmatization does not.
-B. Lemmatization focuses on structural reduction; stemming focuses on dictionary roots.
-C. Stemming is faster but can produce non-dictionary root forms; Lemmatization is slower but ensures valid word roots by considering context.
-D. Both methods produce identical results, but lemmatization uses a larger stop list.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q19. In morphology and syntax, what term is used to describe a category (like Noun, Verb, Adjective) that acquires new lexical items frequently?
-A. Closed class.
-B. Open class.
-C. Fixed class.
-D. Valency class.
+Q9. What historical societal issue has frequently been fueled by the reliance on oil, comparable to arguments caused by a priceless gem?
+A. Academic dishonesty
+B. Geopolitical Tensions and violence
+C. Technological stagnation
+D. Agricultural limitations
 Correct Answer: B
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q20. When defining a Keras sequential model for binary text classification (e.g., positive/negative sentiment), which combination of the final Dense layer output shape and activation function is appropriate?
-A. Output shape (None, 2) with activation 'softmax'.
-B. Output shape (None, 1) with activation 'relu'.
-C. Output shape (None, 1) with activation 'sigmoid' (or no activation, using `from_logits=True` loss).
-D. Output shape (None, vocab_size) with activation 'tanh'.
-Correct Answer: C
-Type: Code
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q21. The "SocialGuard" study on Bangla gender identification found that traditional Machine Learning (ML) models often outperformed Deep Learning (DL) models when using TF-IDF features. What reason was attributed to DL models' relative underperformance in this specific context?
-A. DL models over-rely on syntactic features which are absent in Bangla text.
-B. DL models require smaller datasets, which introduces bias.
-C. DL models rely on weight-based categorization which exhibits underperformance when compared to the efficiency of SGD's linear decision boundaries.
-D. Traditional models were able to use much higher dimensional word embeddings.
-Correct Answer: C
-Type: Theory
-Difficulty: Hard
-
-Unit: 3
-CO: CO3
-Q22. Given a term "salad" which appears in 2 of Shakespeare's 37 plays, what is the Inverse Document Frequency ($idf$) measure using the formula $\log(N/df)$ (where $N=37$)?
-A. $idf = 0$.
-B. $idf = \log(37/37) = 0$.
-C. $idf = \log(37/2) \approx 1.27$.
-D. $idf = \log(37/4) \approx 0.966$.
-Correct Answer: C
-Type: Numerical
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q23. In the context of TF-IDF, what model does it use to represent a document?
-A. A directed acyclic graph (DAG) maintaining dependency relations.
-B. A multiset of words, disregarding word order (Bag-of-Words model).
-C. A dense vector of floating-point values capturing semantic similarity.
-D. A sequence-to-sequence model preserving temporal ordering.
+Q10. Natural gas is often viewed as a cleaner fuel compared to coal and oil because it:
+A. Does not produce any carbon dioxide ($\text{CO}_2$) emissions
+B. Emits fewer harmful pollutants
+C. Is not a finite resource
+D. Cannot leak methane during transport
 Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q24. In a Keras sequential model, an `Embedding` layer outputs a 3D tensor of shape `(None, 100, 16)` for a batch of input sequences. If this output is fed directly into a `GlobalAveragePooling1D()` layer, what will be the shape of the resulting tensor?
-A. (None, 100).
-B. (None, 1).
-C. (None, 16).
-D. (None, 100, 1).
-Correct Answer: C
-Type: Code
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q25. In the high-level architecture of the KerasNLP BertClassifier, which component is responsible for converting preprocessed tensors into dense features where the core calculation ("magic") happens?
-A. BertPreprocessor.
-B. BertTokenizer.
-C. BertClassifier `from_preset` method.
-D. BertBackbone.
-Correct Answer: D
-Type: Theory
+Q11. The environmental concern associated with the potential for leaks during natural gas extraction and transportation is related to the release of:
+A. Carbon Dioxide ($\text{CO}_2$), which is less potent than methane
+B. Sulphur Dioxide ($\text{SO}_2$), which causes acid rain
+C. Methane, which is a potent greenhouse gas
+D. Nitrogen Oxides ($\text{NO}_{\text{x}}$), which are invisible annoyances
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q12. How does the primary constituent of natural gas, methane, compare to $\text{CO}_2$ in terms of its effect on the environment?
+A. Methane traps heat less effectively than $\text{CO}_2$
+B. Methane is an inert gas and does not trap heat
+C. Methane traps heat even more effectively than $\text{CO}_2$
+D. Methane is released at a lower rate than $\text{CO}_2$ from all fossil fuels
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q13. Solar panels absorb sunlight and transform it into electricity using which tiny, enchanted components?
+A. Turbines
+B. Photovoltaic cells
+C. Solar cells
+D. Water wheels
+Correct Answer: C
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q26. The training phase of a model that automatically extracts, classifies, and labels elements of text/voice and assigns a statistical likelihood to each possible meaning is characteristic of which approach to NLP?
-A. Rules-based NLP.
-B. Statistical NLP.
-C. Generative AI.
-D. Dependency Parsing.
+Q14. The best feature of solar energy, described as its friendliness to the environment, is that it:
+A. Is available only in sunny deserts
+B. Produces lower rates of $\text{CO}_2$ than coal
+C. Does not produce any greenhouse gases or pollution
+D. Functions like a versatile multi-tool
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q15. In the long run, using solar energy can help consumers save money primarily because:
+A. It eliminates the need for any other energy sources
+B. Users can produce their own electricity and become less dependent on the expensive grid
+C. Solar panels can be used everywhere, regardless of climate
+D. Solar energy can be utilized to heat homes and fuel aircraft
 Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q27. The Stanford Large Movie Reviews Dataset, commonly used for sentiment classification tasks with deep learning models, is characterized by having movie reviews labeled with which type of class indicator?
-A. Named entities (PERSON, ORG).
-B. Dialogue act types (Question, Statement).
-C. Binary integers indicating positive or negative sentiment.
-D. Part-of-Speech tags.
-Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q28. A key challenge when using the traditional Bag-of-Words (BoW) representation is that:
-A. It fails to capture the frequency of words.
-B. It disregards the grammar and sequential ordering of words.
-C. It produces sparse vectors of very low dimensionality.
-D. It automatically groups synonyms, removing complexity.
+Q16. In the context of wind energy, what is the role of the generator inside the turbine?
+A. It cools down the atmosphere during hot weather
+B. It transforms wind energy into kinetic energy
+C. It produces electricity from spinning energy
+D. It channels the flow of water through the blades
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q17. Wind power is highly environmentally beneficial because it:
+A. Reduces reliance on natural gas leaks
+B. Does not emit toxic gases or cause pollution
+C. Requires clear-cutting huge mountains or forests
+D. Is utilized mostly for irrigation of farmland
 Correct Answer: B
-Type: Theory
-Difficulty: Medium
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q29. Which core component allows a Recurrent Neural Network (RNN) to handle sequential data like text by maintaining an internal state or "memory" from preceding tokens?
-A. Convolutional filtering.
-B. Looping back, remembering earlier words while reading new ones.
-C. Dropout regularization.
-D. Softmax activation.
+Q18. What collective term is used for a group of wind turbines put together that produces a lot of electricity?
+A. Wind cluster
+B. Wind matrix
+C. Wind farm
+D. Wind reservoir
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q19. Hydropower utilizes the force of moving water to generate electricity, which is similar to making a waterfall work its magic to:
+A. Stop the flow of rivers entirely
+B. Illuminate our environment
+C. Dig deep into the Earth's surface
+D. Function as a built-in thermostat
 Correct Answer: B
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q30. In the Bangla gender identification study, the researchers generated word embedding vectors of a dimension of 300 for each word from user posts. If a sentence is limited to 100 words, what is the output shape from the embedding layer (assuming batch size of 1)?
-A. (1, 100).
-B. (1, 300).
-C. (1, 100, 300).
-D. (1, 300, 100).
+Q20. In a hydropower system, large walls known as dams primarily serve to:
+A. Produce pollutants and greenhouse gases
+B. Transform the motion of the spinning wheel into heat
+C. Halt the flow of rivers and form large water reservoirs
+D. Power more than just automobiles
 Correct Answer: C
-Type: Numerical
 Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q31. The primary motivation for applying Inverse Document Frequency (IDF) when weighting terms in a corpus is to reduce the undue influence of:
-A. Extremely long documents.
-B. Terms that occur very infrequently.
-C. Terms that occur across almost all documents (common terms).
-D. Arbitrary integer encodings.
+Q21. Hydropower is referred to as one of the "greenest sources of energy" because it is a clean source that produces neither:
+A. Heat nor rotational motion
+B. Reservoirs nor dams
+C. Pollutants nor greenhouse gases
+D. Turbines nor water wheels
 Correct Answer: C
-Type: Theory
-Difficulty: Medium
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q32. A data scientist is setting up an NLP pipeline for recruiting. Which of the following is a key application area in HR that leverages NLP?
-A. Analyzing earnings calls for stock prediction.
-B. Automatically screening resumes and matching candidates to job requirements.
-C. Extracting clinical notes for computational phenotyping.
-D. Identifying fraudulent transactions.
+Q22. Geothermal energy is generated by drawing heat from the Earth, which originates from the:
+A. Surface wind patterns
+B. Molten rock and magma deep down
+C. Flow of surface rivers
+D. Atmospheric carbon dioxide
 Correct Answer: B
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q33. What is the key advantage of Word Embeddings over a simple integer encoding approach for representing words?
-A. Word Embeddings are sparse, saving memory.
-B. Word Embeddings are manually specified, ensuring high precision.
-C. Word Embeddings encode semantic meaning such that similar words have similar dense vector representations.
-D. Word Embeddings are always 8-dimensional, simplifying model design.
+Q23. What forms deep under the surface as heat rises from the Earth's core, which are then accessible through wells to utilize geothermal energy?
+A. Natural gas reservoirs
+B. Large water reservoirs
+C. Reservoirs of hot water and steam
+D. Methane deposits
 Correct Answer: C
-Type: Theory
 Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q34. If an input batch is passed to a Keras `Embedding` layer with shape `(32, 10)` (32 samples of length 10), and the embedding dimension is 64, what will be the output shape?
-A. (32, 64).
-B. (32, 10).
-C. (10, 64).
-D. (32, 10, 64).
-Correct Answer: D
-Type: Code
-Difficulty: Hard
-
-Unit: 3
-CO: CO3
-Q35. When pre-processing text for a sequence model in Keras, using `padding='post'` with `tf.keras.preprocessing.sequence.pad_sequences` ensures that:
-A. Sequences are truncated from the start if they exceed maximum length.
-B. Sequences are padded with zero values at the beginning if they are shorter than maximum length.
-C. Sequences are padded with zero values at the end if they are shorter than maximum length.
-D. Sequences are automatically normalized to floating-point values.
+Q24. Which of the following is listed as the only reproducible resource in a pencil?
+A. Graphite
+B. Clay
+C. The wood
+D. Zinc and copper
 Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q36. What is the typical effect of applying the `Dropout` layer (e.g., `Dropout(0.2)`) during the training phase of a Deep Learning model like an LSTM classifier?
-A. It speeds up the training process by optimizing the learning rate.
-B. It increases the dimensionality of the model's output.
-C. It helps prevent the model from overfitting to the training data.
-D. It converts the output to a sparse matrix.
-Correct Answer: C
-Type: Code
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q37. The "curse of dimensionality" is often cited as a challenge when working with Bag-of-Words (BoW) models primarily because:
-A. The number of terms (dimensions) often exceeds the number of documents, leading to high-dimensional and sparse representations.
-B. The models require semantic labels that are themselves complex vectors.
-C. The models cannot handle sequential data.
-D. The computational cost of word embeddings is too high.
+Q25. What two materials are used to manufacture the zipper on jeans?
+A. Iron and chromium
+B. Petroleum and synthetic fibers
+C. Copper and zinc
+D. Mercury and silver
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q26. Videotapes are specified to be made of which combination of elements?
+A. Iron and chromium
+B. Quartz and petroleum
+C. Copper and zinc
+D. Mercury and silver
 Correct Answer: A
-Type: Theory
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q27. The large amount of pollutants released into the air when burning coal may result in which specific environmental consequence?
+A. A rise in the Earth's internal temperature
+B. The ecosystem becoming less healthy
+C. The disturbance of coastal communities
+D. Severe harm to marine animals
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q28. Despite being considered a cleaner choice among non-renewable sources, natural gas is still problematic because:
+A. It emits more harmful pollutants than coal
+B. It is a finite resource
+C. It generates electricity at a lower rate than coal or oil
+D. It contributes to geopolitical tensions
+Correct Answer: B
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q38. Which phase in the typical NLP pipeline involves feeding the processed data into a machine learning model which adjusts its parameters to minimize errors and improve performance on unseen data?
-A. Text Preprocessing.
-B. Feature Extraction.
-C. Model Training.
-D. Semantic Analysis.
-Correct Answer: C
-Type: Theory
+Q29. Which description best reflects the rate at which non-renewable resources are consumed relative to their formation?
+A. Extracted at a comparable scale to formation
+B. Consumed faster than the rate at which they formed
+C. Consumed slower than the rate at which they formed
+D. Re-made or re-grown perpetually
+Correct Answer: B
 Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q39. What are N-grams?
-A. Random vectors used to initialize embedding layers.
-B. Arbitrary integer indices assigned to words.
-C. Consecutive word sequences (tokens) of length $n$.
-D. Specialized gates within an LSTM network.
-Correct Answer: C
-Type: Theory
+Q30. Solar panels convert solar energy into electrical energy, which can be utilized for:
+A. Fuelling aircraft
+B. Heating water
+C. Generating methane
+D. Producing synthetic fibers
+Correct Answer: B
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q40. A Keras model layer is defined as: `tf.keras.layers.Dense(3, activation='softmax')`. What is the intended output for a multi-class text classification task (e.g., classifying text into "positive," "neutral," or "negative" sentiment)?
-A. A binary prediction (0 or 1).
-B. A single floating point value.
-C. A vector of 3 probabilities summing to 1, indicating class likelihood.
-D. The raw text sequence.
-Correct Answer: C
-Type: Code
+Q31. Geothermal energy is considered a sustainable source because it is:
+A. The result of burning clean fossil fuels
+B. A never-ending source of heat from the Earth
+C. Limited to sunny desert locations
+D. Utilized primarily in water reservoirs
+Correct Answer: B
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q41. Transformer models, unlike sequence-to-sequence RNNs, rely on what core mechanism to capture dependencies and relationships between different parts of a sequence?
-A. Convolutional filtering.
-B. Logarithmic frequency scaling.
-C. Tokenization and self-attention.
-D. Random indexing.
+Q32. In the context of Earth's resources, the dye in all fabrics mentioned in the source material comes from:
+A. Graphite
+B. Quartz
+C. Petroleum
+D. Copper
 Correct Answer: C
-Type: Theory
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q33. What feature of coal burning traps heat in the atmosphere, leading to the Earth's temperature rising?
+A. The volume of ash and waste left behind
+B. The large amounts of $\text{CO}_2$ emissions
+C. The clearing of forests during mining
+D. The release of methane during extraction
+Correct Answer: B
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q42. In the Inverse Document Frequency formula $idf(t, D) = \log(N/n_t)$, what does the variable $n_t$ represent?
-A. The total number of terms in the document.
-B. The frequency of term $t$ in a specific document $d$.
-C. The total number of unique terms (vocabulary size) in the corpus.
-D. The number of documents where the term $t$ appears.
+Q34. Compared to coal or oil, the burning of natural gas produces $\text{CO}_2$ at what rate?
+A. A higher rate
+B. An incomparable rate
+C. An equal rate
+D. A lower rate
 Correct Answer: D
-Type: Numerical
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q43. When a specialized model (e.g., a Bigram Tagger) cannot determine a tag for a given context, NLP systems often resort to a procedure that falls back on a more general model (e.g., a Unigram Tagger). What is this procedure called?
-A. Smoothing.
-B. Pruning.
-C. Backoff.
-D. Recursive Descent.
-Correct Answer: C
-Type: Theory
+Q35. What is the fundamental difference between using non-renewable energy and using renewable energy, as implied by the source material?
+A. Non-renewable energy is like depleting a finite resource, while renewable energy is a mythical source that never runs out
+B. Non-renewable energy is highly versatile, while renewable energy is only used for electricity generation
+C. Non-renewable energy contributes to climate change, while renewable energy always requires drilling deep wells
+D. Non-renewable energy burns cleanly, while renewable energy sources are often pollutants
+Correct Answer: A
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q44. Which Keras layer is typically placed after an `Embedding` layer, especially in models dealing with variable-length input sequences, to produce a fixed-length output vector for further processing by Dense layers?
-A. `tf.keras.layers.TextVectorization`.
-B. `tf.keras.layers.Dropout`.
-C. `tf.keras.layers.GlobalAveragePooling1D`.
-D. `tf.keras.layers.LSTM`.
+Q36. The versatility of natural gas is demonstrated by its application in:
+A. Manufacturing plastics and chemicals
+B. Powering cars and trucks
+C. Generating electricity and heating our homes
+D. Fueling aircraft and causing oil spills
 Correct Answer: C
-Type: Code
 Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q45. What is the difference between a generative classifier (like Naive Bayes) and a conditional classifier (like Maximum Entropy) in terms of what they model?
-A. Generative classifiers model $P(\text{label}|\text{input})$; conditional classifiers model $P(\text{input}|\text{label})$.
-B. Generative classifiers model the joint probability $P(\text{input}, \text{label})$; conditional classifiers model the conditional probability $P(\text{label}|\text{input})$.
-C. Generative classifiers use only binary features; conditional classifiers use numeric features.
-D. Generative classifiers use deep learning; conditional classifiers use traditional machine learning.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q46. Author Profiling (AP) is a method that uses shared information to infer an author’s demographic and psychological traits, such as gender, age, or personality. What is the primary content source AP relies on?
-A. Structured database entries.
-B. Image recognition.
-C. Text-based online content and the author’s unique writing style.
-D. Acoustic sound waves.
+Q37. Which type of energy source is compared to having a powerful, friendly wind blowing in your direction to produce the energy you require?
+A. Hydropower
+B. Solar energy
+C. Wind energy
+D. Geothermal energy
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q47. If a Keras `Embedding` layer is defined with `vocab_size=1000` and `embedding_dim=5`, and the layer is created with random weights, what is the total number of trainable parameters in this layer?
-A. 1005.
-B. 5000.
-C. 1000.
-D. 5.
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q48. The Keras `Embedding` layer requires an `input_dim` parameter. What linguistic metric must this parameter correspond to?
-A. The total number of documents in the corpus.
-B. The maximum sequence length of the input sentences.
-C. The size of the vocabulary (number of unique tokens).
-D. The chosen dimensionality of the output vector.
+Q38. Why is the environmental community concerned about leaks of methane from natural gas infrastructure?
+A. Methane is an odorant used to detect leaks
+B. Methane is less potent than $\text{CO}_2$ and causes minor irritation
+C. Methane is a potent greenhouse gas that traps heat more effectively than $\text{CO}_2$
+D. Methane causes large-scale oil spills and affects marine life
 Correct Answer: C
-Type: Theory
-Difficulty: Hard
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q49. In classifier evaluation, what is the term for the set of annotated data that is kept separate and is unused during the training and feature selection process, serving only for the final assessment of the model's generalization ability?
-A. Training set.
-B. Dev-test set.
-C. Development set.
-D. Test set.
+Q39. What is the description used in the source material for the large mass of ash and other waste products left behind after coal is burned?
+A. Invisible annoyances
+B. Climate Change Culprit
+C. Difficult to control and harmful to the environment
+D. A versatile multi-tool
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q40. The process of harnessing hydropower requires the flow of water to be channeled through which components that function similarly to energy production units?
+A. Wells
+B. Solar cells
+C. Turbines
+D. Windmills
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q41. Geothermal energy is utilized for heating homes and providing hot water in places like:
+A. Coastal communities
+B. Iceland
+C. Sunny deserts
+D. High-wind fields
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q42. How do solar panels convert solar energy into electrical energy?
+A. By reflecting sunlight like ordinary mirrors
+B. By absorbing light and transforming it using solar cells
+C. By channeling water through turbines
+D. By creating steam from subterranean heat
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q43. Which non-renewable energy source is specifically mentioned for use in blending with cotton to make synthetic fibers in jeans, cutting down on shrinking?
+A. Coal
+B. Natural Gas
+C. Oil (Petroleum-based synthetic fibers)
+D. Methane
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q44. What material, alongside quartz, is used to make eyeglasses and windows?
+A. Iron
+B. Silver
+C. Petroleum
+D. Zinc
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q45. The focus on developing cleaner and more environmentally friendly energy alternatives, such as renewable energy sources, is primarily driven by the need to lessen dependency on oil and its:
+A. Versatility superpower
+B. Ability to heat houses
+C. Negative geopolitical and environmental effects
+D. Use in manufacturing plastics
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q46. What characteristic of the Sun allows solar energy to be used just about any place?
+A. The Earth's heat is closer to the surface
+B. The Sun shines everywhere
+C. Wind turbines are located nearby
+D. Water reservoirs are abundant
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q47. When using geothermal energy, how is the water turned into steam beneath the Earth's surface?
+A. By burning fossil fuels in the wells
+B. By the heat from the molten rock and magma
+C. By the spinning of the turbines
+D. By chemical reactions with copper and zinc
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q48. Which factor is crucial for determining suitable locations for placing wind turbines?
+A. Proximity to volcanic activity
+B. Availability of large water reservoirs
+C. Being found in windy locations, such as wide fields or close to the ocean
+D. The presence of graphite deposits
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q49. Why is careful usage of non-renewable energy necessary?
+A. Because its supply is infinite
+B. Because it is exhaustible and will not last forever
+C. Because it is similar to a mythical source of energy
+D. Because it helps prevent wind spills
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q50. The rise in Earth's temperature due to $\text{CO}_2$ emissions from coal burning is referred to as:
+A. The Greenhouse Impact
+B. Geopolitical Tension
+C. Mining Impact
+D. The Water Conundrum
+Correct Answer: A
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q51. Dental fillings are listed as being made of which two materials?
+A. Iron and chromium
+B. Mercury and silver
+C. Copper and zinc
+D. Graphite and clay
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q52. How does the generation of electricity in a hydropower system begin?
+A. By using solar panels to capture sunlight
+B. By the river's strong current pushing against a large wheel
+C. By pumping water deep into the Earth
+D. By heating houses with natural gas
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q53. What environmental harm is primarily associated with the release of nitrogen oxides and sulphur dioxide during coal combustion?
+A. Trapping heat in the atmosphere
+B. Damaging our air and health
+C. Disturbing marine animals
+D. Heating and cooling buildings
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q54. Non-renewable resources are considered a huge problem because they won't last forever and can harm the ecosystem by:
+A. Running on powerful, friendly wind
+B. Creating pollution and contributing to climate change
+C. Functioning as versatile multi-tools
+D. Utilizing solar super-sponges
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q55. In regions with abundant subterranean heat, geothermal reservoirs are used for which specific heating purpose, as exemplified by Iceland?
+A. Fueling aircraft
+B. Heating homes and providing hot water
+C. Generating electricity for vehicles
+D. Manufacturing plastics
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q56. What type of energy is compared to a wise old wizard that uses the force of moving water to generate electricity?
+A. Wind Energy
+B. Geothermal Energy
+C. Solar Energy
+D. Hydropower
 Correct Answer: D
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q50. When implementing word embeddings using Word2Vec models in Keras/TensorFlow, how can you ensure that pre-trained weights initialized in the `Embedding` layer are NOT updated during the subsequent model training phase?
-A. Set the optimizer to 'adam'.
-B. Use binary cross entropy loss.
-C. Initialize the embedding layer with a `non-trainable` property.
-D. Apply `GlobalAveragePooling1D` immediately after the embedding layer.
-Correct Answer: C
-Type: Code
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q51. What is the fundamental goal of Named Entity Recognition (NER) in the context of information extraction?
-A. To convert the text into a sparse matrix representation.
-B. To identify and extract key words or phrases as useful entities (e.g., person names, locations).
-C. To determine the emotional tone of the text.
-D. To split the text into tokens and remove stop words.
+Q57. Geothermal energy is often found in places where the Earth's heat is closer to the surface, such as near:
+A. Coastal communities, where oil spills occur
+B. Volcanoes, hot springs, or geysers
+C. Wind farms, where strong breezes exist
+D. Coal mines, where surface excavation is needed
 Correct Answer: B
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q52. In feature engineering, if an analyst uses a "kitchen sink" approach (including all imaginable features) on a relatively small training dataset, what risk does this pose, leading to a system that performs poorly on new, unseen data?
-A. Underfitting.
-B. High computational overhead.
-C. Overfitting, where the model learns idiosyncrasies of the training data.
-D. Lack of expressive power.
+Q58. The energy source described as "akin to the grandmother" among non-renewable energy sources is:
+A. Natural Gas
+B. Oil
+C. Coal
+D. Methane
 Correct Answer: C
-Type: Theory
-Difficulty: Medium
+Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q53. A central principle in formal semantics for natural language, which posits that the meaning of a complex expression is a function of the meanings of its parts and their mode of combination, is known as the:
-A. Principle of Unbounded Dependency.
-B. Principle of Compositionality (Frege's Principle).
-C. Maximum Entropy Principle.
-D. Naive Bayes Assumption.
+Q59. The primary environmental risk of coal mining, according to the sources, is the disturbance of:
+A. Coastal ecosystems and marine life
+B. The entire surface of the planet, requiring the clearing of mountains or forests
+C. Subterranean heat reservoirs
+D. Residential heating and cooling systems
 Correct Answer: B
-Type: Theory
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q60. When comparing natural gas to other fossil fuels, it is noted that:
+A. Its supply is infinite because it burns cleanly
+B. It is a finite resource, the same as with other fossil fuels
+C. It is a reproducible resource like wood
+D. It contributes more to climate change than coal
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q61. Which application of hydropower demonstrates its function as a flexible instrument to keep things in motion?
+A. Fueling automobiles
+B. Manufacturing plastics
+C. Supplying homes and factories with electricity and irrigating farmland
+D. Providing heat for volcanoes
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q62. What allows geothermal energy to be used to heat and cool buildings, functioning like a built-in thermostat?
+A. Its ability to generate steam power
+B. Its capacity for energy generation and temperature maintenance
+C. Its high $\text{CO}_2$ emissions
+D. Its dependency on solar cells
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q63. The primary mechanism by which wind turbines produce electricity is by:
+A. Heating the blades until steam is generated
+B. Using the strong current of the ocean
+C. The wind twisting the large blades, which fuels a generator
+D. Drilling deep wells into the Earth
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q64. What happens to the water that is pumped down into deep wells during the process of generating geothermal energy?
+A. It is used to generate powerful wind
+B. It heats up and turns into steam
+C. It halts the flow of rivers
+D. It is converted into methane
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q65. Which non-renewable resource is described as being similar to depleting a finite resource?
+A. Solar energy
+B. Renewable energy
+C. Non-renewable energy
+D. Geothermal energy
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q66. Which non-renewable energy source is frequently referred to as "a cleaner option" among the non-renewable types?
+A. Coal
+B. Oil
+C. Natural Gas
+D. Carbon Dioxide
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q67. Renewable energy sources are called "renewable" because:
+A. They require special dams and reservoirs
+B. They won't disappear, no matter how much we use them
+C. They are only utilized in developed regions
+D. They are extracted faster than they form
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q68. Oil is described as the hidden ingredient in innumerable dishes that power contemporary society, emphasizing its:
+A. Non-renewability
+B. Geopolitical impact
+C. Versatility
+D. Clean burning nature
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q69. The tiny, enchanted components called "solar cells" found in solar panels perform which specific function?
+A. They regulate the flow of water
+B. They convert solar energy into electrical energy
+C. They turn turbines using steam power
+D. They release methane during transportation
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q70. If coal burning is a significant cause of climate change, the rise in Earth's temperature is attributed to the fact that:
+A. The minute particles released cool the atmosphere
+B. $\text{CO}_2$ emissions trap heat in the atmosphere
+C. Nitrogen oxides disrupt weather patterns
+D. Sulphur dioxide causes localized heating
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q71. According to the source material, which components of a pencil are made using zinc and copper?
+A. The graphite
+B. The pigments
+C. The brass component
+D. The wood
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q72. What is the mechanism by which flowing water generates electricity in a dam-based hydropower system?
+A. The water's energy spins the turbines as it passes them
+B. The water is heated to create steam power
+C. The water is used to absorb sunlight through solar cells
+D. The water is pumped down into geothermal wells
+Correct Answer: A
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q73. The search for cleaner and more sustainable energy sources is growing because people are becoming more conscious of the harm that coal does to the:
+A. Geopolitical climate
+B. Atmosphere's ozone layer
+C. Environment and the world
+D. Supply of methane
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q74. Which comparison is used to explain the concept that oil supply will eventually run out?
+A. Similar to a magician never running out of tricks
+B. Comparable to having a finite amount of a priceless element
+C. Similar to an environmentally friendly energy form
+D. Comparable to a never-ending source of heat
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q75. The Earth's resources are defined as any valuable material of geologic origin that can be extracted from the earth, and they are described as being:
+A. Rich in the Earth
+B. Found only in reservoirs of hot water
+C. Entirely reproducible
+D. Independent of copper and zinc
+Correct Answer: A
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q76. Which non-renewable energy source is specifically associated with the accidental release of methane into the atmosphere during extraction and transportation?
+A. Coal
+B. Oil
+C. Natural Gas
+D. Crude Petroleum
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q77. What is the significance of the fact that burning natural gas produces $\text{CO}_2$ at a lower rate than coal or oil?
+A. It indicates natural gas is infinitely available
+B. It means it contributes less to climate change and the greenhouse impact
+C. It suggests natural gas is entirely pollution-free
+D. It restricts its use solely to heating homes
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q78. What term is used for the concept of capturing sunshine to power homes, gadgets, and more?
+A. Hydropower
+B. Geothermal Energy
+C. Solar Energy
+D. Wind Energy
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q79. Which consequence of oil use is described as being comparable to a priceless gem that could cause arguments and conflicts?
+A. Oil Spills
+B. Climate Conundrum
+C. Geopolitical Tensions
+D. Non-renewable status
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q80. In geothermal energy production, what is the steam used for once it rises up from the wells?
+A. To heat up the groundwater
+B. To turn turbines that produce electricity
+C. To stop the flow of surface rivers
+D. To absorb sunlight
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q81. The term used to describe the heat that comes from the molten rock and magma deep beneath the Earth's surface is:
+A. Hydropower
+B. Geothermal energy
+C. Solar energy
+D. Wind energy
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q82. Why is coal’s place in the global energy mix shifting?
+A. Due to rising awareness of the harm it does to the environment
+B. Because methane production is increasing rapidly
+C. Because all non-renewable sources have run out
+D. Due to its increasing cost relative to oil
+Correct Answer: A
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q83. Although jeans may be almost all cotton, they are usually blended with petroleum-based synthetic fibers primarily to:
+A. Increase water flow resistance
+B. Cut down on shrinking
+C. Provide necessary geopolitical stability
+D. Enhance solar absorption
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q84. Compared to coal or oil, natural gas burns:
+A. More cleanly, emitting less harmful pollutants
+B. Less cleanly, emitting potent greenhouse gases
+C. At the same rate, regardless of pollutant type
+D. Only when mixed with large amounts of waste ash
+Correct Answer: A
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q85. What specific action helps users of solar energy become less dependent on the expensive electrical grid?
+A. Digging deep wells into the Earth
+B. Installing solar panels to produce their own electricity
+C. Creating large water reservoirs
+D. Using natural gas exclusively for heating
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q86. Wind turbines are likened to "enormous fans" that create electricity when:
+A. They are attached to solar panels
+B. The wind blows
+C. Water is channeled through them
+D. They are installed near volcanoes
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q87. Which non-renewable resource is described as "akin to the old, cranky uncle in the energy family"?
+A. Natural Gas
+B. Oil
+C. Coal
+D. Methane
+Correct Answer: C
 Difficulty: Hard
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q54. In the Keras Sequential model definition below, if `vocab_size` is 1000, `embedding_dim` is 32, and the input sequence length is 50, what is the output shape *after* the `Embedding` layer?
-
-```python
-model = Sequential([
-    TextVectorization(...),
-    Embedding(1000, 32),
-    GlobalAveragePooling1D(),
-    Dense(1)
-])
-```
-A. (None, 50).
-B. (None, 32).
-C. (None, 50, 32).
-D. (None, 1000, 32).
-Correct Answer: C
-Type: Code
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q55. Why are tokens like "is," "the," and "a" often removed during the text preprocessing stage?
-A. They are essential for capturing sentiment.
-B. They are unique to specific genres.
-C. They are frequently used filler words (stop words) that provide little informational content.
-D. They are always polysemous.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q56. Using a Document-Term Matrix (DTM) representation, if a corpus has 50 documents and a vocabulary size of 5,000 unique terms, what are the dimensions of the resulting TDM (Term-Document Matrix)?
-A. 50 rows $\times$ 5,000 columns.
-B. 5,000 rows $\times$ 50 columns.
-C. 5,000 rows $\times$ 5,000 columns.
-D. 50 rows $\times$ 50 columns.
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q57. In the KerasNLP architecture provided for a BERT Classifier, which component is primarily responsible for converting input strings into dictionary representations before passing them to the backbone model?
-A. BertBackbone.
-B. BertClassifier `from_preset` method.
-C. BertTokenizer, invoked within the BertPreprocessor.
-D. Dense layer.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q58. What role does the `Tokenizer` typically play in the TensorFlow/Keras NLP pipeline when preparing data for an `Embedding` layer?
-A. It calculates the similarity matrix between tokens.
-B. It converts raw words into numerical indices (IDs).
-C. It learns the dense floating-point vector for each word.
-D. It performs one-hot encoding.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q59. When setting up a deep learning model for text classification in Keras, which layer type maps the integer-encoded vocabulary produced by the Tokenizer/TextVectorization into dense vectors of trainable parameters?
-A. `tf.keras.layers.Dense`.
-B. `tf.keras.layers.Embedding`.
-C. `tf.keras.layers.GlobalAveragePooling1D`.
-D. `tf.keras.layers.LSTM`.
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q60. Which key assumption of the Naive Bayes model can lead to the "double-counting" problem when features are highly correlated, reducing the model's justification?
-A. The assumption that all words follow Zipf's law.
-B. The assumption that all input features are continuous numerical values.
-C. The assumption that every feature is entirely independent of every other feature, given the label.
-D. The assumption that the model must maximize entropy.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q61. The Maximum Entropy (MaxEnt) classifier uses iterative optimization techniques to find a set of parameters that maximizes the performance of the classifier. What is the fundamental principle guiding this choice among distributions that are consistent with known information?
-A. Maximizing the frequency of the training corpus.
-B. Maximizing the likelihood ratio.
-C. Maximizing entropy (making the fewest unwarranted assumptions).
-D. Maximizing feature independence.
-Correct Answer: C
-Type: Theory
-Difficulty: Hard
-
-Unit: 3
-CO: CO3
-Q62. What is the primary purpose of creating a Custom Stop Word Dictionary?
-A. To simplify lemmatization rules.
-B. To include domain- or project-specific filler words that do not provide informative content for the analysis.
-C. To limit the vocabulary size to the top 1000 words.
-D. To ensure all words are converted to a sparse vector.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q63. If a training set contains 10,000 unique words (vocabulary size) and is processed by a Keras NLP pipeline, what should be the required value for the `input_dim` parameter of the `Embedding` layer?
-A. 10,000 (Vocabulary size).
-B. 100 (Sequence length).
-C. 16 (Embedding dimension).
-D. 1 (Output dimension).
-Correct Answer: A
-Type: Numerical
-Difficulty: Hard
-
-Unit: 3
-CO: CO3
-Q64. In a binary text classification problem using the Adam optimizer and BinaryCrossentropy loss, the initial training output shows: `loss: 0.6920 - accuracy: 0.5028 - val_loss: 0.6904 - val_accuracy: 0.4886`. What concept is immediately demonstrated if, after several epochs, the training accuracy continues to rise dramatically while the validation accuracy plateaus or declines?
-A. Overfitting.
-B. Underfitting.
-C. Vanishing gradients.
-D. Perfect model fit.
-Correct Answer: A
-Type: Code
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q65. In the context of the Bangla gender identification study, what class of features refers to those designed to capture the unique writing style of an author, including aspects like vocabulary richness, punctuation usage, and structural organization?
-A. Transformer features.
-B. Stylometric features.
-C. Semantic features.
-D. First-order logic features.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q66. Which technique provides a way to reduce a high-dimensional and sparse Document-Term Matrix (DTM) into a smaller approximation consisting of fewer latent dimensions, often for semantic space modeling?
-A. Term Frequency-Inverse Document Frequency (TF-IDF).
-B. Latent Semantic Analysis (LSA) using Singular Value Decomposition (SVD).
-C. Consecutive Classification.
-D. The Maximum Entropy Principle.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q67. What primary limitation of static word embeddings (like traditional Word2Vec or GloVe) did later token-level embeddings (like BERT) aim to address?
-A. The inability to represent words as dense vectors.
-B. The difficulty in learning weights via neural networks.
-C. The fact that words with multiple meanings (polysemy/homonymy) were conflated into a single vector representation.
-D. The constraint that embedding dimensions must be very high.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q68. Given the goal of sentiment classification in Keras, how would you retrieve the learned word embeddings from a trained model named `model` if the `Embedding` layer was explicitly named "embedding"?
-A. `model.get_layer('embedding').weights`.
-B. `model.layers.get_config()`.
-C. `model.predict(input_data)`.
-D. `model.compile().metrics`.
-Correct Answer: A
-Type: Code
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q69. What is the fundamental difference between word embeddings expressed as vectors of co-occurring words and embeddings expressed as vectors of linguistic contexts?
-A. Co-occurrence vectors focus on direct semantic association; context vectors focus on syntactic parsing.
-B. Co-occurrence vectors are sparse; context vectors are dense.
-C. Co-occurrence vectors use only unsupervised learning; context vectors use only supervised learning.
-D. They represent the same information and are mathematically equivalent.
-Correct Answer: A
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q70. In the Keras NLP pipeline, the input to the `Embedding` layer is a batch of integer sequences of shape `(None, sequence_length)`. If the embedding dimension is `embedding_dim`, what is the matrix shape of the trainable weights learned within this layer?
-A. (1, embedding\_dim).
-B. (sequence\_length, embedding\_dim).
-C. (vocab\_size, embedding\_dim).
-D. (sequence\_length, vocab\_size).
-Correct Answer: C
-Type: Code
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q71. Which model, commonly used for sequence classification in NLP, finds the most likely label for the first input, uses that answer to help find the next label, and repeats this process until all inputs are labeled?
-A. Maximum Entropy classifier.
-B. Generative classifier.
-C. Consecutive classification (greedy sequence classification).
-D. Decision Tree.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q72. What is the term for the process in which an NLP system attempts to select the appropriate meaning for a word that has multiple dictionary definitions (e.g., distinguishing "bank" as a financial institution versus a river bank)?
-A. Part-of-Speech Tagging.
-B. Named Entity Recognition.
-C. Coreference Resolution.
-D. Word Sense Disambiguation.
+Q88. Which of the following is NOT an explicitly stated reason why using non-renewable energy resources is considered a huge problem?
+A. They won't last forever
+B. They can harm our ecosystem
+C. They create pollution
+D. They are more difficult to extract than metallic ores
 Correct Answer: D
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q73. When training a sentiment classifier in Keras (as per the IMDb tutorial), the loss function used is `tf.keras.losses.BinaryCrossentropy(from_logits=True)`. This loss function is appropriate when the final Dense layer has:
-A. No activation function (raw logits) and 1 output unit.
-B. 'softmax' activation and 2 output units.
-C. 'sigmoid' activation and 1 output unit.
-D. 'tanh' activation and variable output units.
-Correct Answer: A
-Type: Code
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q74. For large-scale corpus processing in Python, what is the key benefit of using a generator expression like `(w.lower() for w in text)` inside a function call (e.g., `max()`), compared to first creating a full list comprehension `[w.lower() for w in text]`?
-A. The list comprehension is more readable and easier to debug.
-B. The generator expression streams data and does not require allocating memory for the full list object.
-C. The list comprehension executes faster in all cases.
-D. The generator expression automatically handles type checking.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q75. Which type of advanced deep learning model is characterized by being trained specifically to predict the next word in a sequence, marking a significant step in text generation ability?
-A. Recurrent Neural Networks (RNN).
-B. Sequence-to-Sequence (Seq2seq) models.
-C. Autoregressive models.
-D. Convolutional Neural Networks (CNN).
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q76. The term "Stylometric features" generally encompasses metrics related to four main categories of writing style. These categories typically include lexical features, structural features, syntactic features, and what other type of feature?
-A. Gender-neutral features.
-B. Context-specific features.
-C. Positional features.
-D. Global averaging features.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q77. A Keras classification model summary shows the following parameter counts:
-*   Embedding layer: 160000 parameters
-*   Dense (16 units): 272 parameters
-*   Dense (1 unit): 17 parameters
-
-What is the total number of trainable parameters in this model (assuming 0 non-trainable parameters)?
-A. 160,000.
-B. 160,289.
-C. 160,272.
-D. 17.
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q78. In developing broad-coverage, rule-based grammars, why did the astronomical growth in the number of possible parse trees for longer sentences become a major efficiency problem?
-A. The parsing algorithms themselves were only cubic complexity, making the task easy.
-B. Lexical items could be made completely unambiguous.
-C. Humans process long sentences effortlessly, making the computational models seem trivial.
-D. Ambiguity increases with grammar coverage, leading to an intractable number of potential analyses (e.g., Catalan numbers).
-Correct Answer: D
-Type: Theory
 Difficulty: Hard
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q79. When performing Latent Semantic Analysis (LSA), the choice of retaining $k$ singular vectors is a crucial decision. If $k$ is too low, what primary risk does the analyst face?
-A. Overfitting the training data.
-B. The complexity being too high.
-C. Losing important semantic information.
-D. SVD decomposition failure.
+Q89. In the context of hydropower, what functions similarly to a water-powered generator, converting the spinning action into electricity?
+A. The dams
+B. The turbines
+C. The water reservoirs
+D. The water wheels
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q90. Which benefit of wind energy is achieved by keeping our air pure and aiding in the fight against climate change?
+A. Its use in heating and cooling buildings
+B. Its classification as a green energy source
+C. Its restriction to windy locations
+D. Its geopolitical stabilizing effect
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q91. What is the environmental significance of carbon dioxide being released when burning oil in vehicles?
+A. It causes significant oil spills
+B. It contributes substantially to climate change
+C. It fuels geopolitical tensions
+D. It depletes the resource supply instantaneously
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q92. What natural phenomena are utilized to generate hydropower?
+A. The Earth's inner heat
+B. The Sun's rays
+C. The power of flowing water
+D. The constant rotation of the Earth
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q80. In supervised classification, why is it vital to use a separate Dev-Test set (distinct from the final Test Set) during the model development process, especially when iterating on feature selection?
-A. To guarantee the model achieves 100% accuracy on the final test set.
-B. To prevent the classifier from reflecting idiosyncrasies of the Dev-Test set during feature refinement.
-C. To reduce computational complexity by simplifying the feature set.
-D. To ensure the final Test Set is as similar as possible to the training data.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q81. If a classification model correctly labels 75 documents out of a test set of 100, what is the accuracy of the classifier?
-A. 75%.
-B. 100%.
-C. 25%.
-D. 175%.
-Correct Answer: A
-Type: Numerical
-Difficulty: Easy
-
-Unit: 3
-CO: CO3
-Q82. The Word2Vec Skip-Gram model, designed for generating word embeddings, is characterized by taking the current word as input and predicting what component?
-A. The semantic context of the word only.
-B. The surrounding window of context words.
-C. The raw count of the word in the corpus.
-D. The Part-of-Speech tag of the word.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q83. Which Keras layer, applied immediately after an Embedding layer in a classification model, mathematically summarizes the input sequence by averaging across the temporal (sequence) dimension?
-A. `tf.keras.layers.Dense`.
-B. `tf.keras.layers.LSTM`.
-C. `tf.keras.layers.GlobalAveragePooling1D`.
-D. `tf.keras.layers.TextVectorization`.
+Q93. The problem with oil is that it is finite and its usage results in the production of:
+A. Toxic waste ash
+B. Sulphur dioxide and nitrogen oxides
+C. Greenhouse gases that contribute to climate change
+D. Reservoirs of hot water and steam
 Correct Answer: C
-Type: Code
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q94. Solar energy is described as a "superhero" that gets its power from the Sun, while solar panels are likened to:
+A. Gigantic batteries in the sky
+B. Solar super-sponges
+C. Powerful multi-tools
+D. Water wizards
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q95. What two energy forms are produced using natural gas?
+A. Plastic and chemicals
+B. Heat and energy
+C. Steam and geothermal heat
+D. Petroleum and liquid energy
+Correct Answer: B
 Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q84. The Brill Tagger uses an analogy to explain its process of iteratively fixing errors. This analogy compares the tagging process to initially covering the entire canvas with a uniform color before applying successively finer details (correction rules). What activity is used in this analogy?
-A. Database querying.
-B. Scientific experimentation.
-C. Painting a tree against a sky-blue background.
-D. Binary searching for a word.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q85. In NLP, Convolutional Neural Networks (CNNs) are primarily used in text processing for which purpose?
-A. Capturing long-term dependencies through gates.
-B. Identifying local patterns, similar to filter application in image processing.
-C. Transforming raw strings into integer indices.
-D. Generating text one word at a time.
+Q96. Why is the environmental impact of coal mining described as disturbing?
+A. Because it releases harmful pollutants into the air
+B. Because it involves excavating the entire surface of the planet
+C. Because it leaves behind large amounts of ash and waste
+D. Because it is highly versatile in heating and cooling
 Correct Answer: B
-Type: Theory
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q86. When addressing the sparse data problem for N-gram taggers that encounter contexts unseen in the training data, a common method is Backoff. If backoff options are exhausted, the tagger often defaults to which final model type?
-A. The most complex trigram model.
-B. A regular expression tagger or a default tagger (e.g., tagging everything as NN).
-C. Word embedding vectors.
-D. A transformer model.
-Correct Answer: B
-Type: Theory
+---
+## Multiple Correct MCQs (24 Questions)
+
+Q97. Non-renewable resources are fundamentally characterized by which of the following traits? (Choose ALL correct options)
+A. They are exhaustible
+B. They are extracted slower than the rate at which they formed
+C. They cannot be re-made or re-grown at a comparable scale to consumption
+D. Their consumption is similar to depleting a finite resource
+Correct Answers: A, C, D
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q87. Document 1 (D1) has a total of 5 terms. The word "this" appears once in D1. Using the raw count method, calculate the term frequency $tf(t, d)$ for the term "this" in Document 1.
-A. 1.
-B. 5.
-C. $1/5 = 0.2$.
-D. 0.
-Correct Answer: C
-Type: Numerical
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q88. Multi-sense embeddings (or contextually-meaningful embeddings like BERT) were developed to properly handle what specific linguistic challenge?
-A. Arbitrary integer encoding.
-B. Conflating words with multiple meanings (polysemy and homonymy) into a single vector.
-C. The requirement for manual feature specification.
-D. Low IDF scores.
-Correct Answer: B
-Type: Theory
+Q98. Which of the following non-renewable energy sources are specifically mentioned for use in producing energy and heat? (Choose ALL correct options)
+A. Coal
+B. Oil
+C. Natural Gas
+D. Wind
+Correct Answers: A, C
 Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q89. In KerasNLP, the `from_preset` method used in conjunction with a `BertClassifier` is typically responsible for:
-A. Defining the text preprocessing steps like tokenization.
-B. Loading up a ready-to-use model with pre-trained weights.
-C. Calculating the Maximum Entropy of the input features.
-D. Freezing the embedding weights.
-Correct Answer: B
-Type: Code
+Q99. Which harmful substances are listed as being released into the atmosphere when coal is burned? (Choose ALL correct options)
+A. Methane
+B. Nitrogen oxides
+C. Sulphur dioxide
+D. Minute particles
+Correct Answers: B, C, D
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q90. Which of the following machine learning techniques minimizes the total likelihood of the training corpus while maximizing the entropy of the probability distribution?
-A. Naive Bayes Classifier.
-B. Latent Semantic Analysis.
-C. Maximum Entropy Classifier.
-D. Decision Tree Classifier.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 3
-CO: CO3
-Q91. What factor was identified in the Bangla gender identification study as being a major strength of TF-IDF over word embeddings like CBOW and Skip-Gram for that specific task?
-A. Word embeddings require less training data.
-B. Word embeddings excel at capturing subtle stylistic variations critical for gender classification.
-C. TF-IDF's emphasis on term distinctiveness aligns better with the need to capture subtle stylistic variations in gendered language use.
-D. TF-IDF models automatically integrate long-term contextual dependencies.
-Correct Answer: C
-Type: Theory
-Difficulty: Hard
-
-Unit: 3
-CO: CO3
-Q92. The TIMIT Corpus, cited as the first widely distributed annotated speech database, was structured to achieve a balance across multiple dimensions. These dimensions primarily included dialect regions, speakers, and what other type of material?
-A. Financial reports.
-B. Phonetically rich sentences.
-C. Legal documentation.
-D. Novel prose.
-Correct Answer: B
-Type: Theory
+Q100. Oil, or "liquid energy," is utilized for which of the following purposes? (Choose ALL correct options)
+A. Manufacturing plastics
+B. Fueling aircraft
+C. Powering cars and trucks
+D. Heating homes
+Correct Answers: A, B, C, D
 Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q93. The Keras `TextVectorization` layer uses `output_sequence_length` to ensure all input samples have a uniform length. If input sentences are shorter than this length, what typically happens?
-A. They are truncated.
-B. They are padded with zero values.
-C. They are duplicated until the length is met.
-D. An error is raised due to mismatched shapes.
-Correct Answer: B
-Type: Theory
+Q101. Why is there a rising focus on developing cleaner energy alternatives instead of oil? (Choose ALL correct options)
+A. Oil's supply will eventually run out
+B. Oil has negative geopolitical effects
+C. Oil contributes significantly to climate change
+D. Oil is utilized for manufacturing chemicals
+Correct Answers: A, B, C
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q94. Which of the following is the standard formal notation for a production rule in a simple dependency grammar, where "shot" is the head and "I" is the dependent?
-A. `S -> 'I' 'shot'`.
-B. `'shot' -> 'I'`.
-C. `V -> 'shot' NP`.
-D. `'I' -> 'shot'`.
-Correct Answer: B
-Type: Theory
+Q102. Which characteristics describe natural gas when compared to coal and oil? (Choose ALL correct options)
+A. It is frequently referred to as "a cleaner option"
+B. It burns more cleanly, emitting less harmful pollutants
+C. It produces $\text{CO}_2$ at a lower rate
+D. It is a renewable source, meaning its supply is infinite
+Correct Answers: A, B, C
 Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q95. When analyzing text, the goal of converting a word $w$ (e.g., 'running') into its dictionary form $l$ (e.g., 'run') is known as:
-A. Tokenization.
-B. Stemming.
-C. Lemmatization.
-D. Normalization (Stemming/Lemmatization).
-Correct Answer: D
-Type: Theory
+Q103. Which potential negative impacts are associated with Natural Gas usage? (Choose ALL correct options)
+A. It is a non-renewable, finite resource
+B. It can leak methane, a potent greenhouse gas
+C. It is known to fuel geopolitical tensions and violence
+D. It contributes to climate change and the greenhouse impact
+Correct Answers: A, B, D
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q104. Which sources of energy are included in the 'magical energy club' of renewable energy? (Choose ALL correct options)
+A. The Sun
+B. The wind
+C. The water
+D. Natural Gas
+Correct Answers: A, B, C
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q96. Document 2 (D2) has a total of 7 terms. The term "example" occurs 3 times. If $idf(\text{"example"}, D) = 0.301$, what is the final $tfidf(\text{"example"}, D2, D)$ using the formula $tf(t,d) \cdot idf(t,D)$?
-A. $0$.
-B. $0.429 \times 0.301 \approx 0.129$.
-C. $3 \times 0.301 \approx 0.903$.
-D. $7 \times 0.301 \approx 2.107$.
-Correct Answer: B
-Type: Numerical
-Difficulty: Hard
+Q105. What benefits are associated with using solar energy? (Choose ALL correct options)
+A. It is environmentally friendly, producing no pollution
+B. It can be used just about any place because the Sun shines everywhere
+C. It offers financial savings by reducing dependence on the expensive grid
+D. It is highly versatile, functioning as a multi-tool for heating and power
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q97. In the NLP pipeline, the process of converting features extracted from text (like raw counts or TF-IDF weights) into structured, numerical data that models can process is known as:
-A. Text Preprocessing.
-B. Feature Extraction (or Vectorization).
-C. Linguistic Analysis.
-D. Model Deployment.
-Correct Answer: B
-Type: Theory
+Q106. Renewable energy sources listed in the source material include: (Choose ALL correct options)
+A. Hydropower
+B. Geothermal Energy
+C. Wind Energy
+D. Coal
+Correct Answers: A, B, C
 Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q98. What machine learning concept is exemplified when a model is developed to learn multiple related tasks simultaneously, potentially reducing development time and improving performance?
-A. Self-supervised learning.
-B. Federated learning.
-C. Multi-task learning.
-D. Latent semantic indexing.
-Correct Answer: C
-Type: Theory
+Q107. Which features describe wind energy? (Choose ALL correct options)
+A. It is very environmentally beneficial
+B. It is frequently found close to the ocean
+C. It keeps our air pure
+D. It requires the use of special solar panels
+Correct Answers: A, B, C
 Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q99. In the Keras code snippet provided for sentiment classification, the `Embedding` layer has `input_dim=vocab_size` and `output_dim=embedding_dim`. The `GlobalAveragePooling1D` layer reduces the sequence dimension. If this model were modified to use an `LSTM(32)` layer instead of pooling, what would be the output shape immediately following the `LSTM(32)` layer (assuming `return_sequences=False`)?
-A. (None, 50, 32).
-B. (None, 32).
-C. (None, 100, 32).
-D. (None, 100).
-Correct Answer: B
-Type: Code
-Difficulty: Medium
+Q108. Which two raw materials, besides petroleum, are used in the construction of eyeglasses and windows? (Choose ALL correct options)
+A. Iron
+B. Copper
+C. Quartz
+D. Zinc
+Correct Answers: C
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
 
-Unit: 3
-CO: CO3
-Q100. In the process of developing a supervised classifier model, when should the final performance evaluation using the dedicated Test Set be conducted?
-A. Continuously throughout training to monitor loss.
-B. Only after the model training is complete and features have been finalized using the Dev-Test set.
-C. Before any feature extraction begins.
-D. During the initial data collection phase.
-Correct Answer: B
-Type: Theory
+Q109. What is necessary for the mechanism of generating hydropower? (Choose ALL correct options)
+A. Dams to form large water reservoirs
+B. Turbines that are spun by flowing water
+C. The natural force of water flow
+D. Geothermal heat from the Earth's core
+Correct Answers: A, B, C
 Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q110. Which properties contribute to hydropower being considered one of the greenest sources of energy? (Choose ALL correct options)
+A. It produces neither pollutants nor greenhouse gases
+B. It functions as a flexible instrument for irrigation
+C. It works best in areas with a lot of moving water
+D. It is comparable to selecting a green choice for energy requirements
+Correct Answers: A, D
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q111. Which characteristics describe Geothermal Energy? (Choose ALL correct options)
+A. It is generated by drawing heat from the Earth
+B. It is a clean, durable type of energy
+C. It is utilized to heat and cool buildings
+D. It is primarily based on utilizing solar super-sponges
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q112. The components of a pencil that are derived from geologic origin and are NOT reproducible include: (Choose ALL correct options)
+A. Zinc
+B. Copper
+C. Graphite
+D. Wood
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q113. Coal burning contributes to environmental damage through: (Choose ALL correct options)
+A. Being a significant cause of climate change via $\text{CO}_2$ emissions
+B. Releasing hazardous substances like sulphur dioxide and nitrogen oxides
+C. Leaving behind ash and other waste products
+D. Causing oil spills during transportation
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q114. The term "Climate Conundrum" associated with oil refers to which specific issues? (Choose ALL correct options)
+A. Oil supply being finite and running out
+B. Release of $\text{CO}_2$ and other air pollutants
+C. Emissions having a sizable role in climate change
+D. The necessity of oil for manufacturing plastics
+Correct Answers: B, C
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q115. What are the uses of natural gas that demonstrate its versatility? (Choose ALL correct options)
+A. To generate electricity
+B. To heat our homes
+C. To turn turbines using steam power from the Earth's heat
+D. To manufacture the brass in pencils
+Correct Answers: A, B
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q116. Which geological characteristics make a location suitable for Geothermal Energy extraction? (Choose ALL correct options)
+A. The presence of volcanoes
+B. The existence of hot springs
+C. The Earth's heat being closer to the surface
+D. The presence of wind farms
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q117. What components or forces are required to generate electricity using wind energy? (Choose ALL correct options)
+A. Wind turbines
+B. A generator inside the turbine
+C. Strong wind/breeze
+D. Deep wells
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q118. Which descriptions accurately characterize non-renewable resources? (Choose ALL correct options)
+A. They are exhaustible
+B. They are extracted faster than the rate at which they formed
+C. They include coal, oil, and natural gas
+D. They are comparable to selecting a clean energy source
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
+
+Q119. Renewable energy is often found in places where certain natural conditions exist, such as: (Choose ALL correct options)
+A. Areas where there is a lot of water moving (for Hydropower)
+B. Locations close to rivers or waterfalls (for Hydropower)
+C. Windy locations (for Wind Energy)
+D. Areas near volcanoes (for Geothermal Energy)
+Correct Answers: A, B, C, D
+Difficulty: Medium
+Source PPT: Unit 3_Renewable Energy Resources.pdf
+
+Q120. Which of the following are consequences of oil spills resulting from extraction or transport accidents? (Choose ALL correct options)
+A. Severe harm to ecosystems
+B. Impact on coastal communities
+C. Disturbing marine animals
+D. The formation of large water reservoirs
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 3 _Non-Renewable Energy Resources.pdf
