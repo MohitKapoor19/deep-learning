@@ -1,1001 +1,1093 @@
-Unit: 1
-CO: CO1
-Q1. Deep Learning is fundamentally a specialized subfield of Machine Learning distinguished by which key architectural feature?
-A. Reliance solely on statistical regression methods.
-B. Use of decision trees for hierarchical data processing.
-C. Utilization of artificial neural networks with multiple hidden layers.
-D. Requirement for exclusively small, structured datasets.
+As a senior Environmental Studies professor and academic auditor for the CHL100 course, I have prepared a set of 120 examination-safe Multiple Choice Questions, strictly derived only from the provided source material, ensuring compliance with the specified difficulty distribution and format requirements for a Mercer Mettl online examination.
+
+***
+
+### Part A: Single Correct Questions (96 Total)
+
+#### Section 1: Easy and Medium Difficulty Single Correct (72 Questions)
+
+Q1. What is the approximate percentage of water available for human consumption within the Hydrosphere?
+A. 97%
+B. 50%
+C. 1%
+D. 2%
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q2. What is the primary role of the optimizer algorithm in training a deep neural network?
-A. To define the complexity of the network architecture.
-B. To manually select the input features for generalization.
-C. To iteratively refine model parameters (weights/biases) to minimize the loss function.
-D. To convert text inputs into numerical token representations.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q3. In an Artificial Neural Network, what are weights and biases collectively referred to, as defined by their function in the learning process?
-A. Activation states.
-B. Hyperparameters.
-C. Learnable parameters.
-D. Gradient anchors.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q4. What is the function of the loss function (or cost function) in a deep learning model?
-A. To calculate the learning rate dynamically during training.
-B. To calculate the error, defined as the discrepancy between the predicted and actual values.
-C. To initialize the weights randomly before the first training epoch.
-D. To define the computational complexity of the hidden layers.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q5. Which characteristic typically necessitates the selection of a Deep Learning approach over classical Machine Learning algorithms?
-A. Availability of highly structured CSV data.
-B. Preference for easier model interpretability.
-C. Handling unstructured data like images, audio, or raw text.
-D. Need for faster training times on a CPU.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q6. When describing the training process of a deep learning model, what does one "epoch" represent?
-A. A single forward and backward pass through a minibatch of data.
-B. The total number of iterations required for the model to converge.
-C. The number of times the optimization algorithm runs across the entire training dataset.
-D. The process of tuning learning rate decay.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q7. What is the fundamental purpose of the Backpropagation algorithm?
-A. To select the optimal initial weights for the network.
-B. To efficiently compute the gradient of the loss function with respect to every weight in the network.
-C. To define the non-linear transformation applied at each neuron.
-D. To adjust the batch size dynamically during training.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q8. A neural network is classified as "Deep" primarily because it employs:
-A. The Sigmoid activation function.
-B. Convolutional layers exclusively.
-C. Multiple successive transformations (layers) of the input data.
-D. Stochastic Gradient Descent for training.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q9. In classification tasks, how is the model's performance commonly measured using "accuracy"?
-A. The variance of the loss across all epochs.
-B. The proportion of examples for which the model produces the correct output.
-C. The mean squared difference between predicted logits and true labels.
-D. The total cumulative training time in seconds.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q10. Which loss function is conventionally used as the objective for multi-class classification problems, particularly when modeling conditional probabilities via Softmax?
-A. Mean Squared Error (MSE).
-B. L1 Norm Loss.
-C. Cross-Entropy Loss (Log Loss).
-D. Huber Loss.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q11. What is the primary functional range of the Sigmoid activation function?
-A. $(-\infty, \infty)$
-B. $[-1, 1]$
-C. $(0, 1)$
-D. $[0, \infty)$
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q12. The Tanh (Hyperbolic Tangent) activation function squashes its input values into which range?
-A. $(-\infty, \infty)$
-B. $(0, 1)$
-C. $[0, \infty)$
-D. $(-1, 1)$
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q2. What atmospheric layer contains the ozone layer, which absorbs most of the harmful ultraviolet radiation from the Sun?
+A. Troposphere
+B. Mesosphere
+C. Thermosphere
+D. Stratosphere
 Correct Answer: D
-Type: Theory
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q13. Which activation function has largely become the default recommendation for hidden layers in modern deep neural networks due to its simplicity and robust gradient properties?
-A. Tanh.
-B. Sigmoid.
-C. Softmax.
-D. ReLU (Rectified Linear Unit).
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q3. What is the fundamental concept of sustainability focused on exploring?
+A. Maximizing resource extraction for current generations
+B. Meeting current needs without sacrificing future generations' capacity
+C. Prioritizing economic growth over social equity
+D. Eliminating the use of all natural resources immediately
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q4. Which environmental issue mentioned is explicitly stated as requiring international efforts and cooperation to solve, rather than being merely a national issue?
+A. Land use changes
+B. Marine pollution
+C. Deforestation
+D. Eutrophication
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q5. What chemical structure are carbonate ions important building blocks for in calcifying organisms?
+A. Silica skeletons
+B. Protein filaments
+C. Sea shells and coral skeletons
+D. Hydrochloric acid reserves
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q6. Who discovered the insecticidal action of DDT?
+A. Rachel Carson
+B. Paul Hermann Müller
+C. George Bernard Shaw
+D. Dr Aditya Sharma
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q7. In which year was the book *Silent Spring* published?
+A. 1874
+B. 1939
+C. 1962
+D. 1972
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q8. Which segment of the environment is defined as the solid outer section of Earth, including the crust and the underlying rigid upper part of the upper mantle?
+A. Biosphere
+B. Atmosphere
+C. Hydrosphere
+D. Lithosphere
 Correct Answer: D
-Type: Theory
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q14. In training a large model, when resources permit, Mini-Batch Gradient Descent is generally preferred over full Batch Gradient Descent because:
-A. It guarantees faster convergence to the global minimum.
-B. It reduces computational cost and allows for efficient vectorization.
-C. It eliminates the need for activation functions.
-D. It avoids numerical instability inherently.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q15. In deep learning, techniques like L1 and L2 penalties are applied primarily to mitigate which issue?
-A. Vanishing gradients.
-B. Local minima.
-C. Overfitting.
-D. Non-differentiability of the loss function.
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q9. Environmental studies is described as an approach that brings about an appreciation of our natural world and what other factor?
+A. Human impacts on its integrity
+B. Economic fluctuations
+C. Geological formations
+D. Political systems
+Correct Answer: A
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q10. What type of material is DDT defined as?
+A. A non-toxic hydrocarbon
+B. A volatile organic acid
+C. An organochloride
+D. An inorganic salt
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q16. A B.Tech student attempts to classify Fashion-MNIST using a simple Keras model. What is the output shape (excluding batch dimension) after this snippet, assuming the input shape is (784,)?
-A. (784,)
-B. (64,)
-C. (10,)
-D. (784, 64)
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q11. Ocean acidification is caused by the ocean’s uptake of which substance from the atmosphere?
+A. Methane
+B. Nitrogen oxides
+C. Carbon dioxide
+D. Sulfur dioxide
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q12. What specific impact has ocean acidification been proven to have on marine animals?
+A. Inhibiting shell growth
+B. Increasing reproductive success
+C. Promoting muscle development
+D. Lowering body temperature
+Correct Answer: A
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q13. In the context of development strategies, what does CNG stand for?
+A. Carbonated Natural Gas
+B. Concentrated Nitrogen Gas
+C. Compressed Natural Gas
+D. Clean Natural Generator
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q14. What benefit does compost provide regarding soil fertility?
+A. It eliminates the need for water
+B. It maintains long-term soil fertility by reusing biological decomposition residues
+C. It sterilizes the soil, killing all micro-organisms
+D. It prevents nutrient cycles from operating
 Correct Answer: B
-Type: Code
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q17. Calculate the total number of trainable parameters in a tf.keras.layers.Dense layer having 512 input features and 256 output units, assuming both weights ($W$) and biases ($b$) are included.
-A. 131,072
-B. 131,328
-C. 131,584
-D. 196,864
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q15. The Troposphere, the lowest atmospheric layer, is thicker at which geographical location?
+A. The poles
+B. The equator
+C. High mountains
+D. Temperate zones
 Correct Answer: B
-Type: Numerical
+Difficulty: Medium
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q16. Which of the following is listed as a major cause of ocean acidification?
+A. Hydroelectric power generation
+B. Fossil fuel emission
+C. Reforestation efforts
+D. Increased ocean salinity
+Correct Answer: B
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q18. In a CNN applied to a 28x28 grayscale image, the feature map size after the last convolutional block is (1, 5, 5, 32) (Batch, Height, Width, Channels). What is the output shape after applying tf.keras.layers.Flatten()?
-A. (5, 5, 32)
-B. (32,)
-C. (1, 800)
-D. (80,)
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q17. What is the immediate result of CO2 being absorbed by seawater, according to the chemical reactions involved in acidification?
+A. Decreased concentration of hydrogen ions
+B. Increased concentration of calcium carbonate
+C. Increased concentration of hydrogen ions
+D. Neutralization of the water
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q18. What is the overarching goal proposed for development in relation to the environment?
+A. Rapid industrialization at any cost
+B. Development that is environmentally sound and sustainable
+C. Maximizing consumption in developed nations
+D. Focusing solely on resource withdrawal
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q19. What term does Rachel Carson suggest is more proper than "pesticides" because their effects are rarely limited to the target pests?
+A. Herbicides
+B. Biocides
+C. Fungicides
+D. Insecticides
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q20. In India, in which year was DDT banned?
+A. 1972
+B. 2001
+C. 2004
+D. 1962
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q21. The Biosphere is described as being made up of which components?
+A. Core, Mantle, and Crust
+B. Atmosphere, Lithosphere, and Hydrosphere
+C. Stratosphere, Mesosphere, and Thermosphere
+D. Soil, Air, and Water only
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q22. What happens to the temperature in the Troposphere as altitude increases?
+A. It increases slightly
+B. It decreases
+C. It remains constant
+D. It fluctuates rapidly
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q23. Which strategy for sustainable development involves harnessing the power of the wind to produce electricity without adverse impacts on the environment?
+A. Bio Composting
+B. Wind Energy
+C. Solar Energy
+D. Use of CNG
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q24. What is one disadvantage listed for DDT, specifically concerning bird species?
+A. Excessive feather growth
+B. Eggshell thinning
+C. Increased lifespan
+D. Enhanced reproductive rates
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q25. What percentage of the light coming from the sun is absorbed or scattered by the atmosphere and clouds before reaching Earth?
+A. 50%
+B. 55%
+C. 46%
+D. 30%
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q26. What component of the environment is defined as the surrounding in which we are living, including all things we are directly or indirectly dependent on for survival?
+A. The Lithosphere
+B. The Biosphere
+C. Environment
+D. Hydrosphere
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q27. What is the maximum depth that the Lithosphere extends from the surface of Earth?
+A. About 11 km
+B. About 70 km
+C. About 100 km
+D. About 1360 million cubic km
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q28. What concept does the reduction of material dependence by refusing things that harm the environment, reusing products, and motivating recycling relate to?
+A. Explosive Increase in Pollution
+B. Maintenance of healthy life
+C. Imparting knowledge about conservation of energy
+D. Generating concern for population explosion
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q29. What is the process called where living organisms, mostly microbes, break down organic matter in controlled environments to create a humus-like compound?
+A. Eutrophication
+B. Photovoltaic effect
+C. Bio Composting
+D. Ocean Acidification
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q30. According to research on the Sea Butterfly (Pteropod) case study, how quickly did their shells dissolve when exposed to carbonate levels similar to those projected for the Southern Ocean?
+A. Within 48 hours
+B. Within 2 years
+C. Within 2 centuries
+D. Within 300 million years
+Correct Answer: A
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q31. Which organism is the Sea Butterfly (Pteropod) described as being the base of the food chain for?
+A. Shallow water corals
+B. Commercial fish, seabirds, and whales
+C. Oysters and clams
+D. Calcareous plankton only
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q32. CNG is described as a cleaner alternative fuel used in which specific type of vehicle in Delhi to reduce air pollution?
+A. Private cars
+B. Construction vehicles
+C. Public transport vehicles
+D. Aircraft
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q33. What is the focus of Social sustainability, one of the three pillars?
+A. Maintaining a stable and prosperous economy
+B. Using and protecting natural resources responsibly
+C. Promoting equity, justice, and the needs of individuals and communities
+D. Reducing material dependence
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q34. The Stratosphere is found approximately how far above the Earth’s surface?
+A. 7 to 30 miles
+B. 0 to 7 miles
+C. 55 kilometers and above
+D. 70 to 100 kilometers
+Correct Answer: A
+Difficulty: Medium
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q35. What is one specific human health effect listed as a disadvantage of DDT exposure?
+A. Respiratory failure
+B. High BP
+C. Hair loss
+D. Low blood sugar
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q36. What specific role are students encouraged to take regarding pollution prevention?
+A. Lobbying international organizations
+B. Helping government and non-government organizations by actively participating in programs
+C. Performing scientific research exclusively
+D. Setting economic policies
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q37. Which aspect of sustainability involves maintaining a stable and prosperous economy that supports the needs of society while minimizing negative impacts?
+A. Environmental sustainability
+B. Social sustainability
+C. Cultural sustainability
+D. Economic sustainability
 Correct Answer: D
-Type: Code
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q19. A simple feedforward network has an input size of 10. The first hidden layer (H1) has 32 units, and the output layer (O1) has 1 unit. Calculate the total number of weights and biases in the network.
-A. 320
-B. 353
-C. 32
-D. 352
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q38. Why are Polar oceans, such as the Arctic, particularly vulnerable to ocean acidification?
+A. They have high levels of carbon dioxide naturally.
+B. They naturally have low carbonate levels.
+C. They are farther from polluting cities.
+D. They experience less UV radiation.
 Correct Answer: B
-Type: Numerical
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q20. If a model predicts $\hat{Y} = 4.5$ and the true value is $Y = 5.5$, what is the Mean Squared Error (MSE) for this single observation, assuming the standard definition $L=(Y-\hat{Y})^2$?
-A. 1.0
-B. 0.5
-C. 2.0
-D. 0.0
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q39. What is the process of oceanographers adding pH, oxygen, chlorophyll, and turbidity sensors to existing systems intended to study more accurately?
+A. Volcanic eruptions
+B. Changes associated with ocean acidification
+C. Deep-sea fishing patterns
+D. Global warming only
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q40. What is one characteristic of CNG that makes it a "green fuel"?
+A. It produces significant sulfur dioxide.
+B. It is free from lead and sulfur.
+C. It requires extremely high operational costs.
+D. It has a low auto-ignition temperature.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q41. Which consequence of pollution is mentioned as increasing, leading to global warming and human illness?
+A. Explosive Increase in Pollution
+B. Maintenance of ecological balance
+C. Development of social responsibility
+D. Conservation of natural resources
 Correct Answer: A
-Type: Numerical
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q21. A convolutional layer uses a 3x3 kernel. If the input image is 20x20 and no padding or stride is used, what are the dimensions of the output feature map? (Excluding channel and batch dimensions)
-A. 20x20
-B. 18x18
-C. 22x22
-D. 19x19
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q42. The term "Environment" includes components on which we are directly or indirectly dependent for survival, encompassing living components like animals and plants, and non-living components like:
+A. Planets and stars
+B. Soil, air, water
+C. Buildings and infrastructure
+D. Telecommunication systems
 Correct Answer: B
-Type: Numerical
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q22. When evaluating a model, a researcher observes the output of a tf.keras.layers.Dropout(0.5) layer. What is the expected behavior of this layer during this evaluation (prediction) phase?
-A. It randomly sets 50% of the inputs to zero.
-B. It scales all inputs by multiplying by 0.5.
-C. It passes all inputs through without modification or scaling.
-D. It applies a ReLU activation only to 50% of the inputs.
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q43. Which layer of the atmosphere is described as having its temperature decrease with altitude, reaching about -130 Fahrenheit (-90 Celsius) at the top?
+A. Troposphere
+B. Mesosphere
+C. Stratosphere
+D. Thermosphere
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q44. What percentage drop in pH units represents a 25-percent increase in acidity over the past two centuries, relative to the 300 million year average pH of 8.2?
+A. 0.5 pH units
+B. 0.1 pH units
+C. 8.1 pH units
+D. 5.5 pH units
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q45. The concept of Sustainable Development aims to conserve natural assets and preserve what capacity of the world ecological system?
+A. The exploitative capacity
+B. The industrial capacity
+C. The regenerative capacity
+D. The urbanization capacity
 Correct Answer: C
-Type: Code
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q23. An input feature map of size 32x32 is passed through a Max Pooling layer with a pool size of 2x2 and a stride of 2. What is the size of the output feature map?
-A. 31x31
-B. 64x64
-C. 16x16
-D. 8x8
-Correct Answer: C
-Type: Numerical
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q24. If a training set error is high and the validation set error is similarly high, indicating that the model cannot capture the fundamental relationship in the data, what issue is the model exhibiting?
-A. High Variance (Overfitting).
-B. Low Variance (Equilibrium).
-C. High Bias (Underfitting).
-D. Exploding Gradient.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q25. Which optimizer is frequently recommended as the default starting point for training deep neural networks due to its robust combination of momentum and adaptive learning rates?
-A. Stochastic Gradient Descent (SGD).
-B. Adagrad.
-C. RMSProp.
-D. Adam.
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q46. What is the method of reducing material dependence that involves switching to energy star bulbs listed under?
+A. Reusing a product number of times
+B. Refusing things that harm environment
+C. Recycling products
+D. Imparting knowledge about conservation of energy
 Correct Answer: D
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q26. Why is a dedicated validation set required during hyperparameter tuning (HPO)?
-A. To calculate the final, unbiased generalization error reported to stakeholders.
-B. To prevent the hyperparameters from being chosen based on test set performance, avoiding test set overfitting.
-C. To be used as input during the forward propagation training step.
-D. To ensure the model architecture is deep enough.
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q47. What type of resources must be synchronised with the ecological cycle in any plan of development?
+A. Waste products
+B. Resources availability
+C. Transportation systems
+D. Economic investments
 Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q27. When training deep recurrent neural networks, which inelegant but effective heuristic is often employed to mitigate the instability caused by excessively large gradients?
-A. Early Stopping.
-B. Gradient Clipping.
-C. Weight Decay.
-D. Learning Rate Warmup.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q28. In contrast to traditional Gradient Descent, Stochastic Gradient Descent (SGD) introduces an element of randomness primarily by:
-A. Randomly initializing all weight parameters.
-B. Sampling only a single data example (or a small batch) per update iteration.
-C. Using a random learning rate in each step.
-D. Applying random activation functions.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q29. For large datasets where computing the gradient over all samples is prohibitively slow, what is the key practical advantage of using SGD or Mini-Batch GD over full Batch GD?
-A. Lower memory requirements for the weight parameters.
-B. Constant O(1) computational cost per update iteration, regardless of dataset size.
-C. Guaranteed convergence to the global minimum.
-D. Increased model interpretability.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q30. What is the fundamental concept underlying optimization algorithms like Momentum that enables them to accelerate convergence, especially on ill-conditioned loss landscapes?
-A. Resetting the learning rate periodically.
-B. Incorporating an exponentially weighted average of past gradients (velocity).
-C. Dynamically calculating the second derivative (Hessian).
-D. Using one-hot encoding for inputs.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q31. Consider a neural network designed for a sentiment classification task with 10 output classes. If the last tf.keras.layers.Dense layer has 512 input units, calculate the number of weights (excluding biases) in this final layer.
-A. 5120
-B. 5130
-C. 512
-D. 522
-Correct Answer: A
-Type: Numerical
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q32. When defining the Mean Squared Error (MSE) loss for gradient computation in deep learning frameworks, the term is often multiplied by $1/2$. What is the primary purpose of this factor?
-A. To guarantee that the loss is always positive.
-B. To ensure that the error is equivalent to the $L_2$ norm.
-C. To simplify the derivative calculation, canceling the factor of 2 when taking the derivative of $(Y-\hat{Y})^2$.
-D. To reduce the computational complexity from $O(N^2)$ to $O(N)$.
+Difficulty: Medium
+Source PPT: 1_Concept of Env.pdf
+
+Q48. Which strategy for sustainable development involves the Photovoltaic (PV) effect?
+A. Wind Energy
+B. Bio Composting
+C. Solar Energy
+D. Use of CNG
 Correct Answer: C
-Type: Numerical
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q33. Which option correctly sets the output layer of a Keras sequential model designed for binary classification, modeling the probability of the positive class?
-A. model.add(Dense(1, activation='softmax'))
-B. model.add(Dense(2, activation='sigmoid'))
-C. model.add(Dense(1, activation='sigmoid'))
-D. model.add(Dense(2, activation='relu'))
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q49. Which human-created emissions do the oceans currently absorb roughly one third of, equating to about 22 million tons a day?
+A. Water vapor
+B. CO2 emissions
+C. Methane gas
+D. Nitrogen
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q50. One objective of environmental studies listed is:
+A. Increased economic dependency
+B. Skill Development
+C. Promoting unsustainable practices
+D. Encouraging resource withdrawal
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q51. What specific action are students encouraged to take regarding personal transportation due to harmful automobile emissions?
+A. Buy a new car
+B. Use public transport only
+C. Ride a bicycle
+D. Use more bottled water
 Correct Answer: C
-Type: Code
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q34. An input tensor has a spatial size of $H \times W$. If a convolutional operation uses a kernel size $K$, and padding $P = (K-1)/2$ (assuming $K$ is odd) and stride $S=1$, what is the size of the output tensor?
-A. $(H-K+1) \times (W-K+1)$
-B. $(H+P) \times (W+P)$
-C. $H \times W$
-D. $(H/2) \times (W/2)$
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q52. The impact of ocean acidification includes the consequence of corrosive polar seas and what other drastic change?
+A. Expanding coral reefs
+B. Collapsing food webs
+C. Increased calcium carbonate levels
+D. Faster evolution of marine life
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q53. CNG is described as being non-toxic, non-corrosive, and non-carcinogenic, which helps improve what aspect of public life?
+A. Transportation speed
+B. Public health
+C. Fuel cost
+D. Vehicle maintenance
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q54. The Thermosphere, the highest layer of the atmosphere, starts at about how many kilometers?
+A. 11 kilometers
+B. 30 kilometers
+C. 55 kilometers
+D. 70 kilometers
 Correct Answer: C
-Type: Numerical
+Difficulty: Medium
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q55. In the nested model of sustainability dimensions, which pillar relies on society, while both rely on the environment?
+A. Social
+B. Economic
+C. Cultural
+D. Environmental
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q56. What environmental phenomenon is described as occurring when pollutants contaminate the natural surroundings, bringing about changes that adversely affect normal lifestyles?
+A. Sustainable Development
+B. Eutrophication
+C. Pollution
+D. Urbanization
+Correct Answer: C
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q35. Which of the following snippets correctly defines a sequential model in Keras using the add() method?
-A.
-B.
-C.
-D.
-Correct Answer: A
-Type: Code
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q36. When using Cross-Entropy Loss for a binary classification problem, which output prediction (logit, $o$) for the true label ($y=1$) will result in the highest loss value?
-A. $\hat{Y} = 0.9$ (High probability of correct class)
-B. $\hat{Y} = 0.5$ (Uncertainty)
-C. $\hat{Y} = 0.1$ (Low probability of correct class)
-D. $\hat{Y} = 0.0001$ (Near impossible probability of correct class)
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q57. The use of CNG in public transport vehicles in Delhi was aimed at reducing which specific environmental problem?
+A. Water scarcity
+B. Noise pollution
+C. Soil contamination
+D. Air pollution
 Correct Answer: D
-Type: Numerical
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q37. Two vectors $\mathbf{v}$ and $\mathbf{w}$ are considered orthogonal if their dot product $\mathbf{v} \cdot \mathbf{w}$ equals what value?
-A. 1
-B. $-1$
-C. 0
-D. The product of their norms.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q38. If the input to a ReLU activation function is $x = 5.0$, what is the value of the derivative $\frac{d(\text{ReLU}(x))}{dx}$ during the backward pass?
-A. 0
-B. 5.0
-C. 1
-D. -1
-Correct Answer: C
-Type: Numerical
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q39. A programmer creates a tf.keras.layers.Dense(64) layer instance but does not specify the input shape and does not call the layer yet. If the programmer inspects layer.weights, what will they find?
-A. A list containing initialized weights of shape $(?, 64)$.
-B. A list containing only bias weights, as kernel weights require input shape.
-C. An empty list, as weights are only created when the input shape is first determined.
-D. A list containing weights initialized to zeros.
-Correct Answer: C
-Type: Code
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q40. What is the defining characteristic that separates data used for Supervised Learning from data used for Unsupervised Learning?
-A. Supervised data is exclusively numerical; unsupervised data is categorical.
-B. Supervised data contains features and corresponding labels/targets.
-C. Unsupervised data must be drawn from an i.i.d. distribution.
-D. Unsupervised data must be high-dimensional.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q41. You are performing Gradient Descent on a convex function $L(w) = w^2$. If the current weight $w_0 = 5.0$ and the learning rate $\eta = 0.1$, calculate the updated weight $w_1$.
-A. $4.0$
-B. $4.5$
-C. $4.9$
-D. $5.1$
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q58. Ocean acidification is referred to as "Global Warming’s Evil Twin" because if left unchecked, it is projected to devour more than half the world’s oceans in how many centuries?
+A. The next 2 to 3 centuries
+B. The next 10 centuries
+C. The next 48 hours
+D. The next 20 to 50 years
 Correct Answer: A
-Type: Numerical
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q59. According to the objectives listed for Environmental Studies, which is included?
+A. Resource Exploitation
+B. Attitude of concern
+C. Accelerated development
+D. Chemical industry lobbying
+Correct Answer: B
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q42. Deep learning relies heavily on the abundance of data and high computational power (GPUs). In the 1990s, when data and compute were scarce, which type of ML algorithm was often empirically preferred due to its predictable results and strong theoretical guarantees?
-A. Recurrent Neural Networks (RNNs).
-B. Linear Models and Kernel Methods.
-C. Generative Adversarial Networks (GANs).
-D. Deep Multi-layer Perceptrons (MLPs).
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q60. What is a specific suggested solution to protect marine calcifying species like sea urchins, shellfish, and coral from ocean acidification?
+A. Massive deep-sea dredging
+B. Genetic manipulation
+C. Introducing predatory species
+D. Heating the ocean surface
 Correct Answer: B
-Type: Theory
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q61. Development of rich countries having undesirable effects on the environment of the entire world is listed under which reason for the significance of Environmental Studies?
+A. Need for an Alternative Solution
+B. Development and Environment
+C. Explosive Increase in Pollution
+D. Need for Wise Planning of Development
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q62. What condition causes seawater to become more acidic during ocean acidification?
+A. Decreased nitrogen levels
+B. Increased concentration of hydrogen ions
+C. Increased carbonate ion abundance
+D. Reduced atmospheric CO2
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q63. What adverse impact on human connection to the ocean is explicitly mentioned regarding shellfish due to ocean acidification?
+A. Shellfish will become poisonous to eat.
+B. Shellfish will be unable to build sturdy shells.
+C. Shellfish will migrate away from coastal areas.
+D. Shellfish populations will rapidly increase.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q64. What type of organization must be included in the international efforts and cooperation required to solve global environmental issues?
+A. Political parties
+B. International banks
+C. International organizations
+D. Military alliances
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q65. What specific type of chemicals released into waters cause Eutrophication, leading to increased plant growth?
+A. Carbon-based metals
+B. Hydrogen- and oxygen-based chemicals
+C. Nitrogen- and phosphorus-based chemicals
+D. Sulfur compounds
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q66. Which objective of Environmental Studies involves the topic of Protection Quality?
+A. Evaluation
+B. Attitude of concern
+C. Protection Quality
+D. Knowledge
+Correct Answer: C
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q43. Batch Normalization layers operate by normalizing inputs based on minibatch statistics. This layer is beneficial because it helps ensure:
-A. The loss function is always convex.
-B. The parameters are always initialized to zero.
-C. Variables in intermediate layers maintain stable means and variances during training.
-D. The gradient is always perfectly smooth.
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q67. What is CNG fuel defined as, regarding its flammability?
+A. It is highly volatile at all concentrations.
+B. It will not burn if its concentration is below 5% or above 15%.
+C. It requires only 1% concentration to ignite.
+D. It has a low auto-ignition temperature.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q68. What specific marine organisms are mentioned as having already seen declines in larval settlement and survival rates due to ocean acidification in the Pacific Northwest?
+A. Deep sea corals
+B. Pteropods
+C. Some oyster hatcheries
+D. Sea urchins
 Correct Answer: C
-Type: Theory
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q69. Which specific type of radiation makes up 46% of the remaining sunlight that reaches the earth’s surface?
+A. Visible light
+B. UV radiation
+C. IR radiation
+D. Gamma rays
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q70. Which development outcome is listed under the scope of Environmental Studies as a replacement target?
+A. Replacement of industry with agriculture
+B. Replacement of urbanization with development
+C. Replacement of development with sustainable development
+D. Replacement of natural resources with artificial resources
+Correct Answer: C
 Difficulty: Easy
-Unit: 1
-CO: CO1
-Q44. What factor is typically required by Deep Learning models but often unnecessary for classical Machine Learning models?
-A. The use of a loss function.
-B. The use of a backpropagation algorithm.
-C. Large volumes of data (in the millions).
-D. The ability to perform regression.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q45. When initializing the weights of a neural network, why must the weights be initialized randomly (e.g., using Gaussian noise) rather than setting all weights to the same constant (like zero or one)?
-A. To guarantee the model is a Universal Approximator.
-B. To ensure that the training error starts high.
-C. To break symmetry among hidden units so they can learn different representations.
-D. To prevent the loss function from being non-convex.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q46. The Mean Squared Error (MSE) of an estimator $\hat{\theta}$ can be decomposed into the sum of the estimator's variance and its squared bias. For an unbiased estimator, what does the MSE simplify to?
-A. The square of the bias.
-B. The variance of the estimator.
-C. Zero.
-D. The inverse of the learning rate.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q47. If a tf.keras.layers.Dropout(0.2) layer is actively used during model training, what is the expected scale of the remaining (non-dropped out) neuron outputs?
-A. Outputs are multiplied by 0.2.
-B. Outputs are multiplied by 0.8.
-C. Outputs are multiplied by 1.25.
-D. Outputs remain unscaled.
-Correct Answer: C
-Type: Numerical
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q48. Given a prediction $\hat{Y} = 7$ and a true label $Y = 3$. If the standard squared loss (excluding the $1/2$ factor) is calculated, what is the loss value?
-A. 4
-B. 8
-C. 16
-D. 0
-Correct Answer: C
-Type: Numerical
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q49. A feature vector $\mathbf{x} \in \mathbb{R}^n$ is processed by a layer. If a tf.keras.layers.LayerNormalization layer is applied to the output, across which dimension does it calculate the mean and variance for normalization?
-A. Across the batch dimension.
-B. Across the feature dimension.
-C. Across time steps.
-D. Across the entire dataset population.
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q50. Which set of data must hyperparameters be tuned on to prevent the final model from overfitting to the evaluation data?
-A. Training set.
-B. Test set.
-C. Validation set.
-D. Entire population data.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-Unit: 1
-CO: CO1
-Q51. A model trained on 10 epochs shows 95% training accuracy and 55% validation accuracy. The instructor suggests stopping training early. Which primary issue is the model exhibiting, and what is the standard solution?
-A. High Bias (Underfitting); Solution: Use a simpler model.
-B. High Variance (Overfitting); Solution: Apply Early Stopping or Dropout.
-C. Vanishing Gradient; Solution: Switch to Sigmoid activation.
-D. Low Capacity; Solution: Decrease the learning rate.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q52. L2 regularization (weight decay) limits the magnitude of weights during training. For an MLP using the Tanh activation function, how does a large L2 penalty help prevent overfitting?
-A. It forces the output of Tanh into the non-linear saturation region.
-B. It drives weights towards zero, causing $z$ values to be small, approximating Tanh with its central linear region.
-C. It increases the dimensionality of the input vectors.
-D. It ensures that the learning rate is always large.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q53. Given a smooth, convex objective function $f(w)$, if the learning rate $\eta$ is chosen too large for Gradient Descent, what pathological behavior is the optimization process likely to exhibit?
-A. Vanishing gradient, leading to stalled progress.
-B. Convergence to a non-zero minimum due to insufficient steps.
-C. Oscillation or divergence, failing to smoothly approach the minimum.
-D. Increased numerical instability in the loss calculation.
-Correct Answer: C
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q54. Backpropagation is described as an efficient application of the chain rule. What core computational advantage does backpropagation exploit to outperform a naive, independent calculation of gradients for every weight?
-A. It calculates the gradient exclusively through matrix multiplication (forward mode differentiation).
-B. It computes gradients one layer at a time, iterating backward, avoiding redundant recalculations of intermediate terms.
-C. It bypasses the need for activation function derivatives entirely.
-D. It guarantees that the Hessian matrix remains sparse.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q55. A developer is designing a Keras model that requires a Residual Connection (a non-linear topology where a layer's output skips the next layer and is added to the output of the layer after that). Why is the tf.keras.Sequential model inappropriate for this structure?
-A. Sequential models cannot use tf.keras.layers.Dense.
-B. Sequential models must define the input shape in the first layer.
-C. Sequential models can only handle a plain stack of layers where each layer has exactly one input and one output tensor.
-D. Sequential models are restricted to using ReLU activation.
-Correct Answer: C
-Type: Code
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q56. Mini-Batch Stochastic Gradient Descent (SGD) reduces the variance of the gradient estimate compared to using a single observation ($\text{batch size}=1$). If a batch size of $B$ is used, the resulting minibatch gradient is the average of $B$ independent gradients. By what factor is the statistical standard deviation of this average gradient reduced compared to the standard deviation of a single gradient?
-A. $1/B$
-B. $\sqrt{B}$
-C. $1/\sqrt{B}$
-D. $B^2$
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q57. In minimizing ill-conditioned quadratic objectives (like a narrow, deep valley), standard Gradient Descent struggles due to oscillations in the steep directions and slow movement in the flat directions. How does the Momentum method fundamentally solve this issue?
-A. It zeros out the gradient component in the steepest direction.
-B. It accumulates gradients, canceling out oscillations while reinforcing consistent movement in shallow directions.
-C. It dynamically sets the learning rate to be proportional to the loss magnitude.
-D. It transforms the objective function into a perfectly spherical shape.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q58. What is the fundamental distinction between the RMSProp optimizer and the Adam optimizer?
-A. RMSProp calculates adaptive learning rates based on the first moment (mean), while Adam only uses the learning rate decay schedule.
-B. Adam uses exponential moving averages of both the first moment (mean) and the second moment (uncentered variance) of the gradient, while RMSProp only uses the second moment.
-C. RMSProp requires manual tuning of the learning rate, while Adam sets the learning rate adaptively to zero.
-D. Adam employs stochasticity, while RMSProp uses full-batch gradients.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q59. During training, the total norm of the aggregated gradient vector $\mathbf{g}$ is calculated as $|\mathbf{g}| = 4.0$. If the gradient clipping threshold $\theta$ is set to $1.0$, calculate the factor by which the gradient $\mathbf{g}$ is scaled down before updating the weights.
-A. 1.0
-B. 0.25
-C. 4.0
-D. 0.5
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q60. A feature map of shape (Batch, 32, 32, 16) is input to a prediction module. This module uses a tf.keras.layers.Conv2D layer with 5 anchor boxes ($a=5$) and 3 object classes ($q=3$) for prediction. If the class prediction layer must output $a(q+1)$ channels, calculate the total number of channels required for the output feature map (excluding the batch dimension).
-A. 15
-B. 16
-C. 20
-D. 64
-Correct Answer: C
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q61. A student writes a Keras model but forgets to specify the input shape in the first Dense layer. Which action must be taken to ensure model.summary() executes successfully without requiring the model to be called on actual input data first?
-A. Use a large batch size in the training loop.
-B. Add tf.keras.layers.Flatten() before the Dense layer.
-C. Explicitly add a tf.keras.Input(shape=(...)) object or pass the input_shape argument to the first layer.
-D. Switch the optimizer to Adam.
-Correct Answer: C
-Type: Code
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q62. The RMSProp state variable $\mathbf{s}_t$ uses a leaky average $\mathbf{s}t \leftarrow \gamma \mathbf{s}{t-1} + (1 - \gamma) \mathbf{g}_t^2$. If the hyperparameter $\gamma$ is set to $0.9$, the half-life time of an observation contributing to the average is roughly 10 steps. What is the effective sample size or number of past gradient squares contributing significantly to $\mathbf{s}_t$?
-A. 1.0
-B. $1 / (1 - \gamma)$
-C. $100$
-D. $1 / \sqrt{1 - \gamma}$
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q63. For convex optimization problems using SGD, what theoretical constraint must the learning rate $\eta_t$ satisfy as the number of time steps $t$ increases to guarantee convergence to the optimal solution?
-A. $\eta_t$ must remain constant.
-B. $\eta_t$ must decay at least as quickly as $O(t^{-1/2})$.
-C. $\eta_t$ must grow linearly with $t$.
-D. $\eta_t$ must be proportional to the second derivative (Hessian).
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q64. A single-channel input image of size $128 \times 128$ is processed by a single layer of tf.keras.layers.MaxPooling2D(pool_size=2, strides=2). What is the resulting output feature map shape?
-A. $(128, 128)$
-B. $(64, 64)$
-C. $(127, 127)$
-D. $(32, 32)$
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q65. A single-channel image of size $20 \times 20$ is processed by a 3x3 kernel with no padding and a stride of 1. What is the output size?
-A. $20 \times 20$
-B. $17 \times 17$
-C. $18 \times 18$
-D. $19 \times 19$
-Correct Answer: C
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q66. An attention mechanism computes an output tensor of shape $(B, N_Q, N_V)$. If the keys and values are the same size as the queries, and the number of hidden units $D_{hidden}=100$, what is the shape of the concatenation of the $H=4$ heads before the final projection?
-A. $(B \cdot 4, N_Q, D_{hidden})$
-B. $(B, N_Q, D_{hidden})$
-C. $(B, N_Q, 4 \cdot D_{hidden})$
-D. $(B, N_Q, D_{hidden} / 4)$
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q67. Calculate the number of weights (kernel parameters) in a tf.keras.layers.Dense layer with 128 input features and 64 output units.
-A. $128 \times 64$
-B. $128 + 64$
-C. $128 \times 64 + 64$
-D. $128 \times 64 + 128$
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q71. One listed advantage of DDT is its effect on which component of the environment?
+A. It is beneficial for plants
+B. It increases animal population declines
+C. It improves human liver health
+D. It accelerates eggshell thinning
 Correct Answer: A
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q68. A model uses Softmax output $P(\text{Dog}) = 0.8$ and $P(\text{Cat}) = 0.2$. The true label is Cat. The cross-entropy loss is given by $L = -\log(P(\text{Cat}))$. Calculate the loss value (round to 3 decimal places).
-A. 0.223
-B. 1.609
-C. 0.800
-D. 0.999
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q69. Batch Normalization (BN) layers behave differently during training and prediction. How does the parameter normalization statistic used in BN typically differ between these two modes?
-A. Training uses fixed, initial statistics; prediction uses dynamically calculated minibatch statistics.
-B. Training uses aggregated statistics from the entire dataset; prediction uses zero mean/unit variance.
-C. Training uses minibatch statistics; prediction uses stable estimates calculated over the entire training dataset.
-D. BN is only applied during training, not prediction.
+Difficulty: Easy
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q72. What is the approximate thickness of the Troposphere at the poles?
+A. About 16 km
+B. About 11 km
+C. About 8 km
+D. About 48 km
 Correct Answer: C
-Type: Theory
 Difficulty: Medium
-Unit: 1
-CO: CO1
-Q70. Which constraint, highly relevant to high-performance computing, is the primary reason for choosing minibatches (batch size $>1$) over single observation SGD (batch size $=1$)?
-A. The constraint that GPUs are single-threaded devices.
-B. The constraint that computation cannot be parallelized.
-C. The inefficiency of reading and writing data to/from CPU/GPU caches for small, non-vectorized operations.
-D. The necessity to use complex activation functions.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q71. What does the term "generalization gap" quantify in the context of model performance?
-A. The difference between the highest and lowest validation error across epochs.
-B. The difference between the model's performance on the training set and its expected performance on unseen data (test error).
-C. The ratio of bias to variance.
-D. The length of the computational graph.
+Source PPT: Unit 1_Segments of Environment.pdf
+
+#### Section 2: Hard Difficulty Single Correct (24 Questions)
+
+Q73. If atmospheric carbon dioxide exceeds 490 ppm, by which time period is more than half of the Arctic Ocean projected to be corrosive to calcium carbonate?
+A. By 2100 to 2200
+B. By 2040 to 2050
+C. By 2010
+D. By 2030 to 2040
 Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q72. Dropout regularization achieves its goal by randomly setting a fraction of neurons' outputs to zero during training. What underlying problem does this mechanism aim to break among neurons?
-A. Vanishing gradients across layers.
-B. The complexity of the loss function.
-C. Co-adaptation of hidden units in layers.
-D. Exploding gradients in deeper networks.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q73. Why is L2 regularization applied during Mini-Batch SGD often referred to as "weight decay"?
-A. Because the penalty term forces the weights to be positive.
-B. Because the L2 penalty introduces an extra term that linearly shrinks the magnitude of the current weight vector towards zero in each update step.
-C. Because it causes the learning rate to decrease exponentially.
-D. Because it encourages sparse weights (setting many to zero).
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q74. In adaptive optimizers like Adagrad and RMSProp, a small constant $\epsilon$ is often added in the denominator $\frac{\eta}{\sqrt{\mathbf{s}_t + \epsilon}}$. What is the primary purpose of this additive constant?
-A. To increase the effective learning rate.
-B. To ensure the optimizer achieves quadratic convergence.
-C. To prevent division by zero or overly large step sizes if $\mathbf{s}_t$ is very small.
-D. To implement bias correction for initial steps.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q75. Vectorization and parallelization are key to computational efficiency in deep learning. Which operation benefits the most from parallelization when performing Gradient Descent on a minibatch?
-A. The scalar summation of the loss function results.
-B. The element-wise computation of the activation function.
-C. The large matrix-matrix multiplication ($\mathbf{X} \mathbf{W}$) and associated matrix-vector operations involved in the forward/backward pass.
-D. The reading of hyperparameters from CPU memory.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q76. The Sigmoid activation function was popular initially but was largely superseded by ReLU. Why was the Sigmoid function problematic for training very deep networks?
-A. Its computation was too slow for modern GPUs.
-B. Its range was too narrow, restricting activation dynamics.
-C. Its gradient vanishes (approaches zero) when inputs are large positive or large negative, hindering deep gradient flow.
-D. It introduced bias by having a non-zero mean output.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q77. The core idea behind Gradient Descent is that the direction of steepest descent is given by the negative gradient. This idea is valid due to which mathematical concept?
-A. The Law of Large Numbers.
-B. The first-order Taylor expansion (linear approximation).
-C. The Chain Rule of differentiation.
-D. The Frobenius Norm calculation.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q78. When measuring model accuracy (proportion of correct predictions) during training, why is accuracy itself rarely used as the primary loss function to be minimized directly by the optimizer?
-A. Accuracy is a continuous metric, unlike MSE.
-B. Accuracy is typically non-differentiable or piecewise constant, preventing the smooth flow of gradients needed for backpropagation.
-C. Accuracy requires too much memory to calculate on large minibatches.
-D. Accuracy only works for regression problems.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q79. For optimization problems, what critical property of convex functions guarantees that the numerical solution obtained by Gradient Descent will be the absolute best solution available?
-A. The function is always symmetric around the origin.
-B. All local minima are also global minima.
-C. The gradient is always one.
-D. The domain is always a unit ball.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q80. Training RNNs on long sequences suffers from numerical instability. The problem is characterized by gradients that can become unstable due to the recurrent computation. What is the fundamental mathematical reason for this instability across long sequences?
-A. The $T$ layers of matrix products along the time steps causing eigenvalues to vanish or diverge.
-B. The use of the Softmax function in the output layer.
-C. The non-linear conversion of data types (e.g., float to integer).
-D. The L1 regularization of weights.
+Difficulty: Hard
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q74. Which specific type of coating material is suggested as a solution to protect coral reefs from carbonic acid corrosion?
+A. Superomniphobic material
+B. Calcium carbonate plaster
+C. Simple fiber netting
+D. High-density polyethylene
 Correct Answer: A
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q81. If the learning rate $\eta$ is chosen to be excessively high in Gradient Descent, what is the most likely immediate consequence?
-A. Slow convergence due to minimal updates.
-B. The optimization process diverges or oscillates wildly.
-C. Convergence to a high-bias solution.
-D. Numerical underflow, stalling training.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q82. Which statement accurately captures the distinction between the goal of optimization in training and the goal of deep learning?
-A. Optimization focuses on minimizing generalization error; Deep Learning focuses on minimizing training error.
-B. Optimization focuses on finding the best model parameters given infinite data; Deep Learning focuses on model portability.
-C. Optimization focuses on minimizing training error; Deep Learning focuses on minimizing generalization error.
-D. Optimization uses only convex objectives; Deep Learning uses only non-convex objectives.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q83. Machine Learning theory often relies on the "i.i.d. assumption." What does this assumption state regarding the samples in the training and test sets?
-A. They must be collected independently from the same underlying probability distribution.
-B. They must be continuous and Gaussian distributed.
-C. They must contain zero noise and be high dimensional.
-D. They must be collected sequentially over time.
+Difficulty: Hard
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q75. According to Rachel Carson, what is the overriding theme of *Silent Spring*?
+A. The powerful, negative effect humans have on the natural world
+B. The historical uses of DDT in WWII
+C. The importance of fertilizer use in agriculture
+D. The non-toxic nature of chemical pesticides
 Correct Answer: A
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q84. In high-dimensional, non-convex loss landscapes, why are saddle points often considered more problematic than local minima?
-A. Saddle points always lead to catastrophic divergence.
-B. The large number of negative eigenvalues in the Hessian matrix makes saddle points far more common than local minima.
-C. Saddle points inherently lead to vanishing gradients in all directions.
-D. Saddle points only exist when L1 regularization is used.
+Difficulty: Hard
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q76. Why is CNG described as having a low operational cost compared to other fuels?
+A. Its procurement process is subsidized globally.
+B. Its cost is significantly low; 66% lower than petrol and 28% lower than diesel in Delhi.
+C. It requires no engine modifications, reducing cost.
+D. It is used only in low-speed vehicles.
 Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q85. Adam computes normalized state variables $\hat{\mathbf{v}}_t$ and $\hat{\mathbf{s}}_t$ by dividing the raw moments $\mathbf{v}_t$ and $\mathbf{s}_t$ by factors like $(1 - \beta_1^t)$ and $(1 - \beta_2^t)$. What is the function of this operation?
-A. To force the convergence of $\mathbf{v}_t$ and $\mathbf{s}_t$ to zero.
-B. To reduce the computational cost of the square root operation.
-C. To correct for the initial bias towards zero introduced by initializing the moments at $\mathbf{v}_0 = \mathbf{s}_0 = 0$.
-D. To implement weight decay inherently within the optimizer.
+Difficulty: Hard
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q77. What distinguishes Environmental studies as an academic field, according to the sources?
+A. It focuses solely on wildlife conservation.
+B. It is limited to geological sciences.
+C. It systematically studies every issue that affects an organism.
+D. It deals only with non-living components.
 Correct Answer: C
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q86. Why is the choice of batch size critical when applying Batch Normalization layers?
-A. Batch Normalization only works if the batch size is a power of 2.
-B. If the batch size is too small (e.g., 1), the resulting mean and variance estimates are high variance and useless, destroying the model's signal.
-C. Batch Normalization introduces O($N^3$) complexity, which increases rapidly with batch size.
-D. Small batch sizes automatically enforce L2 regularization.
+Difficulty: Hard
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q78. Development includes which of the following examples mentioned in the sources?
+A. Reduction of pollution and ozone depletion
+B. Urbanization, Industrial Growth, Telecommunication and Transportation Systems
+C. Conservation and management of natural resources
+D. Replacement of development with sustainable development
 Correct Answer: B
-Type: Theory
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q87. A student attempts to build a small Keras model and runs the following code, resulting in an error during model construction because the input shape of the first Dense layer is unknown.
-Which line must be added or modified to specify that the model expects inputs of shape (784,)?
-A. model.add(tf.keras.Input(shape=(784,)))
-B. model.add(tf.keras.layers.BatchNormalization())
-C. model.add(tf.keras.layers.Dense(32, activation='relu', input_dim=784))
-D. model.compile(..., input_shape=(784))
+Difficulty: Hard
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q79. Which statement accurately reflects the temperature variation in the Stratosphere?
+A. Temperature decreases with altitude.
+B. Temperature increases slightly with altitude.
+C. Temperature remains constant at 0 degrees Celsius.
+D. Temperature is constantly thousands of degrees.
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q80. What critical function of the marine plant life underwater is cited as a reason to increase and enhance it exponentially?
+A. Preventing coastal erosion
+B. Acting as a carbon sink
+C. Filtering plastic waste
+D. Providing shade for fish
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q81. The definition of Sustainable Development includes providing growth for agriculture, manufacturing, energy, and services to fulfill the needs of all people, especially whom?
+A. The educated elite
+B. The wealthy landowners
+C. The poor
+D. The industrialized nations
+Correct Answer: C
+Difficulty: Hard
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q82. When pollution occurs, which two specific effects on the natural world are listed?
+A. It enhances resource availability and economic growth.
+B. It promotes modernization and development.
+C. It disturbs our ecosystem and the balance of the environment.
+D. It facilitates international efforts and cooperation.
+Correct Answer: C
+Difficulty: Hard
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q83. Which statement accurately describes the relationship between the three pillars of sustainability?
+A. They function independently and sequentially.
+B. The economy relies on the environment, and society relies on the economy.
+C. They are interconnected and dependent on each other, forming a nested model.
+D. Social and Environmental pillars are constraints on Economic prosperity.
+Correct Answer: C
+Difficulty: Hard
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q84. What process is suggested to make pH sensors, which are critical for monitoring ocean chemistry, more affordable?
+A. Using simpler chemical analysis methods
+B. Eliminating the need for fiber optics in the sensor
+C. Making fiber optics a more affordable affair
+D. Reducing the size and sophistication of the sensors
+Correct Answer: C
+Difficulty: Hard
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q85. Ocean acidification causes carbonate ions to be relatively less abundant, which is problematic because:
+A. Carbonate ions are crucial for absorbing atmospheric nitrogen.
+B. Carbonate ions are needed to neutralize carbonic acid instantly.
+C. Carbonate ions are important building blocks for calcium carbonate structures.
+D. Carbonate ions increase the solubility of oxygen in water.
+Correct Answer: C
+Difficulty: Hard
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q86. What is the temperature range stated for the top of the Mesosphere?
+A. Approximately 0 degrees Celsius
+B. Approximately 32 degrees Fahrenheit
+C. Approximately -130 Fahrenheit
+D. Approximately thousands of degrees
+Correct Answer: C
+Difficulty: Hard
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q87. What chemical reaction, explicitly mentioned as a negative effect, results from plant respiration during eutrophication?
+A. The absorption of nitrogen-based chemicals.
+B. The formation of CO2, which increases water acidity.
+C. The breakdown of phosphorus-based chemicals.
+D. The reduction of algae growth.
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q88. What level must the number of people on the planet be reduced to, in order to align with the principles of sustainability?
+A. A level within the environment’s ability to handle them.
+B. The level present before the industrial revolution.
+C. A level supported purely by renewable resources.
+D. The maximum level allowed by economic capacity.
 Correct Answer: A
-Type: Code
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q88. An instructor decides to switch from using a batch size of 32 to a batch size of 128 (4x increase). Assuming the statistical properties hold, by what approximate factor will the statistical noise (standard deviation) of the gradient estimate be reduced?
-A. Reduced by a factor of 4.
-B. Reduced by a factor of 16.
-C. Reduced by a factor of 2.
-D. Increased by a factor of 4.
-Correct Answer: C
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q89. A training sample $\mathbf{X}$ of shape (2, 512) is fed through a Keras layer where weights have already been inferred. What will be the shape of the output tensor $\mathbf{Y}$ if the layer is defined as:
-A. (512, 64)
-B. (2, 64)
-C. (2, 512)
-D. (64, 64)
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q90. An MLP processes 784 inputs. It has a hidden layer of 256 units and an output layer of 10 units. Calculate the total number of biases in the entire network.
-A. 784
-B. 256
-C. 266
-D. 1040
-Correct Answer: C
-Type: Numerical
-Difficulty: Medium
-Unit: 1
-CO: CO1
-Q91. In classical learning theory (e.g., VC dimension), high model capacity (like millions of parameters) suggests a high risk of poor generalization. Why does the practice of training deep neural networks often contradict this, showing good generalization despite massive parameter counts?
-A. Deep networks primarily rely on convex optimization techniques.
-B. Effective regularization heuristics (Dropout, Early Stopping) and the optimization algorithm itself encode implicit inductive biases that limit the effective search space to "simpler" solutions that generalize well.
-C. They exclusively use the Softmax activation function, which enforces stability.
-D. The universal approximation theorem guarantees generalization regardless of dataset size.
-Correct Answer: B
-Type: Theory
 Difficulty: Hard
-Unit: 1
-CO: CO1
-Q92. For tasks like matrix factorization where sparsity (having many parameters set to zero) is desirable for interpretability and storage, which regularization technique is theoretically preferred?
-A. L2 Regularization (Ridge Regression), as it gradually shrinks all weights.
-B. L1 Regularization (Lasso Regression), as it tends to concentrate weights on a small set of features by pushing others exactly to zero.
-C. Dropout, as it randomly sets weights to zero during inference.
-D. Batch Normalization, as it normalizes parameter scales.
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q89. By 2010, what percentage decrease in calcium carbonate levels was stated to have occurred due to ocean acidification?
+A. 25 percent
+B. 50 percent
+C. 490 ppm
+D. 0.1 pH units
 Correct Answer: B
-Type: Theory
 Difficulty: Hard
-Unit: 1
-CO: CO1
-Q93. Consider a long chain of matrix multiplications $f(\mathbf{x}) = \mathbf{W}_3(\mathbf{W}_2(\mathbf{W}_1 \mathbf{x}))$. Why would a naive attempt to compute $\partial f / \partial \mathbf{W}_1$ by algebraically expanding the full expression and applying forward derivatives be catastrophically inefficient compared to backpropagation?
-A. Forward derivation requires complex number arithmetic.
-B. Backpropagation relies on the central limit theorem, which is faster.
-C. Naive expansion leads to redundant computations of intermediate terms and matrix-matrix products, whereas backpropagation efficiently reuses derivatives from later stages to compute gradients for earlier stages.
-D. Backpropagation converts the process to an equivalent $O(1)$ scalar operation.
-Correct Answer: C
-Type: Numerical
-Difficulty: Hard
-Unit: 1
-CO: CO1
-Q94. Which of the following equations correctly represents one step of the weight update rule for standard Mini-Batch Stochastic Gradient Descent (SGD) with learning rate $\eta$, where $\mathbf{g}$ is the calculated gradient and $\mathbf{w}t$ is the current weight vector?
-A. $\mathbf{w}{t+1} \leftarrow \mathbf{w}t + \mathbf{g}$
-B. $\mathbf{w}{t+1} \leftarrow \mathbf{w}t - \eta \cdot \mathbf{g}$
-C. $\mathbf{w}{t+1} \leftarrow \eta \cdot \mathbf{w}t - \mathbf{g}$
-D. $\mathbf{w}{t+1} \leftarrow \mathbf{w}_t - \mathbf{g} / \sqrt{\mathbf{w}_t}$
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q90. When was DDT first synthesized?
+A. 1962
+B. 1874
+C. 1939
+D. 1945
 Correct Answer: B
-Type: Code
 Difficulty: Hard
-Unit: 1
-CO: CO1
-Q95. Finding the optimal learning rate and regularization strength is computationally expensive and requires iterative training. Explain why it is impossible to correctly tune these hyperparameters based solely on the model's performance on the training dataset.
-A. The computational cost of computing gradients becomes too high if training loss is used.
-B. Tuning on training data always leads to maximizing the model's capacity, setting regularization to zero and forcing the learning rate to its maximum, resulting in severe overfitting to the training set.
-C. The backpropagation algorithm is only valid if the training set is not used for HPO.
-D. The model's performance metric (accuracy) is non-differentiable on the training set.
-Correct Answer: B
-Type: Theory
-Difficulty: Hard
-Unit: 1
-CO: CO1
-Q96. What is the fundamental requirement for a Multilayer Perceptron (MLP) with one or more hidden layers to be able to model complex, non-linear functions (as guaranteed by the universal approximation theorem), contrasting it with a simple affine model?
-A. The output layer must use a Softmax activation.
-B. The network must use a non-linear, differentiable activation function (like ReLU or Tanh) in the hidden layers.
-C. The input must be one-hot encoded categorical data.
-D. The hidden layer size must be greater than the input size.
-Correct Answer: B
-Type: Theory
-Difficulty: Hard
-Unit: 1
-CO: CO1
-Q97. An optimization problem is ill-conditioned (highly skewed loss landscape). Why does using the Momentum method (where $\beta \to 1$) over standard SGD help the optimization quickly move past the plateau along the shallow dimensions?
-A. The large $\beta$ ensures that stochastic noise is maximized.
-B. The accumulated velocity vector (v) aligns strongly with the consistent shallow gradient direction, accelerating progress, while oscillating gradients in steep directions cancel out.
-C. Momentum forces the problem to become fully convex.
-D. Momentum automatically calculates the inverse Hessian for preconditioning.
-Correct Answer: B
-Type: Numerical
-Difficulty: Hard
-Unit: 1
-CO: CO1
-Q98. Compare standard SGD ($\eta \mathbf{g}_t$) and SGD with Momentum ($\mathbf{v}t \leftarrow \beta \mathbf{v}{t-1} + \mathbf{g}t, \mathbf{w}{t+1} \leftarrow \mathbf{w}_t - \eta \mathbf{v}_t$). If both are applied to a non-convex, noisy problem, what is the primary statistical advantage of the momentum update?
-A. Momentum guarantees convergence to the global optimum faster than SGD.
-B. Momentum effectively integrates gradients over a larger history, reducing noise variance and stabilizing the direction of movement towards the optimum.
-C. Momentum requires less memory because $\mathbf{v}_t$ is sparse.
-D. Momentum prevents the learning rate from decaying.
-Correct Answer: B
-Type: Theory
-Difficulty: Hard
-Unit: 1
-CO: CO1
-Q99. The tf.linalg.matmul operation is called using two tensors, $\mathbf{A} \in \mathbb{R}^{2 \times 3}$ and $\mathbf{B} \in \mathbb{R}^{3 \times 4}$. The result $\mathbf{C}$ is a $2 \times 4$ matrix. If $\mathbf{A}$ and $\mathbf{B}$ are now 3D tensors representing a batch of 16 matrices, $\mathbf{A}' \in \mathbb{R}^{16 \times 2 \times 3}$ and $\mathbf{B}' \in \mathbb{R}^{16 \times 3 \times 4}$, what is the shape of the batch matrix multiplication output $\mathbf{C}' = \text{BMM}(\mathbf{A}', \mathbf{B}')$?
-A. $\mathbb{R}^{16 \times 2 \times 4}$
-B. $\mathbb{R}^{16 \times 3 \times 3}$
-C. $\mathbb{R}^{16 \times 4 \times 3}$
-D. $\mathbb{R}^{16 \times 3 \times 4}$
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q91. Environmental studies is essentially a multidisciplinary approach that deals with which fundamental concept?
+A. Issues that affect an organism
+B. Only global warming and ozone depletion
+C. Only the non-living components of the environment
+D. Agricultural development and output
 Correct Answer: A
-Type: Numerical
 Difficulty: Hard
-Unit: 1
-CO: CO1
-Q100. The derivative of the Sigmoid activation function $\sigma(z)$ used during backpropagation is given by $\sigma'(z) = \sigma(z)(1-\sigma(z))$. If the layer output $o_j = \sigma(\text{net}_j)$, what is the analytic expression for the derivative $\partial o_j / \partial \text{net}_j$ in terms of the output $o_j$?
-A. $\text{net}_j (1 - o_j)$
-B. $o_j (1 - o_j)$
-C. $1 - o_j^2$
-D. $o_j^2 - 1$
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q92. Why does the problem of species extinction due to ocean acidification persist, even beyond the higher concentration of carbon dioxide?
+A. The oceans are heating up too rapidly.
+B. Carbonate ions are dissolving all shells instantly.
+C. The rate of change of carbon dioxide levels is too quick for life and ecosystems to evolve.
+D. Marine food webs are collapsing universally.
+Correct Answer: C
+Difficulty: Hard
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q93. What is the maximum temperature mentioned for the Stratosphere?
+A. About 0 degrees Celsius
+B. About -90 degrees Celsius
+C. About 32 degrees Fahrenheit
+D. Both A and C
+Correct Answer: D
+Difficulty: Hard
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q94. According to the source, why is the survival of Pteropods (Sea Butterflies) very important to humans?
+A. They are used for transportation.
+B. They are a major food source for fish.
+C. They produce medicines.
+D. They construct coral reefs.
 Correct Answer: B
-Type: Code
 Difficulty: Hard
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q95. The need for wise planning of development focuses on ensuring that our actions are planned in what manner for the sustenance of resources availability?
+A. Economically
+B. Ecologically
+C. Industrially
+D. Geographically
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q96. Based on the scope of environmental studies, which science is it related to in particular?
+A. Physics
+B. Chemistry
+C. Mathematics
+D. Biology
+Correct Answer: D
+Difficulty: Hard
+Source PPT: Unit 1_Concept of Env.pdf
+
+***
+
+### Part B: Multiple Correct Questions (24 Total)
+
+Q97. Which of the following are explicitly listed under the Importance of Environmental Studies? (Choose ALL correct options)
+A. Generates concern for the changing environment
+B. Helps to maintain ecological balance
+C. Directs attention towards unlimited exploitation of the environment
+D. Encourages rapid urbanization
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q98. Which layers are included in the segments of the Environment? (Choose ALL correct options)
+A. Atmosphere
+B. Lithosphere
+C. Ionosphere
+D. Hydrosphere
+Correct Answers: A, B, D
+Difficulty: Easy
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q99. What are the three aspects encompassed by the concept of sustainability? (Choose ALL correct options)
+A. Economic sustainability
+B. Political sustainability
+C. Environmental sustainability
+D. Social sustainability
+Correct Answers: A, C, D
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q100. Which of the following are listed fields within the wide scope of Environmental Studies? (Choose ALL correct options)
+A. Conservation and management of natural resources
+B. Control of human population
+C. Control of environmental pollution
+D. Unlimited exploitation of the environment
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q101. Which health effects are listed as disadvantages of DDT exposure on human health? (Choose ALL correct options)
+A. Liver damage
+B. Cancer
+C. Hypertension
+D. Increased bone density
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q102. Which strategies are listed for achieving sustainable development? (Choose ALL correct options)
+A. Use of CNG
+B. Solar Energy
+C. Wind Energy
+D. Nuclear Fission
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Sustainability.pdf,,
+
+Q103. What are listed disadvantages of ocean acidification? (Choose ALL correct options)
+A. Dying coral reefs
+B. Collapsing food webs
+C. Corrosive polar seas
+D. Rapid evolution of sea life
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q104. Which characteristics describe DDT? (Choose ALL correct options)
+A. A colourless substance
+B. Almost odourless
+C. Tasteless
+D. Highly corrosive to metals
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q105. What benefits are associated with Bio Composting? (Choose ALL correct options)
+A. Improves soil structure and porosity
+B. Helps maintain long-term soil fertility
+C. Provides essential nutrients for plant development
+D. Increases the risk of nutrient overproduction
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q106. Why is CNG considered Eco-friendly? (Choose ALL correct options)
+A. It reduces the emission of carbon dioxide
+B. It reduces the emission of carbon monoxide
+C. It increases the effects of global warming
+D. It is non-carcinogenic
+Correct Answers: A, B, D
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
+
+Q107. Which of the following are natural calamities or events listed as causes of CO2 release leading to ocean acidification? (Choose ALL correct options)
+A. Volcanic eruptions
+B. Forest fires caused by lightning
+C. Deforestation
+D. Land use changes
+Correct Answers: A, C, D
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q108. What are students encouraged to do to save the environment? (Choose ALL correct options)
+A. Recycle, Reduce, Reuse
+B. Say goodbye to bottled water
+C. Open a window instead of turning on the AC
+D. Waste food regularly
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q109. Which factors are included in the definition of Environment as conditions that surround, affect, and influence survival, growth, and development? (Choose ALL correct options)
+A. Social conditions
+B. Physical conditions
+C. Political conditions
+D. Cultural conditions
+Correct Answers: A, B, D
+Difficulty: Easy
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q110. Which outcomes are part of the change in ocean chemistry caused by ocean acidification? (Choose ALL correct options)
+A. Extinction of marine species
+B. Reproductive disorders in fish species
+C. Reducing levels of calcium carbonate
+D. Increasing the ocean pH
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf,
+
+Q111. Which organizations are cited as collecting carbon measurements throughout the world’s oceans? (Choose ALL correct options)
+A. NOOA
+B. NNOCCI
+C. EPA
+D. UGC
+Correct Answers: A, B
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q112. The scope of environmental studies includes the conservation of which aspects of biodiversity? (Choose ALL correct options)
+A. Genetic biodiversity
+B. Species biodiversity
+C. Ecosystem biodiversity
+D. Material biodiversity
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q113. What actions are included in the ongoing monitoring efforts being undertaken to study how CO2 emissions affect the ocean system? (Choose ALL correct options)
+A. Large-scale research cruises across ocean basins
+B. Measurements of the partial pressure of CO2 (pCO2) in the surface water
+C. Monitoring ocean acidification in all the world’s oceans
+D. Implementing worldwide bans on fishing immediately
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 1_Ocean Acidification.pdf
+
+Q114. Which are listed components of the water bodies that constitute the Hydrosphere? (Choose ALL correct options)
+A. Glaciers
+B. Oceans
+C. Rivers
+D. Mountains
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 1_Segments of Environment.pdf
+
+Q115. What are the listed advantages of DDT? (Choose ALL correct options)
+A. Kills disease causing organisms
+B. Low price
+C. Low toxic to humans
+D. Causes widespread extinctions
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 1_SILENT SPRING.pdf
+
+Q116. Which methods of solution are highlighted by Environmental Studies in the context of changing environment and population explosion? (Choose ALL correct options)
+A. Directing attention towards unlimited exploitation
+B. Generating concern for the changing environment
+C. Throwing light on methods of solution
+D. Increasing material dependence
+Correct Answers: B, C
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q117. What are the key elements included in defining the role of students in protecting the environment? (Choose ALL correct options)
+A. Students should fight against the contamination of the atmosphere
+B. Students need to promote interaction with other parts of society
+C. Students should use their efficient skills of interaction to communicate the need for protection
+D. Students should disregard non-government organization activities
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q118. Which goals are set for the true goal of development? (Choose ALL correct options)
+A. A goal common to all citizens of our planet earth
+B. A goal distant from the over-consuming wasteful societies
+C. A goal with an environmentally sound and sustainable development
+D. A goal prioritizing only the developed world’s requirements
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf,
+
+Q119. Which phenomena are cited as environmental issues that are being of Global concern? (Choose ALL correct options)
+A. Ozone depletion
+B. Acid rain
+C. Global warming
+D. Land use changes in developing regions
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Env.pdf
+
+Q120. Besides visible light, what two major forms of radiation are included in the sunlight that reaches the earth’s surface? (Choose ALL correct options)
+A. IR radiation
+B. UV radiation
+C. Radio waves
+D. Gamma radiation
+Correct Answers: A, B
+Difficulty: Medium
+Source PPT: Unit 1_Concept of Sustainability.pdf
