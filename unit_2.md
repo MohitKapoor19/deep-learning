@@ -1,1115 +1,1330 @@
-Unit: 2
-CO: CO2
-Q1. Which of the following statements correctly distinguishes between a grayscale image and an RGB image?
-A. Grayscale images have 3 color channels, while RGB images have 1.
-B. Grayscale images use 8 bits per pixel, while RGB images typically use 24 bits per pixel.
-C. RGB images represent intensity only, while grayscale images represent color.
-D. Grayscale images require more storage space than RGB images of the same resolution.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
+As an Environmental Studies (CHL100) exam paper setter and academic auditor, I have prepared a set of 120 objective questions strictly conforming to the provided source materials and the specified output structure, difficulty distribution, and formatting rules for a Mercer Mettl online examination.
 
-Unit: 2
-CO: CO2
-Q2. In a digital image, what does the resolution typically refer to?
-A. The total number of pixels along the height and width.
-B. The number of color channels.
-C. The bit-depth of the image.
-D. The compression format used.
-Correct Answer: A
-Type: Theory
-Difficulty: Easy
+## Unit 2: Structure and Functions of Ecosystem, Biodiversity, and Conservation
 
-Unit: 2
-CO: CO2
-Q3. What is the primary purpose of a Convolutional Layer in a CNN?
-A. To reduce the spatial dimensions of the input.
-B. To flatten the input into a 1D vector.
-C. To extract local features such as edges and textures using learnable filters.
-D. To classify the image into final categories.
+### Single Correct MCQs (96 Questions)
+
+Q1. What term is defined as a dynamic entity composed of a biological community and its associated abiotic environment?
+A. Ecology
+B. Biosphere
+C. Ecosystem
+D. Biogeographical Zone
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q4. In the context of CNNs, what is a "kernel" or "filter"?
-A. A small matrix of weights that slides over the input data.
-B. The final output class label.
-C. A function that removes noise from the dataset.
-D. The bias term added to the output.
-Correct Answer: A
-Type: Theory
+Q2. What is the fundamental concept referred to by the Greek words *OIKOS* (a house) and *Logos* (study of)?
+A. Ecosystem
+B. Conservation
+C. Biogeography
+D. Ecology
+Correct Answer: D
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q5. If an input image has dimensions $32 \times 32 \times 3$, what does the number '3' represent?
-A. The width of the image.
-B. The number of color channels (Red, Green, Blue).
-C. The number of filters used.
-D. The batch size.
+Q3. In the context of ecosystem structure, what decides the type of forest vegetation?
+A. Only the altitude and latitude of the region
+B. The amount of rainfall, local temperature, and soil type
+C. Only the type of primary consumers present
+D. The standing crop of organic compounds
 Correct Answer: B
-Type: Numerical
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q6. Which operation effectively increases the receptive field of a neuron in later layers without increasing the number of parameters?
-A. Padding
-B. Pooling
-C. Flattening
-D. Batch Normalization
-Correct Answer: B
-Type: Theory
 Difficulty: Medium
+Source PPT: Unit 2_Forest Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q7. What is the output height of a convolutional layer given input height $H$, filter size $F$, stride $S$, and zero padding $P$?
-A. $(H - F + 2P) / S + 1$
-B. $(H - F - 2P) / S + 1$
-C. $(H + F + 2P) / S - 1$
-D. $(H \times F) / S$
-Correct Answer: A
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q8. Consider an input volume of size $32 \times 32 \times 1$. You apply a convolution with 10 filters of size $5 \times 5$, stride $S=1$, and no padding (valid). What is the spatial dimension of the output volume?
-A. $32 \times 32$
-B. $28 \times 28$
-C. $27 \times 27$
-D. $5 \times 5$
+Q4. Which statement accurately describes the flow of energy and matter in an Open Ecosystem?
+A. It is isolated from outside sources.
+B. It can exchange energy and matter from outside.
+C. It is typically artificial and self-regulating.
+D. Energy is only stored, never exchanged.
 Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q9. In TensorFlow/Keras, what argument in `Conv2D` controls the number of output filters?
-A. `kernel_size`
-B. `filters`
-C. `strides`
-D. `input_shape`
-Correct Answer: B
-Type: Code
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q10. What is the result of using "Same" padding in a convolutional layer with a stride of 1?
-A. The output spatial dimensions are smaller than the input.
-B. The output spatial dimensions are the same as the input.
-C. The output spatial dimensions are larger than the input.
-D. The padding is automatically set to 0.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q11. Which activation function is most commonly used in the hidden layers of modern CNNs to introduce non-linearity and avoid the vanishing gradient problem?
-A. Sigmoid
-B. Tanh
-C. ReLU (Rectified Linear Unit)
-D. Softmax
+Q5. Which component of the ecosystem includes elements such as C, N, P, O, S, and H?
+A. Organic components
+B. Biotic components
+C. Inorganic constituents
+D. Saprotrophic components
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q12. Analyze the following code snippet:
-```python
-model = tf.keras.models.Sequential([
-  tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1))
-])
-```
-How many parameters (weights + biases) does this layer have?
-A. 320
-B. 288
-C. 32
-D. 9
-Correct Answer: A
-Type: Numerical
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q13. In a Max Pooling layer with a $2 \times 2$ pool size and stride 2, what happens to the input dimensions?
-A. They remain the same.
-B. The height and width are both halved.
-C. The depth (number of channels) is halved.
-D. The height and width are reduced by 2 pixels.
+Q6. Photoautotrophs produce food using sunlight, $\text{CO}_2$, and water in the presence of which substance?
+A. Detritus
+B. Chlorophyll
+C. Organic compounds
+D. Nitrogen
 Correct Answer: B
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q14. Which component of a CNN architecture is primarily responsible for combining local features into global predictions (classification)?
-A. Convolutional Layer
-B. Pooling Layer
-C. Fully Connected (Dense) Layer
-D. Dropout Layer
+Q7. In the classification of consumers, microscopic bacteria and fungi are categorized as which type of consumer?
+A. Macroconsumers
+B. Primary Consumers
+C. Microconsumers
+D. Tertiary Consumers
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q15. Given an input volume of $14 \times 14 \times 64$, what is the output shape after applying a Global Average Pooling layer?
-A. $1 \times 1 \times 64$ (or a vector of size 64)
-B. $7 \times 7 \times 64$
-C. $14 \times 14 \times 1$
-D. $196$
-Correct Answer: A
-Type: Numerical
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q16. What is the primary innovation introduced by the LeNet-5 architecture?
-A. Use of ReLU activation functions.
-B. Use of convolution and pooling layers for handwritten digit recognition.
-C. Use of residual skip connections.
-D. Use of Inception modules.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q17. Which CNN architecture won the ILSVRC 2012 challenge and popularized the use of deep CNNs, GPUs, and Dropout?
-A. LeNet-5
-B. AlexNet
-C. VGGNet
-D. ResNet
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q18. Look at the code below. What is the purpose of the `Flatten` layer?
-```python
-model.add(tf.keras.layers.Conv2D(64, (3,3), activation='relu'))
-model.add(tf.keras.layers.MaxPooling2D(2,2))
-model.add(tf.keras.layers.Flatten())
-model.add(tf.keras.layers.Dense(10, activation='softmax'))
-```
-A. To reduce the number of channels to 1.
-B. To convert the 2D feature maps into a 1D vector for the Dense layer.
-C. To normalize the pixel values.
-D. To apply dropout regularization.
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q19. VGGNet is characterized by its use of:
-A. Very large filters (e.g., $11 \times 11$).
-B. A sequence of many $3 \times 3$ convolutional filters.
-C. Inception modules with parallel convolutions.
-D. Skip connections to train very deep networks.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q20. What problem does the ResNet (Residual Network) architecture solve using skip connections?
-A. Overfitting on small datasets.
-B. High computational cost of convolutions.
-C. Vanishing gradient problem in very deep networks.
-D. Inability to capture color information.
+Q8. Which process is used by Saprotrophs to feed on nonliving organic matter?
+A. Photosynthesis
+B. Chemosynthesis
+C. Absorptive nutrition
+D. Assimilative nutrition
 Correct Answer: C
-Type: Theory
-Difficulty: Medium
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q21. Calculate the number of parameters in a Convolutional layer with 64 filters of size $3 \times 3 \times 3$ (assuming bias is included).
-A. $3 \times 3 \times 3 \times 64 = 1728$
-B. $(3 \times 3 \times 3 + 1) \times 64 = 1792$
-C. $(3 \times 3 + 1) \times 64 = 640$
-D. $3 \times 3 \times 64 = 576$
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
+Q9. Macroconsumers are generally classified as which type of organisms based on their feeding habit?
+A. Saprotrophs
+B. Chemotrophs
+C. Photoautotrophs
+D. Heterotrophs
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q22. In the Inception architecture (GoogLeNet), what is the main purpose of the $1 \times 1$ convolution?
-A. To increase the spatial dimensions.
-B. To serve as a bottleneck for dimensionality reduction (reducing depth).
-C. To perform average pooling.
-D. To remove noise from the image.
+Q10. According to the trophic classification, a frog feeding on herbivores would be classified as a:
+A. Primary Consumer
+B. Primary Carnivore / Secondary Consumer
+C. Tertiary Carnivore / Consumer
+D. Omnivore
 Correct Answer: B
-Type: Theory
+Difficulty: Medium
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q11. The sun provides energy to the ecosystem primarily in what form to carry on ecosystem processes?
+A. Chemical energy
+B. Heat energy
+C. Radiation
+D. Mechanical energy
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q12. The presence of which factors influences the function of an ecosystem under the Chemical Factors classification?
+A. Latitude and Longitude
+B. Wind and Annual Rainfall
+C. Levels of toxic substances and salts causing salinity
+D. Intensity of Solar Flux
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q13. What is the relationship between ecosystem complexity and energy requirement for self-maintenance?
+A. Complex ecosystems require more energy to maintain.
+B. Less energy is required for a complex ecosystem to maintain on its own.
+C. Energy accumulation increases as the ecosystem becomes more complex.
+D. Energy requirement is independent of complexity.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q14. The flow of energy and materials within the ecosystem constitutes which aspect of the ecosystem?
+A. Structural aspect
+B. Functional aspect
+C. Biodiversity aspect
+D. Homeostatic aspect
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q15. The first law of thermodynamics, as applied to the ecosystem, states that energy:
+A. is lost progressively at each trophic level.
+B. is proportional to the material cycle.
+C. is neither created nor destroyed; it is only converted from one form to another.
+D. is stored as biomass at the apex.
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q16. Which model of energy flow uses light, heat, import, export, and storage of organic matter to explain the process?
+A. Y-Shaped Model of Energy Flow
+B. Single Channel Energy Flow Model
+C. Detritus Food Chain Model
+D. Grazing Food Chain Model
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q17. Which arm of the Y-Shaped Model of Energy Flow represents the pathway of energy flowing from dead organic matter to decomposers?
+A. Photosynthesis
+B. Grazing Food Chain
+C. Detritus Food Chain
+D. Producer Pathway
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q18. Man-made ecosystems, such as crop and urban systems, are also known by what term?
+A. Closed Ecosystems
+B. Aquatic Ecosystems
+C. Anthropogenic Ecosystems
+D. Thermal Ecosystems
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q19. What is the disadvantage noted for artificial ecosystems that have evolved in the past few years?
+A. They require very little energy to maintain.
+B. They often produce high levels of toxic by-products and quickly decay.
+C. They are strictly isolated from the outside environment.
+D. They do not involve the exchange of matter or energy.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q20. What is the approximate percentage of the total land area in India that is estimated to be under various kinds of grass cover?
+A. Less than 10%
+B. 11%
+C. 18 to 19 percent
+D. 33 percent
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q21. The common grasses of Indian grasslands include Dicanthium, Sehima, and Cynodon. Which of these is popularly known as Dub grass?
+A. Sehima
+B. Dicanthium
+C. Phrqgmites
+D. Cynodon
+Correct Answer: D
+Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q22. Grasslands in temperate regions are known as Pampas in which geographical location?
+A. Eurasia
+B. New Zealand
+C. North America
+D. Argentina
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q23. In the context of grassland conservation, which practice is suggested regarding grazing?
+A. Grazing should be completely banned immediately.
+B. Grazing should be allowed only by rotation.
+C. Grasslands should be converted into industrial areas for economic growth.
+D. Only domestic animals should be grazed, excluding wildlife.
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q24. Grasses that are C4 plants, common in tropical countries like India, can start photosynthesis when the Carbon Dioxide in the air is as low as:
+A. 50-150 ppm
+B. 1-10 ppm
+C. 25-75 ppm
+D. 200 ppm
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q25. Which threat to the grassland ecosystem is exemplified by the poaching of the black buck and chinkara for their meat?
+A. Climate change
+B. Overexploitation of grasses
+C. Poaching of wildlife
+D. Conversion to industrial areas
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q26. What percentage of the country's landmass is covered by the Trans Himalayan Region, an extension of the Tibetan plateau?
+A. 7.2%
+B. 15.6%
+C. 6.9%
+D. 5.7%
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q27. The extremely arid area west of the Aravalli hill range, comprising both the salty desert of Gujarat and the sand desert of Rajasthan, corresponds to which Biogeographic Zone?
+A. Semi – Arid Zones
+B. Indian Desert
+C. Trans Himalayan Region
+D. Gangetic Plains
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q28. Which endemic species is found only in the Gir Forest National Park of Gujarat?
+A. Nilgiri Tahr
+B. Lion-tailed macaque
+C. Asiatic Lion
+D. Indian Rhinoceros
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q29. What is the percentage of the endemic species in India that are found in the Himalayas and the Western Ghats?
+A. 70%
+B. Almost 60%
+C. 50%
+D. Less than 15%
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q30. The biogeographical 'Gateway' for much of India’s fauna and flora is represented by which region, which also includes the Eastern Himalaya biodiversity hotspot?
+A. Gangetic Plains
+B. Western Ghats
+C. North-East India
+D. Deccan Peninsula
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q31. Which organism is endemic to the Indian Desert region?
+A. Indian rhinoceros
+B. Wild ass
+C. Snow leopard
+D. Nilgiri tahr
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q32. Areas that are rich in species diversity and have lost at least 70% of their original habitat are called:
+A. Biogeographical zones
+B. Wildlife Sanctuaries
+C. Endemic regions
+D. Biodiversity hotspots
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q33. What is the significance of the fact that endemic species are genetically isolated and have fewer individuals?
+A. They are crucial indicators of climate stability.
+B. They are vulnerable to extinction when environmental changes occur.
+C. They have a higher resistance to new diseases.
+D. They require minimal conservation attention.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q34. Which document consists of a list of rare and endangered species in an area and was established by the Russian federation?
+A. IUCN Red List
+B. Endangered Species Act
+C. Red Data Book
+D. Wildlife Protection Act
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q35. The species whose population strength reduced from 50 percent to 5 percent in a region are known as:
+A. Extinct species
+B. Threatened species
+C. Endangered species
+D. Endemic species
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q36. What distinguishes a National Park from a Wildlife Sanctuary in India regarding human activities?
+A. In Sanctuaries, private ownership rights are not allowed, but they are allowed in Parks.
+B. In National Parks, activities like grazing and cultivation are strictly not permitted.
+C. National Parks allow controlled biotic interference like tourism, while Sanctuaries do not.
+D. National Parks emphasize the preservation of multiple species, while Sanctuaries focus on a single species.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q37. Which type of conservation involves the preservation of genetic resources in natural populations of plant or animal species?
+A. Ex-situ conservation
+B. Tissue culture banking
+C. In-situ conservation
+D. Cryopreservation
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q38. In which location is the Corbett National Park situated, as listed in the source material?
+A. Uttar Pradesh
+B. Gujarat
+C. Uttarakhand
+D. Rajasthan
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q39. What is the temperature utilized for preservation in liquid nitrogen during Cryopreservation?
+A. $196^\circ\text{C}$
+B. $-196^\circ\text{C}$
+C. $0^\circ\text{C}$
+D. $100^\circ\text{C}$
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q40. Ex-situ conservation strategies include all of the following techniques EXCEPT:
+A. Seed gene banks
+B. Tissue culture banks
+C. Botanical gardens
+D. Wildlife Sanctuaries
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q41. The principle of "live and let others live" forms the foundation of which value category of biodiversity?
+A. Social Value
+B. Ecological Value
+C. Economic Value
+D. Ethical Value
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q42. Which value of biodiversity is exemplified by people traveling to remote locations to take in the scenery and fauna, leading to eco-tourism revenue?
+A. Social Value
+B. Aesthetic Value
+C. Economic Value (as primary resource)
+D. Ethical Value
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q43. Healthy ecosystems help to maintain the Earth's natural processes, such as soil turnover, water purification, and pest control. These fall under which category of biodiversity value?
+A. Social Value
+B. Ethical Value
+C. Ecological Value
+D. Aesthetic Value
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q44. What is the definition of Genetic Diversity?
+A. The variety of species in a given region or area.
+B. The diversity at the ecosystem level of organization.
+C. The sum of genetic information contained in the genes of individual plants, animals, and micro-organisms.
+D. The different habitats, niches, and species interactions.
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q45. Which level of biodiversity organization includes distinctive landscapes such as forests, grasslands, deserts, and mountains?
+A. Genetic diversity
+B. Species diversity
+C. Ecological diversity
+D. Population diversity
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q46. Endemic species are particularly vulnerable to extinction due to which primary factor?
+A. High population strength
+B. Low geographical distribution
+C. High adaptability to environmental changes
+D. Their preference for exotic habitats
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q47. The poaching case study provided involves which specific animal killed by actor Salman Khan in the Kankani village near Jodhpur?
+A. Tiger
+B. Nilgiri tahr
+C. Blackbuck
+D. Indian rhinoceros
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q48. Which solution is proposed to reduce man-wildlife conflicts by augmenting food and water availability in the habitat?
+A. Increasing poaching penalties
+B. Educating the public about the importance of forests
+C. Construction of boundary walls and solar fences
+D. Governments working on habitat improvement
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q49. The movement in which the Bishnoi tribe of Rajasthan protected their Khejdi trees and the blackbuck antelope by hugging tree-trunks is now known as the:
+A. Chipko movement
+B. Bishnoi movement
+C. Narmada Bachao Andolan
+D. Green Revolution
+Correct Answer: A
+Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q50. The chief controlling climatic factor for the formation of dry desert ecosystems is:
+A. High temperature fluctuations
+B. High wind speed
+C. Low rainfall
+D. Intense solar flux
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q51. Which category of desert producers includes succulent plants that hoard plenty of water in their thick and fleshy stems and leaves?
+A. Drought evading
+B. Drought enduring
+C. Drought resisting
+D. Drought escaping
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q52. Which type of Xerophytes have a very short life span of 4 to 6 weeks, germinating and reproducing before the onset of dry conditions?
+A. Drought enduring
+B. Drought evading
+C. Drought resisting
+D. Drought escaping or Ephemerals
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q53. An example of a tertiary consumer in a dry desert ecosystem is:
+A. Camel
+B. Desert fox
+C. Wolf
+D. Wild ass
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q54. In the cold desert ecosystem (Tundra), what is the name for the permanently frozen soil located a short distance below the surface?
+A. Permafrost
+B. Marshy plain
+C. Cladonia
+D. Betula soil
+Correct Answer: A
+Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q55. Why do Coniferous Forest trees have needle-like leaves and downward sloping branches?
+A. To maximize light absorption during low sunlight periods.
+B. To reduce competition among neighboring trees.
+C. So that snow can slip off the branches easily.
+D. To enhance water collection during rainfall.
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2_Forest Ecosystem.pdf
+
+Q56. What distinguishes Deciduous forests from Evergreen forests regarding leaf fall?
+A. Deciduous trees shed their leaves only during the rainy season.
+B. Evergreen leaf fall is gradual, so most leaves remain on the plants throughout the year.
+C. Deciduous trees never shed their leaves, maintaining a continuous canopy.
+D. Evergreen forests experience total leaf shedding in winter.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_Forest Ecosystem.pdf
+
+Q57. The Sundarban Delta in Bengal is named after which common plant found in the mangrove delta forest?
+A. *Avicinea*
+B. *Rhizophora conjugate*
+C. *Nipa fruticans*
+D. Sundari tree (*Heritiera fomes*)
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_Forest Ecosystem.pdf
+
+Q58. Which animal is listed as a Quaternary or top-most consumer in the Biotic components of a Forest Ecosystem?
+A. Wolf
+B. Fox
+C. Lion
+D. Deer
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_Forest Ecosystem.pdf
+
+Q59. According to the structure of the ecosystem, what is the term for the amount of abiotic components present in an ecosystem at a given time?
+A. Standing crop
+B. Standing stage
+C. Productivity flux
+D. Abiotic biomass
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_Forest Ecosystem.pdf
+
+Q60. When considering energy flow in an ecosystem, the progressive decrease in energy at each trophic level is explained by which physical law?
+A. The First Law of Thermodynamics
+B. The Law of Conservation of Mass
+C. The Second Law of Thermodynamics
+D. Lindeman's Ten Percent Energy Law (excluding the law name)
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q61. Which characteristic defines a Closed Ecosystem?
+A. It exchanges energy and matter from outside.
+B. It is typically a natural ecosystem like a forest.
+C. It is isolated from outside, and is generally artificial.
+D. It is characterized by high species diversity.
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q62. What is the process that converts detritus into simpler molecules that are then absorbed by saprotroph cells?
+A. Photosynthesis
+B. Absorptive nutrition involving excreted enzymes
+C. Grazing food chain
+D. Chemosynthesis in the absence of sunlight
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q63. What distinguishes the Semiarid Zones (15.6% of India's landmass) from the Indian Desert?
+A. The Semiarid zone is west of the Aravalli hill range.
+B. The Semiarid zone includes the Aravalli hill range, located between the desert and the Deccan plateau.
+C. The Semiarid zone is an extension of the Tibetan plateau.
+D. The Semiarid zone is known for endemic animals like the wild ass.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q64. In which Indian biogeographical zone are large populations of Nilgiri tahr, Nilgiri langur, and the endemic grizzled squirrel found?
+A. Gangetic Plains
+B. North-East India
+C. Western Ghats
+D. Deccan Peninsula
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q65. Which criterion must a region meet to qualify as a biodiversity hotspot?
+A. It must contain at least 50% of its original habitat intact.
+B. It must have lost at least 70% of its original habitat through man-made activities.
+C. It must be a large natural terrestrial area outside human habitats.
+D. It must be located strictly between $15^\circ$ and $35^\circ$ latitudes.
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q66. The International Day for Biological Diversity is proclaimed by the United Nations on which date?
+A. December 3rd
+B. May 22nd
+C. April 22nd
+D. June 5th
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q67. Which of the following is an example of an inorganic constituent in the abiotic component of an ecosystem?
+A. Protein
+B. Carbohydrates
+C. Lipids
+D. Sulphur (S)
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q68. When considering the general characteristics of ecosystems, what happens to energy accumulation as the system moves from less complex to more complex states?
+A. Energy accumulation goes on increasing.
+B. Energy accumulation goes on decreasing.
+C. Energy accumulation remains constant.
+D. Energy accumulation only depends on producers.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q69. If the producers in an ecological pyramid have a total of 80000 Kcal of energy, based on Lindeman’s Ten Percent Energy Law, what amount of energy would be available to the secondary consumers?
+A. 8000 Kcal
+B. 80 Kcal
+C. 800 Kcal
+D. 8 Kcal
+Correct Answer: C
 Difficulty: Hard
+Source PPT: Unit 2_ECOLOGICAL PYRAMIDS.pdf (Calculation: Producer (80000) -> Primary Consumer (8000) -> Secondary Consumer (800))
 
-Unit: 2
-CO: CO2
-Q23. Which regularization technique randomly sets a fraction of input units to 0 at each update during training time?
-A. Batch Normalization
-B. Data Augmentation
-C. Dropout
-D. L2 Regularization
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q24. Identify the Keras layer used to implement Batch Normalization.
-A. `tf.keras.layers.Normalization()`
-B. `tf.keras.layers.BatchNormalization()`
-C. `tf.keras.layers.StandardScaler()`
-D. `tf.keras.layers.Lambda(tf.nn.batch_norm)`
+Q70. What is the phenomenon where harmful substances like toxins become more concentrated in organisms' bodies as one moves up the ecological pyramid?
+A. Energy loss
+B. Biomagnification
+C. Photosynthesis
+D. Nutrient cycling
 Correct Answer: B
-Type: Code
 Difficulty: Easy
+Source PPT: Unit 2_ECOLOGICAL PYRAMIDS.pdf
 
-Unit: 2
-CO: CO2
-Q25. Given an image input of shape $(224, 224, 3)$, what is the output shape after applying `MaxPooling2D(pool_size=(2, 2), strides=2)`?
-A. $(112, 112, 3)$
-B. $(112, 112, 1)$
-C. $(222, 222, 3)$
-D. $(224, 224, 1)$
+Q71. Which type of ecological pyramid indicates the total mass of organisms at each trophic level?
+A. Pyramid of Numbers
+B. Pyramid of Productivity
+C. Pyramid of Energy
+D. Pyramid of Biomass
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_ECOLOGICAL PYRAMIDS.pdf
+
+Q72. In an ecological pyramid, which trophic level occupies the base?
+A. Secondary Consumers
+B. Producers
+C. Secondary Carnivores
+D. Tertiary Consumers
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_ECOLOGICAL PYRAMIDS.pdf
+
+Q73. The primary drawback of the Pyramid of Numbers is that it does not account for:
+A. the total mass of organisms.
+B. the number of trophic levels.
+C. the size of the organisms.
+D. the flow of energy.
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2_ECOLOGICAL PYRAMIDS.pdf
+
+Q74. Which type of ecological pyramid is considered more accurate because it accounts for the loss of energy between trophic levels?
+A. Pyramid of Numbers
+B. Pyramid of Biomass
+C. Pyramid of Energy / Pyramid of Productivity
+D. Inverted Pyramid
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2_ECOLOGICAL PYRAMIDS.pdf
+
+Q75. Ecological succession is defined as the steady and gradual change in a species of a given area with respect to:
+A. Biotic components only.
+B. Introduction of invasive species.
+C. The changing environment.
+D. The climax community structure.
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
+
+Q76. What is the term for the entire sequence of communities that successively change in a given area during ecological succession?
+A. Climax community
+B. Seral stage
+C. Sere
+D. Mesic condition
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
+
+Q77. What characteristic is observed when a community reaches the climax stage of succession?
+A. Net community production increases rapidly.
+B. The ecosystem becomes unstable.
+C. The composition of the community becomes stable.
+D. Food chains simplify rapidly.
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
+
+Q78. Primary succession begins in areas such as bare rock or regions devoid of soil, where which condition initially exists?
+A. A highly complex food web
+B. A destroyed climax community
+C. No living organisms were ever there
+D. Mesic conditions
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
+
+Q79. Which specific type of ecological succession starts in dry areas and progresses from xeric to mesic conditions?
+A. Hydrarch succession
+B. Primary succession
+C. Secondary succession
+D. Xerarch succession
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
+
+Q80. In the sequence of Hydrarch succession, which stage immediately follows the rooted-floating stage?
+A. Rooted-submerged plants
+B. Free-floating stage
+C. Marsh-meadow
+D. Scrub
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
+
+Q81. The continuous causes of ecological succession, which lead to subsequent changes, are also referred to by which term?
+A. Sere
+B. Ecesis
+C. Climax
+D. Hydrarch
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
+
+Q82. Developing Genetically Modified Organisms (GMOs) is described as what kind of process compared to historical cross-breeding?
+A. A less efficient process
+B. A more targeted process
+C. A naturally occurring process
+D. A process limited only to medicine
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_GMO.pdf
+
+Q83. GMO technology has been used on microorganisms like bacteria to create which beneficial products?
+A. Toxic cry proteins
+B. Enhanced nutrition crops
+C. Medicines (like insulin) and vaccines
+D. Herbicides
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_GMO.pdf
+
+Q84. What is the function of the specific proteins, known as "cry proteins," secreted by the bacterium *Bacillus thuringiensis*?
+A. They enhance nutritional value.
+B. They are toxic to insects.
+C. They allow for herbicide resistance.
+D. They facilitate nitrogen fixation in the soil.
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_GMO.pdf
+
+Q85. When an insect feeds on a transgenic plant containing the toxic cry protein, what is the immediate effect on the insect?
+A. Enhanced digestion of proteins
+B. Crystallization of the insect's digestive system
+C. Rapid genetic alteration
+D. Resistance development to the toxin
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_GMO.pdf
+
+Q86. Which specific pest does the toxin *cry1Ac* produced by Bt brinjal kill?
+A. Root nematodes
+B. Fruit and shoot boring pest
+C. Weeds
+D. Leafhoppers
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_GMO.pdf
+
+Q87. Which countries mentioned in the source explicitly stated "no to commercial release of bt. Brinjal" due to inadequate tests?
+A. Bangladesh and the Philippines
+B. India and the Philippines
+C. India and Bangladesh
+D. USA and India
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_GMO.pdf
+
+Q88. Which Indian biogeographical zone is characterized by being the catchment area of major Indian rivers like Godavari, Tapti, Narmada, and Mahanadi?
+A. Gangetic Plains
+B. Western Ghats
+C. Deccan Peninsula
+D. Coastal Region
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q89. The Himalayan ranges and valleys cover what percentage of India’s landmass?
+A. 5.7%
+B. 7.2%
+C. 6.9%
+D. 11%
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q90. Which organism is endemic to the Western Ghats region, along with the Lion-tailed macaque and Purple Frog?
+A. Asiatic Lion
+B. Nilgiri Tahr
+C. Sclater’s Monkey
+D. Kashmir Stag
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q91. What is the approximate length of the Indian coastline from Gujarat to Sundarbans?
+A. 25 islets
+B. 1,500 km
+C. 5423 km
+D. 2000 mm
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q92. The long western and eastern coastal belt, along with sandy beaches and forests, constitutes which biogeographical zone?
+A. Andaman and Nicobar Islands
+B. Coastal Region
+C. Gangetic Plains
+D. North-East India
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q93. The vegetation in the Thorn and Scrub forests, common in Delhi, Punjab, and Rajasthan, includes which common trees/shrubs?
+A. Pines and Deodar
+B. Bamboo and Babool
+C. Sundari tree and *Avicinea*
+D. Teak and Sal
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_Forest Ecosystem.pdf
+
+Q94. The process where the nutritional substrate is directly digested by excreted enzymes describes which specific feeding mechanism?
+A. Chemosynthesis
+B. Absorptive nutrition
+C. Photosynthesis
+D. Grazing food chain
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q95. What are the trees in a Deciduous forest adapted to do during the winter and hot summer months?
+A. Grow rapidly in response to rains.
+B. Shed their leaves.
+C. Overlap to form a continuous canopy.
+D. Begin the process of photosynthesis using minimum $\text{CO}_2$.
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_Forest Ecosystem.pdf
+
+Q96. Which animal is listed as a primary consumer (herbivore) in the Tundra (Cold desert) ecosystem?
+A. Polar wolf
+B. Polar bear
+C. Penguin
+D. Lizard
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+### Single Correct MCQs (Additional for Target 96)
+
+Q97. In the Xerarch succession series, which stage immediately precedes the Shrub stage?
+A. Climax community
+B. Moss stage
+C. Herb stage
+D. Lichen stage
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
+
+Q98. Which concept is primarily used to explain the movement and cycling of energy through and among all elements (living and non-living) in an ecosystem?
+A. Structure
+B. Function
+C. Complexity
+D. Biodiversity
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q99. What term refers to the preservation of components of biological diversity outside their natural habitats?
+A. Animal Translocation
+B. In-situ conservation
+C. Ex-situ conservation
+D. Habitat restoration
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q100. In India, the use of areas with scarce vegetation for 'browsing' by camel and grazing by goat and sheep occurs primarily in which regions?
+A. Himalayan forests
+B. Coastal region
+C. Gujarat and Rajasthan
+D. North American Desert
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q101. Why is ecology important in relation to the tremendous variety of living things in the environment?
+A. Ecology involves the study of interactions between organisms and the non-living components of the environment, which includes the variety of living things.
+B. Ecology is defined solely by the flow of energy.
+C. Ecology is concerned only with the structural components of ecosystems.
+D. Ecology is the study of how man destroys forests.
 Correct Answer: A
-Type: Numerical
 Difficulty: Medium
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q26. What does the `padding='valid'` argument imply in a Keras Conv2D layer?
-A. Zero padding is applied to maintain the output size same as input.
-B. No padding is applied; the output size shrinks.
-C. Invalid pixels are discarded.
-D. Padding is applied only if the stride is greater than 1.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q27. Why is Data Augmentation useful in training CNNs?
-A. It reduces the training time.
-B. It increases the resolution of input images.
-C. It generates new training samples from existing ones to reduce overfitting.
-D. It automatically tunes the hyperparameters.
+Q102. What percentage of the land is spread over by deserts worldwide?
+A. 5.7%
+B. 35%
+C. 17%
+D. 25%
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q28. In a CNN for classification, if the training accuracy is high but validation accuracy is low, the model is likely:
-A. Underfitting
-B. Overfitting
-C. Learning perfectly
-D. Converging too slowly
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q29. Consider the following code snippet using `ImageDataGenerator`. What does `rescale=1./255` do?
-```python
-train_datagen = ImageDataGenerator(rescale=1./255)
-```
-A. It resizes the image to 255x255 pixels.
-B. It normalizes pixel values to the range.
-C. It augments the data by scaling the image size.
-D. It converts the image to grayscale.
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q30. Which loss function is appropriate for a multi-class classification problem (e.g., CIFAR-10) where labels are integers?
-A. `binary_crossentropy`
-B. `categorical_crossentropy`
-C. `sparse_categorical_crossentropy`
-D. `mean_squared_error`
+Q103. In the context of conservation, Animal Translocation is defined as:
+A. The conservation of genetic resources in natural populations.
+B. The establishment of botanical gardens.
+C. The release of animals in a new locality which come from anywhere else.
+D. Long term captive breeding programs.
 Correct Answer: C
-Type: Code
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q104. What is the cause of dwarfism in plants like dwarf *Betula* and *Salix* found in the Tundra ecosystem?
+A. Permanently frozen soil
+B. Lack of moisture
+C. Snow-storms throughout the year
+D. Limited light intensity
+Correct Answer: C
 Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q31. In transfer learning, what does "freezing" the base model mean?
-A. Making the weights non-trainable so they don't get updated during training.
-B. Saving the model to a file.
-C. Stopping the training process early.
-D. Reducing the learning rate to zero.
-Correct Answer: A
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q32. How many total parameters are in a dense layer with 10 units connected to a flattened input of size 100?
-A. 1000
-B. 1010
-C. 110
-D. 100
-Correct Answer: B
-Type: Numerical
+Q105. What is the reason why man can plant trees but cannot grow a forest?
+A. Forests only grow along river deltas.
+B. Forests require very low temperature to grow.
+C. A forest is a natural ecosystem having its own producers, consumers, and decomposers.
+D. Man can only grow Broad-leaved forests, not Coniferous forests.
+Correct Answer: C
 Difficulty: Medium
+Source PPT: Unit 2_Forest Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q33. Which of the following is NOT a typical application of CNNs?
-A. Image Classification
-B. Object Detection
-C. Stock Price Prediction (Time Series)
-D. Semantic Segmentation
+Q106. The Deccan Peninsula is predominantly characterized by which type of vegetation?
+A. Semi evergreen forests
+B. Coniferous vegetation
+C. Deciduous vegetation
+D. Mangrove vegetation
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
 
-Unit: 2
-CO: CO2
-Q34. What is the main advantage of using small filters (like $3 \times 3$) stacked on top of each other compared to a single large filter (like $7 \times 7$)?
-A. They cover less spatial area.
-B. They increase the number of parameters.
-C. They introduce more non-linearities and use fewer parameters.
-D. They are faster to compute in all hardware.
+Q107. Which animal is endemic to the Western Ghats region, specifically the Nilgiri Hills?
+A. Purple Frog
+B. Lion-tailed macaque
+C. Malabar Civet
+D. Nilgiri Tahr
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q108. The concept of biomass in an ecosystem refers specifically to:
+A. The total energy of living and non-living components.
+B. The total mass of living organisms in an ecosystem.
+C. The total mass of non-living components.
+D. The energy flux across trophic levels.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_ECOLOGICAL PYRAMIDS.pdf
+
+Q109. Which threat to the desert ecosystem results in 'Saline or oosar soil' (unproductive) due to rapid evaporation?
+A. Nuclear testing
+B. Deep tube wells lowering the water table
+C. Expansion of irrigation using canal water
+D. Overgrazing by camels and sheep
 Correct Answer: C
-Type: Theory
+Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q110. Which factor is explicitly mentioned as a cause of Man-wildlife conflicts?
+A. Expansion of wildlife sanctuaries
+B. Shrinking forest cover
+C. Increased poaching for pelts
+D. Development of GMO crops
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q111. What technology is suggested to track the movements of wild life to reduce man-wildlife conflicts?
+A. Cryopreservation
+B. Information Technology devices like radio collars with GPS/Satellite uplink
+C. Absorptive nutrition monitoring
+D. Creation of more thorn forests
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q112. According to the source, what is the role of fungi and certain bacteria in relation to detritus?
+A. They function as Photoautotrophs.
+B. They are critical to decomposition and nutrient cycling.
+C. They primarily act as primary consumers (herbivores).
+D. They synthesize food using photosynthesis.
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
+
+Q113. If a large number of herbivores like deer are introduced to a forest, which function of the ecological pyramid gives insight into the effect on the trophic level below and above the consumers?
+A. Biomagnification awareness
+B. The insight into how a change in numbers at one trophic level influences others
+C. The determination of the pyramid's shape
+D. Lindeman’s Ten Percent Energy Law
+Correct Answer: B
 Difficulty: Hard
+Source PPT: Unit 2_ECOLOGICAL PYRAMIDS.pdf
 
-Unit: 2
-CO: CO2
-Q35. In Keras, what does `model.summary()` display?
-A. The training accuracy history.
-B. The architecture of the model, output shapes, and parameter counts.
-C. The visualization of feature maps.
-D. The values of the weights.
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q36. Which object detection algorithm processes the image once to predict bounding boxes and class probabilities simultaneously?
-A. R-CNN
-B. Faster R-CNN
-C. YOLO (You Only Look Once)
-D. Sliding Window
+Q114. Which factor of the abiotic component is classified under Geographical Factors?
+A. Average Temperature
+B. Intensity of Solar flux
+C. Latitude
+D. Soil type
 Correct Answer: C
-Type: Theory
-Difficulty: Medium
+Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q37. An image with resolution $100 \times 100$ passes through a Conv2D layer with 32 filters, kernel size $3 \times 3$, stride 1, and `padding='same'`. What is the shape of the output feature map?
-A. $(100, 100, 32)$
-B. $(98, 98, 32)$
-C. $(50, 50, 32)$
-D. $(100, 100, 3)$
-Correct Answer: A
-Type: Numerical
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q38. What is the receptive field?
-A. The total number of neurons in a layer.
-B. The region of the input image that a particular CNN feature is looking at.
-C. The size of the padding added to the image.
-D. The number of classes the model can predict.
+Q115. What are the trees in Deciduous moist forests adapted to do by April-May, before the monsoon begins?
+A. Experience rapid growth immediately.
+B. Shed most of their leaves.
+C. Form a continuous canopy.
+D. Migrate to higher altitudes.
 Correct Answer: B
-Type: Theory
-Difficulty: Easy
+Difficulty: Medium
+Source PPT: Unit 2_Forest Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q39. Which Keras layer is used to randomly flip images horizontally during training?
-A. `tf.keras.layers.RandomFlip("horizontal")`
-B. `tf.keras.layers.FlipImage()`
-C. `tf.keras.layers.DataAugmentation()`
-D. `tf.keras.layers.HorizontalFlip()`
-Correct Answer: A
-Type: Code
+Q116. Which specific type of forest grows along river deltas and is characterized by halophytic vegetation?
+A. Coniferous Forests
+B. Deciduous Forests
+C. Evergreen Forests
+D. Mangrove delta forest
+Correct Answer: D
 Difficulty: Easy
+Source PPT: Unit 2_Forest Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q40. The ReLU activation function is defined as:
-A. $f(x) = 1 / (1 + e^{-x})$
-B. $f(x) = \tanh(x)$
-C. $f(x) = \max(0, x)$
-D. $f(x) = x$
+Q117. What is the fundamental idea behind the social value of biodiversity?
+A. Reliance on biodiversity for food, fuel, and medicine.
+B. The motivation for habitat conservation and reliance on forests for livelihood.
+C. The idea that all living things have an equal right to exist.
+D. The enhancement of the quality of life through scenery.
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
+
+Q118. Which category of desert producers includes slow growing shrubs or small trees whose leaves are reduced to leaflets?
+A. Drought resisting
+B. Drought evading
+C. Drought escaping
+D. Drought enduring
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q119. The variety of life forms within a given ecosystem, biome, or the entire Earth is referred to as:
+A. Ecology
+B. Genetic diversity
+C. Biodiversity
+D. Ecological succession
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
 
-Unit: 2
-CO: CO2
-Q41. A tensor with shape `(None, 28, 28, 1)` is input to a model. What does `None` represent?
-A. The height of the image.
-B. The number of channels.
-C. The variable batch size.
-D. An error in the definition.
+Q120. In the context of ecological succession, what is the description of a Seral community?
+A. A stable, self-perpetuating community where biomass is maximum.
+B. An initial community starting in lifeless areas.
+C. An intermediate stage advancing towards the climax community, replaced by the subsequent community.
+D. The destruction of existing habitats due to initial causes.
 Correct Answer: C
-Type: Theory
 Difficulty: Medium
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
 
-Unit: 2
-CO: CO2
-Q42. In Semantic Segmentation, the goal is to:
-A. Draw a bounding box around objects.
-B. Classify the entire image into one category.
-C. Classify each pixel of the image into a category.
-D. Generate a caption for the image.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
+---
+### Multiple Correct MCQs (24 Questions)
 
-Unit: 2
-CO: CO2
-Q43. Which of the following is true about $1 \times 1$ convolutions?
-A. They do not change the spatial dimensions but can change the number of channels (depth).
-B. They are used to increase the spatial dimensions.
-C. They effectively do nothing.
-D. They are only used in Fully Connected layers.
-Correct Answer: A
-Type: Theory
-Difficulty: Hard
-
-Unit: 2
-CO: CO2
-Q44. Calculate the output size: Input $227 \times 227$, Filter $11 \times 11$, Stride 4, Padding 0.
-A. 55
-B. 54
-C. 56
-D. 28
-Correct Answer: A
-Type: Numerical
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q45. Which code snippet correctly instantiates a VGG16 model with pre-trained ImageNet weights in Keras?
-A. `tf.keras.applications.VGG16(weights='imagenet')`
-B. `tf.keras.models.VGG16(pretrained=True)`
-C. `tf.keras.layers.VGG16(weights='imagenet')`
-D. `tf.keras.applications.VGG16(weights=None)`
-Correct Answer: A
-Type: Code
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q46. Batch Normalization is typically applied:
-A. Before the input layer.
-B. Before or after the activation function of a layer.
-C. Only at the output layer.
-D. After the loss calculation.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q47. If you have a small dataset but a pre-trained model on a large dataset (like ImageNet) is available, the best strategy is:
-A. Train a large model from scratch.
-B. Use Transfer Learning.
-C. Use Unsupervised Learning.
-D. Discard the data.
-Correct Answer: B
-Type: Theory
+Q1. (Choose ALL correct options)
+Which components are considered essential factors responsible for shaping the ecosystem structure?
+A. Biotic components
+B. Physical factors (such as wind)
+C. Abiotic components
+D. Geographical factors (such as altitude)
+Correct Answers: A, C
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q48. What is the stride in a convolutional layer?
-A. The number of filters used.
-B. The step size the filter takes when sliding over the input.
-C. The amount of zero padding added.
-D. The size of the filter.
-Correct Answer: B
-Type: Theory
+Q2. (Choose ALL correct options)
+According to the concept of Ecosystems, which of the following are mentioned as supporting systems that have structural components and functions?
+A. Oceans
+B. Deserts
+C. Grasslands
+D. House lawns
+Correct Answers: A, B, C
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q49. Given a 1D tensor ``, applying a Max Pooling with pool size 2 and stride 2 results in:
-A. ``
-B. ``
-C. ``
-D. ``
-Correct Answer: A
-Type: Numerical
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q50. Which function converts the logits (raw outputs) of the final layer into class probabilities?
-A. ReLU
-B. Tanh
-C. Softmax
-D. Dropout
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q51. What is the primary benefit of using "Global Average Pooling" over "Flattening" before the dense layers?
-A. It increases the number of parameters.
-B. It preserves spatial information better.
-C. It drastically reduces the number of parameters and prevents overfitting.
-D. It is computationally more expensive.
-Correct Answer: C
-Type: Theory
-Difficulty: Hard
-
-Unit: 2
-CO: CO2
-Q52. The MNIST dataset consists of:
-A. Color images of animals.
-B. Grayscale images of handwritten digits (0-9).
-C. Color images of clothing items.
-D. Satellite images.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q53. A CNN model summary shows a layer output shape of `(None, 10, 10, 32)`. If this is followed by a `Flatten()` layer, what is the output shape?
-A. `(None, 100)`
-B. `(None, 320)`
-C. `(None, 3200)`
-D. `(None, 10, 10)`
-Correct Answer: C
-Type: Numerical
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q54. Which Keras callback is useful for stopping training when the validation loss stops improving?
-A. `ModelCheckpoint`
-B. `EarlyStopping`
-C. `TensorBoard`
-D. `ReduceLROnPlateau`
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q55. In the context of `tf.keras.layers.Conv2D`, what does `activation=None` imply?
-A. A linear activation (identity) is used.
-B. ReLU is used by default.
-C. The layer outputs zeros.
-D. The layer is not trainable.
-Correct Answer: A
-Type: Code
+Q3. (Choose ALL correct options)
+Which of the following organisms are classified as Macroconsumers/Heterotrophs?
+A. Microscopic bacteria
+B. Herbivores
+C. Carnivores
+D. Fungi
+Correct Answers: B, C
 Difficulty: Medium
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q56. Which of the following is a symptom of a high learning rate?
-A. The loss decreases very slowly.
-B. The loss oscillates or diverges.
-C. The model overfits immediately.
-D. The training accuracy is 100%.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q57. A 3-channel RGB image is processed by a Conv layer with 16 filters of size $3 \times 3$. The number of depth channels in the output feature map will be:
-A. 3
-B. 9
-C. 16
-D. 27
-Correct Answer: C
-Type: Numerical
+Q4. (Choose ALL correct options)
+Which factors are classified under Abiotic Component (Physical Factors)?
+A. Intensity of Solar flux
+B. Average Temperature
+C. Protein and Lipids
+D. Annual Rainfall
+Correct Answers: A, B, D
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q58. What is the effect of L2 regularization on the weights of a CNN?
-A. It forces weights to be exactly zero.
-B. It penalizes large weights, encouraging simpler models.
-C. It randomly sets weights to zero during training.
-D. It normalizes the batch statistics.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q59. To perform object detection using a pre-trained model in TensorFlow Hub, which module would you likely search for?
-A. ResNet-50 Classification
-B. SSD MobileNet
-C. BERT
-D. StyleGAN
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q60. If you have a training set of 1000 images and you use `ImageDataGenerator` to generate batches, how much data can the model potentially see?
-A. Exactly 1000 images.
-B. Indefinitely many variations of the 1000 images.
-C. 2000 images exactly.
-D. Only the validation set.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q61. What is the output of `tf.keras.layers.GlobalMaxPooling2D()` on an input of shape `(None, 7, 7, 512)`?
-A. `(None, 512)`
-B. `(None, 49, 512)`
-C. `(None, 7, 7, 1)`
-D. `(None, 1)`
-Correct Answer: A
-Type: Numerical
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q62. Which architecture introduced the concept of "Depthwise Separable Convolutions" (Xception/MobileNet)?
-A. AlexNet
-B. VGG16
-C. Xception
-D. LeNet
-Correct Answer: C
-Type: Theory
-Difficulty: Hard
-
-Unit: 2
-CO: CO2
-Q63. The Fashion MNIST dataset contains images of size:
-A. $28 \times 28$ grayscale
-B. $32 \times 32$ color
-C. $224 \times 224$ color
-D. $64 \times 64$ grayscale
-Correct Answer: A
-Type: Theory
+Q5. (Choose ALL correct options)
+The functional aspects of the ecosystem are constituted by the flow and cycle of which topics?
+A. Food chain
+B. Energy flow
+C. Law of Thermodynamics
+D. Nutrient cycles
+Correct Answers: A, B, D
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q64. Code Check: Which line correctly adds a Dropout layer with a 50% drop rate?
-A. `model.add(tf.keras.layers.Dropout(0.5))`
-B. `model.add(tf.keras.layers.Dropout(50))`
-C. `model.add(tf.keras.layers.Drop(0.5))`
-D. `model.add(tf.keras.layers.Regularization(0.5))`
-Correct Answer: A
-Type: Code
+Q6. (Choose ALL correct options)
+Which pathways are represented as the three different arms of the Y-Shaped Model of Energy Flow?
+A. Photosynthesis (Sun to producers)
+B. Single Channel Flow
+C. Grazing Food Chain
+D. Detritus Food Chain
+Correct Answers: A, C, D
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q65. If a CNN is underfitting, which action is most appropriate?
-A. Add Dropout.
-B. Increase the complexity of the model (add more layers/filters).
-C. Add L2 regularization.
-D. Reduce the training time.
-Correct Answer: B
-Type: Theory
+Q7. (Choose ALL correct options)
+The structure of Deciduous forests allows for light penetration to the forest floor, resulting in the vegetation showing three stories. These stories include:
+A. Herbs
+B. Trees
+C. Shrubs
+D. Conifers
+Correct Answers: A, B, C
 Difficulty: Medium
+Source PPT: Unit 2_Forest Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q66. What is the typical range of pixel values in a standard 8-bit digital image?
-A. 0 to 1
-B. -1 to 1
-C. 0 to 255
-D. 0 to 100
-Correct Answer: C
-Type: Theory
+Q8. (Choose ALL correct options)
+Threats to the Forest ecosystem explicitly mentioned in the source material include:
+A. Urbanization and industrialization
+B. Dam construction
+C. Agriculture expansion
+D. Nuclear testing
+Correct Answers: A, B, C
 Difficulty: Easy
+Source PPT: Unit 2_Forest Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q67. Calculate the output width: Input width 32, Filter width 3, Stride 1, Padding 'valid'.
-A. 32
-B. 30
-C. 29
-D. 10
-Correct Answer: B
-Type: Numerical
+Q9. (Choose ALL correct options)
+Which animals are listed as Secondary consumers in the Dry Desert ecosystem?
+A. Camels
+B. Desert cats
+C. Frogs
+D. Great Indian Bustard
+Correct Answers: B, C, D
+Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
+
+Q10. (Choose ALL correct options)
+Functions of the Grassland ecosystem mentioned in the sources include:
+A. Providing forage and habitat for grazing animals.
+B. Serving as a source of fuel wood from thorny bushes in Savanna grasslands.
+C. Providing dry grasses for thatching material.
+D. Acting as good soil binders due to extensive fibrous roots.
+Correct Answers: A, B, C, D
 Difficulty: Easy
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q68. In Keras, how do you specify the input shape for the very first layer of a Sequential model?
-A. Using `input_dim` argument.
-B. Using `input_shape` argument.
-C. It is inferred automatically.
-D. Using `shape` argument.
-Correct Answer: B
-Type: Code
+Q11. (Choose ALL correct options)
+Which factors risk the survival of animals and plants, contributing to the status of endangered species?
+A. Loss of habitat
+B. Hunting
+C. Climate changes
+D. Industrialization
+Correct Answers: A, B, C, D
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q12. (Choose ALL correct options)
+The four identified biodiversity hotspots in India are:
+A. Himalayas
+B. Deccan Peninsula
+C. Western Ghats
+D. Sundaland
+Correct Answers: A, C, D
 Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
 
-Unit: 2
-CO: CO2
-Q69. Which of the following best describes "feature maps"?
-A. The weights of the convolutional filters.
-B. The output of applying filters to the input image/layer.
-C. The labels of the training data.
-D. The learning rate schedule.
-Correct Answer: B
-Type: Theory
+Q13. (Choose ALL correct options)
+Which of the following endemic species are found in the Western Ghats region of India?
+A. Malabar Civet
+B. Lion-tailed macaque
+C. Sangai Deer
+D. Purple Frog
+Correct Answers: A, B, D
 Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
 
-Unit: 2
-CO: CO2
-Q70. Which architecture uses "Inception modules" to compute convolutions with different kernel sizes in parallel?
-A. ResNet
-B. VGGNet
-C. GoogLeNet
-D. AlexNet
-Correct Answer: C
-Type: Theory
+Q14. (Choose ALL correct options)
+The benefits received from ecology, often given externally to humans, include:
+A. Cleaner air
+B. Cleaner water
+C. Medicinal resources
+D. Pest control
+Correct Answers: A, B, D
 Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
 
-Unit: 2
-CO: CO2
-Q71. What does `pool_size=(2,2)` mean in `MaxPooling2D`?
-A. The layer outputs 2 feature maps.
-B. The pooling window is 2 pixels high and 2 pixels wide.
-C. The stride is 2.
-D. The input image is resized to $2 \times 2$.
-Correct Answer: B
-Type: Code
+Q15. (Choose ALL correct options)
+In-situ conservation of natural habitats maintained in India includes:
+A. National parks
+B. Biosphere reserves
+C. Seed gene banks
+D. Wildlife sanctuaries
+Correct Answers: A, B, D
 Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY CONSERVATION.pdf
 
-Unit: 2
-CO: CO2
-Q72. If a model has high training accuracy but low validation accuracy, it is suffering from:
-A. High Bias
-B. Underfitting
-C. Overfitting
-D. Vanishing Gradient
-Correct Answer: C
-Type: Theory
+Q16. (Choose ALL correct options)
+The primary causes of poaching mentioned in the source material include:
+A. Large profits gained by the illegal sale or trade of animal parts.
+B. A lack of education among the buyers.
+C. Disregard for the law amongst the buyers.
+D. Habitat fragmentation due to urbanization.
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 2_BIODIVERSITY.pdf
+
+Q17. (Choose ALL correct options)
+The three different types of Ecological Pyramids are classified based on the parameters they represent. These are:
+A. Pyramids of Mass
+B. Pyramids of Numbers
+C. Pyramids of Biomass
+D. Pyramid of Energy
+Correct Answers: B, C, D
 Difficulty: Easy
+Source PPT: Unit 2_ECOLOGICAL PYRAMIDS.pdf
 
-Unit: 2
-CO: CO2
-Q73. What is the total number of parameters in a `Conv2D` layer with 32 filters, kernel size $3 \times 3$, and input depth 1 (including bias)?
-A. $32 \times 3 \times 3 = 288$
-B. $(3 \times 3 \times 1 + 1) \times 32 = 320$
-C. $(3 \times 3 + 1) \times 32 = 320$
-D. $3 \times 3 \times 32 = 288$
-Correct Answer: B
-Type: Numerical
+Q18. (Choose ALL correct options)
+Which characteristics describe a Climax Community in ecological succession?
+A. Biomass increases to maximum.
+B. Food chain becomes highly complex, changing to a food web.
+C. Net community production increases rapidly.
+D. Ecosystem is stable and self-perpetuating.
+Correct Answers: A, B, D
 Difficulty: Medium
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
 
-Unit: 2
-CO: CO2
-Q74. Which layer is typically used as the final layer for a binary classification CNN?
-A. `Dense(1, activation='sigmoid')`
-B. `Dense(2, activation='softmax')`
-C. `Dense(1, activation='relu')`
-D. `Conv2D(1, kernel_size=1)`
-Correct Answer: A
-Type: Code
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q75. The "vanishing gradient" problem is most severe in:
-A. Shallow networks with ReLU.
-B. Deep networks with Sigmoid activations.
-C. Networks with Batch Normalization.
-D. Networks with Residual connections.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q76. A stride of 2 in a convolutional layer has an effect similar to:
-A. Padding
-B. Max Pooling with stride 2
-C. Dropout
-D. Flattening
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q77. What is the purpose of the `rescale` parameter in `ImageDataGenerator`?
-A. To resize the image dimensions.
-B. To multiply pixel values by a factor (e.g., 1/255) for normalization.
-C. To randomly zoom the image.
-D. To change the aspect ratio.
-Correct Answer: B
-Type: Code
+Q19. (Choose ALL correct options)
+Ecological Succession is important because it contributes to:
+A. Diversity in Ecosystem
+B. Equilibrium in Ecosystem
+C. Stability of Ecosystem
+D. Simplification of food webs
+Correct Answers: A, B, C
 Difficulty: Easy
+Source PPT: Unit 2_ECOLOGICAL SUCCESSION.pdf
 
-Unit: 2
-CO: CO2
-Q78. In a VGG16 architecture, what is the size of the filters used throughout the convolutional layers?
-A. $1 \times 1$
-B. $3 \times 3$
-C. $5 \times 5$
-D. $7 \times 7$
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q79. Which function calculates the cross-entropy loss between true labels and predicted probabilities in TensorFlow?
-A. `tf.keras.losses.SparseCategoricalCrossentropy()`
-B. `tf.keras.losses.MeanSquaredError()`
-C. `tf.keras.losses.Hinge()`
-D. `tf.keras.metrics.Accuracy()`
-Correct Answer: A
-Type: Code
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q80. Calculate the output height: Input height 64, Filter 3, Stride 2, Padding 1 (Same-like behavior logic approximation for manual calc: $(H+2P-F)/S + 1$).
-Let's use explicit values: $(64 + 2\times1 - 3)/2 + 1$.
-A. 32
-B. 31
-C. 33
-D. 64
-Correct Answer: A
-Type: Numerical
-Difficulty: Hard
-
-Unit: 2
-CO: CO2
-Q81. The "bottleneck" layer in Inception modules uses which kernel size?
-A. $3 \times 3$
-B. $5 \times 5$
-C. $1 \times 1$
-D. $7 \times 7$
-Correct Answer: C
-Type: Theory
-Difficulty: Hard
-
-Unit: 2
-CO: CO2
-Q82. Which of the following is a technique to visualize what a CNN filter has learned?
-A. Gradient Descent
-B. Backpropagation
-C. Feature Map Visualization / Activation Maximization
-D. Dropout
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q83. In the code `model.fit(train_images, train_labels, epochs=10)`, what is an epoch?
-A. One forward pass of a single batch.
-B. One update of the weights.
-C. One complete pass through the entire training dataset.
-D. The time it takes to train the model.
-Correct Answer: C
-Type: Code
+Q20. (Choose ALL correct options)
+The common fauna of the Himalayan ranges include:
+A. Wild sheep
+B. Snow leopard
+C. Panda
+D. Wild ass
+Correct Answers: A, B, C
 Difficulty: Easy
+Source PPT: Unit 2_BIODIVERSITY.pdf
 
-Unit: 2
-CO: CO2
-Q84. Which metric is most commonly used for evaluating Object Detection models?
-A. Accuracy
-B. Mean Squared Error (MSE)
-C. Intersection over Union (IoU) / Mean Average Precision (mAP)
-D. Log Loss
-Correct Answer: C
-Type: Theory
+Q21. (Choose ALL correct options)
+If the rainfall is from 25 to 75 cm per year, what characteristics describe the resulting Grassland ecosystem?
+A. Big trees generally cannot survive.
+B. The area is likely a hot desert.
+C. It is typically utilized for grazing and forage.
+D. The ground floor of the soil may be used for agroforestry with trees like Teak.
+Correct Answers: A, C, D
 Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q85. Input: $6 \times 6$. Max Pooling: $2 \times 2$, Stride 2. Output size?
-A. $3 \times 3$
-B. $2 \times 2$
-C. $4 \times 4$
-D. $6 \times 6$
-Correct Answer: A
-Type: Numerical
+Q22. (Choose ALL correct options)
+Macroconsumers are generally Heterotrophs that depend on other organisms for food. Which categories are classified under Heterotrophs?
+A. Herbivores
+B. Carnivores
+C. Saprotrophs
+D. Omnivores
+Correct Answers: A, B, D
 Difficulty: Easy
+Source PPT: Unit 2 _Structure and Functions of Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q86. What is the primary role of the Flatten layer before the Dense layers?
-A. To normalize the data.
-B. To reduce overfitting.
-C. To convert multidimensional tensor data into a 1D array.
-D. To apply activation functions.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q87. Which Keras function is used to convert integer class vectors to binary class matrix (one-hot encoding)?
-A. `tf.keras.utils.to_categorical`
-B. `tf.one_hot`
-C. `tf.keras.layers.OneHot`
-D. `tf.keras.preprocessing.encode`
-Correct Answer: A
-Type: Code
+Q23. (Choose ALL correct options)
+The threat of converting grasslands to industrial areas can lead to the disappearance of which biological resources?
+A. Wild grasses, important for developing new crop varieties.
+B. Endangered animals like the wolf and great Indian bustard.
+C. Genes from wild herbivores useful for developing new strains of domestic animals.
+D. $\text{C}_4$ plants like Cynodon.
+Correct Answers: A, B, C, D
 Difficulty: Medium
+Source PPT: Unit 2_Desert and Grassland Ecosystem.pdf
 
-Unit: 2
-CO: CO2
-Q88. Which CNN architecture relies heavily on depthwise separable convolutions to reduce parameter count for mobile devices?
-A. VGG16
-B. ResNet-50
-C. MobileNet / Xception
-D. AlexNet
-Correct Answer: C
-Type: Theory
-Difficulty: Hard
-
-Unit: 2
-CO: CO2
-Q89. In a grayscale image, a pixel value of 0 usually represents:
-A. White
-B. Black
-C. Grey
-D. Red
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q90. Calculate parameters for a Dense layer with 100 inputs and 10 outputs.
-A. $100 \times 10 = 1000$
-B. $(100 + 1) \times 10 = 1010$
-C. $100 + 10 = 110$
-D. $100 \times 10 + 100 = 1100$
-Correct Answer: B
-Type: Numerical
+Q24. (Choose ALL correct options)
+What are the reasons why India and the Philippines rejected the commercial release of Bt brinjal?
+A. Concerns over negative impacts on rodents and cows.
+B. Serious concerns over gene flow and genetic contamination.
+C. Grounds of inadequate tests.
+D. Total absence of tests about food safety and toxicity.
+Correct Answers: B, C, D
 Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q91. Which component of the CNN allows it to be translation invariant?
-A. The activation function.
-B. The pooling layer.
-C. The dense layer.
-D. The bias term.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q92. What does `model.evaluate(test_images, test_labels)` return in Keras?
-A. The predictions for the test images.
-B. The loss value and metrics values for the model in test mode.
-C. The gradients of the loss.
-D. The summary of the model.
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q93. A color image of $100 \times 100$ pixels has how many values in the input tensor?
-A. 10,000
-B. 20,000
-C. 30,000
-D. 3
-Correct Answer: C
-Type: Numerical
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q94. The "Same" padding formula $P = (F - 1) / 2$ assumes:
-A. Stride = 1
-B. Stride = 2
-C. Filter size is even
-D. Filter size is 1
-Correct Answer: A
-Type: Numerical
-Difficulty: Hard
-
-Unit: 2
-CO: CO2
-Q95. Which statement about the ReLU function is false?
-A. It outputs 0 for negative inputs.
-B. It is computationally efficient.
-C. It suffers from the saturation problem for large positive values.
-D. It helps mitigate the vanishing gradient problem.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q96. In transfer learning, if your new dataset is small and similar to the original dataset, you should:
-A. Fine-tune all layers.
-B. Freeze the convolutional base and train only the top dense layers.
-C. Train the entire model from scratch.
-D. Freeze the dense layers and train the convolutional base.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q97. Which code snippet sets the optimizer to Adam with a learning rate of 0.001?
-A. `model.compile(optimizer='adam', ...)`
-B. `model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.001), ...)`
-C. `model.compile(optimizer=tf.keras.optimizers.SGD(0.001), ...)`
-D. `model.compile(optimizer='sgd', ...)`
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 2
-CO: CO2
-Q98. What is the spatial output size of a $1 \times 1$ convolution applied to a $28 \times 28$ input?
-A. $1 \times 1$
-B. $14 \times 14$
-C. $28 \times 28$
-D. $26 \times 26$
-Correct Answer: C
-Type: Numerical
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q99. Semantic segmentation differs from object detection because:
-A. It puts a box around the object.
-B. It classifies every pixel rather than drawing boxes.
-C. It only works on grayscale images.
-D. It is faster.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 2
-CO: CO2
-Q100. If you have an input of $6 \times 6$ and apply a $3 \times 3$ filter with stride 2 and valid padding, what is the output size?
-A. $2 \times 2$
-B. $3 \times 3$
-C. $4 \times 4$
-D. $2.5 \times 2.5$
-Correct Answer: A
-Type: Numerical
-Difficulty: Hard
+Source PPT: Unit 2_GMO.pdf
