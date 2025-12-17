@@ -1,1159 +1,1085 @@
-Unit: 4
-CO: CO4
-Q1. In a standard Recurrent Neural Network (RNN), the hidden state $h_t$ at time step $t$ is computed using the previous hidden state $h_{t-1}$ and the current input $x_t$. Which of the following equations represents this update (ignoring bias for simplicity)?
-A. $h_t = \tanh(W_{hh}h_{t-1} + W_{hx}x_t)$
-B. $h_t = \sigma(W_{hh}h_{t-1} \times W_{hx}x_t)$
-C. $h_t = \tanh(W_{hh}x_t + W_{hx}h_{t-1})$
-D. $h_t = \text{softmax}(W_{hh}h_{t-1} + W_{hx}x_t)$
+## Unit 4: Environmental Pollution and Hazards
+
+### Single Correct MCQs (96 Total)
+
+Q1. Which statement accurately defines water pollution according to the source material?
+A. Contamination of water bodies, very often by human activities
+B. The dispersal of pollutants only through direct discharge into aquifers
+C. Any change in water that reduces oxygen levels for marine life
+D. The modification of biological properties caused only by industrial waste
 Correct Answer: A
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 4 _Water Pollution.pdf
 
-Unit: 4
-CO: CO4
-Q2. What is the primary reason simple RNNs struggle with learning long-term dependencies in long sequences?
-A. The number of parameters grows exponentially with sequence length.
-B. The Vanishing Gradient problem caused by repeated multiplication of weight matrices < 1 during backpropagation.
-C. They cannot process inputs of variable lengths.
-D. They require future information to compute the current state.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q3. Which technique is commonly used to mitigate the "Exploding Gradient" problem in RNNs?
-A. Using ReLUs instead of Tanh.
-B. Gradient Clipping.
-C. Increasing the learning rate.
-D. Using a deeper network.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q4. In the context of Long Short-Term Memory (LSTM) networks, what is the role of the **Forget Gate**?
-A. To determine which parts of the new input to store in the cell state.
-B. To output the hidden state based on the cell state.
-C. To decide what information from the previous cell state should be discarded or kept.
-D. To reset the hidden state to zero.
+Q2. What is the approximate percentage of oil entering the ocean that is accounted for by oil spills?
+A. 97%
+B. 50%
+C. 12%
+D. 2%
 Correct Answer: C
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 4 _Water Pollution.pdf
 
-Unit: 4
-CO: CO4
-Q5. Which of the following gates is found in a Gated Recurrent Unit (GRU) but NOT in a standard LSTM?
-A. Input Gate
-B. Forget Gate
-C. Update Gate
-D. Output Gate
+Q3. In the context of water pollution causes (SECTORS), what substance discharge is directly associated with Thermal Pollution?
+A. Radioactive substances
+B. Sulphur compounds
+C. Coolant from power plants
+D. Pathogen and nutrient runoffs
 Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q6. Consider the following Keras code snippet using TensorFlow 2.x:
-```python
-model = tf.keras.Sequential()
-model.add(tf.keras.layers.Embedding(input_dim=1000, output_dim=64))
-model.add(tf.keras.layers.SimpleRNN(128))
-```
-If the input batch has shape `(32, 10)`, what is the shape of the output from the `SimpleRNN` layer?
-A. `(32, 10, 128)`
-B. `(32, 128)`
-C. `(32, 10, 64)`
-D. `(128, 10)`
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q7. What does the argument `return_sequences=True` do in a Keras Recurrent layer?
-A. It returns the internal state (cell state) along with the output.
-B. It returns the output at every time step in the input sequence, resulting in a 3D output tensor.
-C. It reverses the input sequence before processing.
-D. It returns only the last output of the sequence but duplicates it for the batch.
-Correct Answer: B
-Type: Theory
 Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q8. In a GRU architecture, what happens if the **Reset Gate** ($r_t$) is close to 0?
-A. The unit acts like a standard LSTM.
-B. The previous hidden state is effectively ignored when computing the candidate hidden state.
-C. The current input is ignored.
-D. The previous hidden state is copied directly to the next state.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q9. Calculate the number of trainable parameters in a `SimpleRNN` layer with `units=10` and an `input_dim=5` (input feature size). Assume use of bias.
-Formula: $h \times h + h \times x + h$ (weights for hidden, weights for input, bias).
-A. 150
-B. 160
-C. 65
-D. 110
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q10. Which activation function is primarily used for the **gates** (Input, Forget, Output) in an LSTM to output values between 0 and 1?
-A. Tanh
-B. ReLU
-C. Sigmoid
-D. Softmax
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q11. You are designing a model to forecast the temperature 24 hours into the future based on the past 24 hours of data. The data is sampled hourly. Which input shape would be appropriate for a Keras RNN layer processing this window?
-A. `(batch_size, 24)`
-B. `(batch_size, 1, 24)`
-C. `(batch_size, 24, num_features)`
-D. `(24, batch_size, num_features)`
-Correct Answer: C
-Type: Code
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q12. Refer to the Keras snippet below. What is the output shape of the `bidirectional` layer?
-```python
-layer = tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(32, return_sequences=True))
-# Input shape is (Batch, 10, 5)
-```
-A. `(Batch, 10, 32)`
-B. `(Batch, 10, 64)`
-C. `(Batch, 32)`
-D. `(Batch, 64)`
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q13. Why might one choose a GRU over an LSTM?
-A. GRUs are strictly more powerful than LSTMs for all tasks.
-B. GRUs have fewer parameters and are computationally faster to train while often achieving comparable performance.
-C. GRUs do not suffer from the vanishing gradient problem, whereas LSTMs do.
-D. GRUs can handle longer sequences than LSTMs because they have more gates.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q14. In the LSTM cell state equation $C_t = f_t \odot C_{t-1} + i_t \odot \tilde{C}_t$, what does the symbol $\odot$ represent?
-A. Matrix multiplication
-B. Element-wise addition
-C. Element-wise multiplication (Hadamard product)
-D. Dot product
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q15. Consider a Keras model for text classification.
-```python
-model = tf.keras.Sequential([
-    tf.keras.layers.Embedding(input_dim=10000, output_dim=32),
-    tf.keras.layers.LSTM(32),
-    tf.keras.layers.Dense(1, activation='sigmoid')
-])
-```
-If the input is a batch of sentences padded to length 50, how many parameters does the Embedding layer have?
-A. 320,000
-B. 10,000
-C. 1,600
-D. 32
-Correct Answer: A
-Type: Numerical
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q16. What is "Backpropagation Through Time" (BPTT)?
-A. A technique to train RNNs by unrolling the network over the time steps and applying standard backpropagation.
-B. A method to speed up RNN training by skipping time steps.
-C. A forward-only algorithm for making predictions in time series.
-D. An initialization strategy for recurrent weights.
-Correct Answer: A
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q17. Which component of the LSTM architecture is explicitly designed to handle the **Vanishing Gradient** problem by creating a "gradient superhighway"?
-A. The Hidden State $h_t$
-B. The Cell State $C_t$
-C. The Output Gate
-D. The Tanh activation
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q18. You are training a character-level RNN for text generation. The vocabulary size is 50. If you use a `SimpleRNN` layer with 100 units, and the input is one-hot encoded, what is the size of the input weight matrix $W_{hx}$?
-A. $100 \times 100$
-B. $50 \times 100$
-C. $100 \times 50$
-D. $50 \times 50$
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q19. In TensorFlow/Keras, what argument in `LSTM` layer allows you to retrieve the final cell state $C_t$ alongside the output?
-A. `return_sequences=True`
-B. `return_state=True`
-C. `stateful=True`
-D. `output_state=True`
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q20. When using `GridSearchCV` with a Keras model wrapper (e.g., `KerasClassifier` or `KerasRegressor`), why is `n_jobs=-1` sometimes problematic on Windows or with GPU?
-A. It causes the GPU to overheat.
-B. It can cause serialization/pickling errors or conflicts with the backend's internal parallelism.
-C. It forces the model to use CPU only.
-D. It disables cross-validation.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q21. Which statement best describes the "Update Gate" $z_t$ in a GRU?
-A. It determines how much of the past information to forget and how much new information to add.
-B. It completely resets the memory content.
-C. It controls the output visibility of the hidden state.
-D. It only filters the input data.
-Correct Answer: A
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q22. Calculate the number of parameters in a standard LSTM layer with `units=10` and `input_features=5`. Use the formula: $4 \times (h \times h + x \times h + h)$.
-A. 640
-B. 400
-C. 600
-D. 240
-Correct Answer: A
-Type: Numerical
-Difficulty: Hard
-
-Unit: 4
-CO: CO4
-Q23. Which of the following problems is an LSTM specifically designed to solve compared to a basic RNN?
-A. High computational cost per step.
-B. Difficulty in mapping fixed-size inputs to fixed-size outputs.
-C. Inability to capture long-term dependencies due to vanishing gradients.
-D. Overfitting on small datasets.
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q24. In the context of time series forecasting with Keras, what is the purpose of the `tf.keras.utils.timeseries_dataset_from_array` function?
-A. To plot the time series data.
-B. To efficiently generate batches of sliding windows of inputs and targets.
-C. To normalize the time series data.
-D. To convert a time series into a static image.
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q25. Identify the error in the following Keras code for a stacked LSTM:
-```python
-model = Sequential()
-model.add(LSTM(64, input_shape=(10, 5))) # Layer 1
-model.add(LSTM(32))                      # Layer 2
-```
-A. Layer 1 is missing `return_sequences=True`.
-B. Layer 2 units must match Layer 1 units.
-C. `input_shape` should be `(5, 10)`.
-D. LSTM layers cannot be stacked.
-Correct Answer: A
-Type: Code
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q26. What is the range of the output of the `tanh` activation function used in RNNs and LSTMs?
-A. $$
-B. $[-1, 1]$
-C. $[0, \infty)$
-D. $(-\infty, \infty)$
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q27. In a "many-to-one" sequence classification task (e.g., sentiment analysis), which output from the RNN layer is typically used?
-A. The output at every time step.
-B. The output from the last time step.
-C. The average of all outputs.
-D. The initial state.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q28. A GRU layer has 10 units and input dimension 5. How does its parameter count compare to an LSTM with the same configuration?
-A. GRU has roughly 75% of the parameters of the LSTM.
-B. GRU has more parameters than the LSTM.
-C. They have exactly the same number of parameters.
-D. GRU has half the parameters of the LSTM.
-Correct Answer: A
-Type: Numerical
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q29. Which technique allows an RNN to process inputs of variable lengths in a batch by ignoring specific padding values?
-A. Dropout
-B. Batch Normalization
-C. Masking
-D. Pooling
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q30. Consider a time series prediction model where the model predicts the next value based on the previous 10 values. If the input data has shape `(1000, 1)`, and we create windows of length 10, what is the shape of a single input sample fed into the model?
-A. `(1, 10)`
-B. `(10, 1)`
-C. `(1000, 1)`
-D. `(1, 1)`
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q31. In the equation $f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)$ for an LSTM, what does $[h_{t-1}, x_t]$ represent?
-A. The subtraction of the previous hidden state and current input.
-B. The dot product of the previous hidden state and current input.
-C. The concatenation of the previous hidden state and the current input.
-D. The element-wise multiplication of the previous hidden state and current input.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q32. When performing hyperparameter tuning on an RNN using `GridSearchCV`, why might one fix the random seed?
-A. To make the grid search run faster.
-B. To ensure the results are reproducible despite the stochastic nature of network initialization.
-C. To prevent the gradients from exploding.
-D. To allow the model to use the GPU.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q33. What is the output shape of the following layer?
-```python
-tf.keras.layers.GRU(32, return_sequences=True, input_shape=(20, 5))
-```
-A. `(None, 20, 32)`
-B. `(None, 32)`
-C. `(None, 20, 5)`
-D. `(None, 5, 32)`
-Correct Answer: A
-Type: Code
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q34. In a "stateful" RNN in Keras (`stateful=True`), what happens to the internal states between batches?
-A. They are reset to zero.
-B. They are re-initialized randomly.
-C. They are preserved and passed as the initial state for the next batch.
-D. They are averaged across the batch.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q35. Which of the following is an advantage of Transformers over RNNs/LSTMs for sequence processing?
-A. Transformers process data sequentially, making them slower.
-B. Transformers allow for parallelization of the entire sequence processing.
-C. Transformers have fewer parameters than RNNs for the same hidden size.
-D. Transformers require no memory for long sequences.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q36. For an LSTM layer with 10 units, what is the dimensionality of the Cell State $C_t$?
-A. 1
-B. 10
-C. 20 (concatenated with hidden state)
-D. It depends on the input size.
-Correct Answer: B
-Type: Numerical
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q37. What does the `tf.keras.layers.Bidirectional` wrapper do?
-A. It trains two RNNs: one on the input sequence and one on the reversed input sequence, and merges their outputs.
-B. It allows the RNN to output values greater than 1.
-C. It connects the output of the RNN back to its input.
-D. It doubles the number of time steps in the input.
-Correct Answer: A
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q38. In the paper "Comparing LSTM and GRU Models to Predict the Condition of a Pulp Paper Press" (Source), which model generally showed better performance and stability for the given dataset?
-A. The standard RNN.
-B. The LSTM.
-C. The GRU.
-D. Both performed exactly the same.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q39. A "Peephole" LSTM connection allows the gates to look at:
-A. The next input in the sequence.
-B. The cell state $C_{t-1}$.
-C. The output of the next layer.
-D. The gradients of the future steps.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q40. Code Snippet:
-```python
-inputs = tf.keras.Input(shape=(None, 10))
-x = tf.keras.layers.LSTM(20)(inputs)
-outputs = tf.keras.layers.Dense(1)(x)
-model = tf.keras.Model(inputs, outputs)
-```
-Is this model architecture suitable for "Many-to-Many" (Sequence output) or "Many-to-One" (Single output) tasks?
-A. Many-to-Many
-B. Many-to-One
-C. One-to-Many
-D. One-to-One
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q41. Which gradient problem causes the weights of an RNN to update very slowly or not at all, preventing the learning of long-term dependencies?
-A. Exploding Gradient
-B. Vanishing Gradient
-C. Oscillating Gradient
-D. Sparse Gradient
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q42. In Keras, how do you specify that an LSTM layer should process input in reverse order?
-A. `reverse=True`
-B. `go_backwards=True`
-C. `direction='backward'`
-D. `input_reverse=True`
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q43. Given an input sequence of length $T$ and feature dimension $D$, and a SimpleRNN with $H$ units. What is the time complexity of the forward pass for one sequence?
-A. $O(T \times D \times H)$
-B. $O(T \times (H^2 + H \times D))$
-C. $O(H^2)$
-D. $O(T^2 \times H)$
-Correct Answer: B
-Type: Numerical
-Difficulty: Hard
-
-Unit: 4
-CO: CO4
-Q44. What does the `Dropout` argument in a Keras RNN layer constructor (e.g., `LSTM(64, dropout=0.2)`) apply to?
-A. The recurrent connections (state-to-state).
-B. The linear transformation of the inputs (input-to-state).
-C. The output layer only.
-D. The bias terms.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q45. If you are tuning hyperparameters for a Keras LSTM model using `GridSearchCV`, which wrapper class from `scikeras.wrappers` (or `tensorflow.keras.wrappers.scikit_learn`) should be used for a regression problem?
-A. `KerasClassifier`
-B. `KerasRegressor`
-C. `KerasGrid`
-D. `KerasOptimizer`
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q46. The operation $f_t \odot C_{t-1}$ in an LSTM corresponds to which logical operation?
-A. Writing new information.
-B. Forgetting old information.
-C. Outputting the hidden state.
-D. Creating the candidate cell state.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q47. When forecasting time series, if we use a "Single-shot" prediction models to predict 24 hours into the future at once, the output layer typically has how many units (assuming 1 feature)?
-A. 1
-B. 24
-C. 12
-D. It depends on the batch size.
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q48. Which RNN architecture reduces the number of gates compared to LSTM by combining the Forget and Input gates into an Update gate?
-A. Bidirectional RNN
-B. GRU
-C. Peephole LSTM
-D. Deep RNN
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q49. Consider the following code for a Conv1D layer used in time series:
-```python
-tf.keras.layers.Conv1D(filters=32, kernel_size=3, activation='relu')
-```
-If the input sequence length is 10, what is the length of the output sequence (assuming default 'valid' padding)?
-A. 10
-B. 8
-C. 7
-D. 12
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q50. Why is `n_jobs=-1` in `GridSearchCV` sometimes avoided when training Keras models on a single GPU?
-A. It causes the CPU to overheat.
-B. Keras/TensorFlow already utilizes the GPU parallelism, and forking processes can cause memory contention or serialization errors.
-C. It stops the grid search from running.
-D. It reverses the order of the search.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q51. What is the value range of the candidate hidden state $\tilde{h}_t$ in a GRU (typically using `tanh`)?
-A. $$
-B. $[-1, 1]$
-C. $[0, \infty)$
-D. $(-\infty, \infty)$
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q52. In Keras, what argument is used to specify the initial state of an RNN layer during the `call`?
-A. `start_state`
-B. `initial_state`
-C. `reset_state`
-D. `begin_state`
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q53. Which loss function is most appropriate for a binary text classification problem using an RNN?
-A. `mean_squared_error`
-B. `categorical_crossentropy`
-C. `binary_crossentropy`
-D. `sparse_categorical_crossentropy`
-Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q54. If an LSTM layer has 100 units, how many "cell states" are maintained internally during processing?
-A. 1
-B. 100
-C. 200 (100 hidden + 100 cell)
-D. 400 (one for each gate)
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q55. In the context of NLP, what is the purpose of an `Embedding` layer placed before an LSTM?
-A. To convert integer token indices into dense vectors of fixed size.
-B. To convert text to one-hot encoding.
-C. To reduce the sequence length.
-D. To normalize the input text.
-Correct Answer: A
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q56. Which of the following is NOT a gate in the standard GRU?
-A. Update Gate
-B. Reset Gate
-C. Output Gate
-D. All are present in GRU.
-Correct Answer: C
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q57. Calculate the number of parameters for a GRU layer with `units=32` and `input_dim=10` (ignore bias for simplicity).
-Formula: $3 \times (h \times h + h \times x)$
-A. $3 \times (32 \times 32 + 32 \times 10) = 4032$
-B. $3 \times (32 + 10) = 126$
-C. $4 \times (32 \times 32 + 32 \times 10) = 5376$
-D. $32 \times 32 + 32 \times 10 = 1344$
-Correct Answer: A
-Type: Numerical
-Difficulty: Hard
-
-Unit: 4
-CO: CO4
-Q58. What is the effect of `recurrent_dropout` in Keras RNN layers?
-A. It drops inputs connecting to the layer.
-B. It drops connections between the previous hidden state and the current hidden state.
-C. It drops the final output of the layer.
-D. It drops entire time steps from the sequence.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q59. In an LSTM, if the **Input Gate** is 0 and the **Forget Gate** is 1, what happens to the cell state?
-A. The cell state is reset to 0.
-B. The cell state remains exactly the same as the previous time step ($C_t = C_{t-1}$).
-C. The cell state is updated with new information only.
-D. The cell state becomes 1.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q60. Which Keras callback is commonly used to save the best model during training based on validation loss?
-A. `ModelCheckpoint`
-B. `EarlyStopping`
-C. `ReduceLROnPlateau`
-D. `TensorBoard`
-Correct Answer: A
-Type: Code
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q61. What is "Teacher Forcing" in the context of training sequence-to-sequence RNNs?
-A. Using the model's own output from the previous step as input for the current step during training.
-B. Using the actual ground truth output from the previous step as input for the current step during training.
-C. Freezing the weights of the encoder.
-D. Increasing the learning rate over time.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q62. A stacked RNN consists of 3 LSTM layers. Which layers MUST have `return_sequences=True`?
-A. Only the last layer.
-B. The first and second layers.
-C. Only the first layer.
-D. None of the layers.
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q63. What is the shape of the kernel weights matrix ($W_{hx}$) in a SimpleRNN layer with 50 units and input dimension 20?
-A. `(50, 50)`
-B. `(20, 50)`
-C. `(50, 20)`
-D. `(20, 20)`
-Correct Answer: B
-Type: Numerical
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q64. When using `tf.data.Dataset` for time series, what does the `window()` method do?
-A. It normalizes the data.
-B. It groups elements into windows (sequences) of a specified size.
-C. It shuffles the dataset.
-D. It splits the data into train and test sets.
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q65. Which limitation of RNNs is addressed by the bidirectional RNN?
-A. Vanishing gradients.
-B. The inability to use future context in the sequence to predict the current output.
-C. High memory usage.
-D. Slow training speed.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q66. If `x` has shape `(32, 10, 8)` (Batch, Time, Feat), what is the output shape of:
-`tf.keras.layers.GlobalMaxPooling1D()(x)`?
-A. `(32, 10)`
-B. `(32, 8)`
-C. `(32, 1)`
-D. `(32, 10, 1)`
-Correct Answer: B
-Type: Code
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q67. In the context of LSTM, what is $\tilde{C}_t$ (Candidate Cell State)?
-A. The final output of the cell.
-B. A vector of new candidate values that could be added to the state, created by a tanh layer.
-C. The value of the forget gate.
-D. The value of the output gate.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q68. In time series forecasting, what does a "Naive Forecast" or "Persistence Model" typically predict?
-A. The average of all past values.
-B. The value at the last observed time step ($y_{t+1} = y_t$).
-C. A random value.
-D. Zero.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q69. Which of the following is true about the parameter count of LSTM vs SimpleRNN?
-A. LSTM has roughly 4 times the parameters of a SimpleRNN with the same number of units.
-B. LSTM has fewer parameters than SimpleRNN.
-C. They have the same number of parameters.
-D. LSTM has 2 times the parameters.
-Correct Answer: A
-Type: Numerical
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q70. Code Snippet:
-```python
-rnn = tf.keras.layers.SimpleRNN(10, return_state=True)
-output, state = rnn(inputs)
-```
-If `inputs` has shape `(Batch, Time, Feat)`, what is the relationship between `output` and `state`?
-A. `output` is the full sequence, `state` is the last step.
-B. `output` and `state` are identical.
-C. `output` is the last step hidden state, `state` is the full sequence.
-D. `state` is the cell state, which SimpleRNN does not have.
-Correct Answer: B
-Type: Code
-Difficulty: Hard
-
-Unit: 4
-CO: CO4
-Q71. Why is the sigmoid function used for gates in LSTM/GRU?
-A. It outputs values in $(-1, 1)$, ideal for data scaling.
-B. It outputs values in $(0, 1)$, ideal for acting as a "switch" or percentage to let information through.
-C. It avoids the vanishing gradient problem better than ReLU.
-D. It is computationally cheaper than tanh.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q72. When dealing with variable-length sequences in Keras (e.g., text), what is the standard value used for padding?
-A. -1
-B. 0
-C. NaN
-D. 1
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q73. What is the formula for the Reset Gate $r_t$ in a GRU?
-A. $r_t = \sigma(W_r \cdot [h_{t-1}, x_t])$
-B. $r_t = \tanh(W_r \cdot [h_{t-1}, x_t])$
-C. $r_t = \sigma(W_r \cdot h_{t-1} + U_r \cdot x_t)$
-D. $r_t = \text{ReLU}(W_r \cdot x_t)$
-Correct Answer: A
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q74. For a "Many-to-Many" task where the input and output sequences have the same length (e.g., POS tagging), which `return_sequences` setting is required for the output RNN layer?
-A. `return_sequences=False`
-B. `return_sequences=True`
-C. `return_state=True`
-D. It doesn't matter.
-Correct Answer: B
-Type: Code
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q75. How many bias terms are typically associated with a single LSTM unit (considering all 4 gates/components)?
-A. 1
-B. 2
-C. 3
-D. 4
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q4. The presence of nitrates and phosphates in water bodies, washed from soils, primarily leads to which detrimental consequence?
+A. Oxygen depletion
+B. Oil spill accumulation
+C. Thermal heating
+D. Eutrophication
 Correct Answer: D
-Type: Numerical
 Difficulty: Medium
+Source PPT: Unit 4 _Water Pollution.pdf
 
-Unit: 4
-CO: CO4
-Q76. Which hyperparameter is critical for the stability of training RNNs to prevent exploding gradients?
-A. Batch size
-B. Clipnorm or Clipvalue
-C. Dropout
-D. L2 Regularization
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q77. In the TensorFlow "Time series forecasting" tutorial, what does the `WindowGenerator.split_window` method do?
-A. Splits the data into training and testing sets.
-B. Splits a window of consecutive samples into inputs and labels.
-C. Splits the time series into hourly chunks.
-D. Normalizes the window data.
-Correct Answer: B
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q78. In an autoregressive RNN model for text generation, the prediction at time $t$ is used as:
-A. The label for time $t$.
-B. The input for time $t+1$.
-C. The hidden state for time $t-1$.
-D. The reset gate value.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q79. Which statement is TRUE regarding the difference between `tf.keras.layers.RNN` and `tf.keras.layers.LSTM`?
-A. `RNN` is a specific layer, `LSTM` is a base class.
-B. `LSTM` is a built-in layer optimized for CuDNN, while `RNN` is a base class that takes a cell instance (e.g., `LSTMCell`).
-C. There is no difference.
-D. `RNN` can only implement SimpleRNN logic.
-Correct Answer: B
-Type: Code
-Difficulty: Hard
-
-Unit: 4
-CO: CO4
-Q80. Calculate the output shape of:
-```python
-x = tf.keras.Input((100, 16))
-y = tf.keras.layers.Conv1D(filters=32, kernel_size=5, padding='same')(x)
-```
-A. `(None, 100, 32)`
-B. `(None, 96, 32)`
-C. `(None, 100, 16)`
-D. `(None, 32, 100)`
-Correct Answer: A
-Type: Code
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q81. What does the "Cell State" in an LSTM represent intuitively?
-A. Short-term working memory.
-B. The "conveyor belt" or long-term memory that runs through the entire chain with minor linear interactions.
-C. The output of the current time step.
-D. The forget gate activation.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q82. In a GRU, the equation $h_t = (1 - z_t) \odot h_{t-1} + z_t \odot \tilde{h}_t$ represents:
-A. The calculation of the reset gate.
-B. The calculation of the candidate hidden state.
-C. The final update of the hidden state, combining old state and new candidate.
-D. The output gate.
+Q5. Which metallic element is explicitly mentioned as harmful, poisonous, and capable of causing environmental and health problems for humans and animals?
+A. Sulphur
+B. Nitrates
+C. Lead and Mercury
+D. Cadmium
 Correct Answer: C
-Type: Theory
 Difficulty: Medium
+Source PPT: Unit 4 _Water Pollution.pdf
 
-Unit: 4
-CO: CO4
-Q83. Which optimizer is generally recommended as a first choice for training RNNs/LSTMs due to its adaptive learning rate capabilities?
-A. SGD
-B. Adam
-C. Adadelta
-D. Momentum
+Q6. Pollution disrupts the natural food chain when tiny animals consume which pollutants before being eaten by fish and shellfish?
+A. Sulphur and Nitrates
+B. Lead and Cadmium
+C. Oil and Solid Waste
+D. Pathogens and Phosphates
 Correct Answer: B
-Type: Theory
-Difficulty: Easy
+Difficulty: Medium
+Source PPT: Unit 4 _Water Pollution.pdf
 
-Unit: 4
-CO: CO4
-Q84. What is the purpose of the `Masking` layer in Keras?
-A. To hide neurons during training (Dropout).
-B. To tell downstream layers to skip processing of timesteps containing a specific padding value.
-C. To normalize the input data.
-D. To obscure the labels.
+Q7. According to the source, what specific human disease can result from eating poisoned seafood?
+A. Asthma
+B. Cancer
+C. Hepatitis
+D. Blue Baby Syndrome
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q8. Which measure is listed under the "STABLES" framework for water pollution prevention that involves zero input dependency?
+A. Sewage disposal facilities
+B. Zero waste technology
+C. Legislation enforcement
+D. Septic tanks
 Correct Answer: B
-Type: Code
 Difficulty: Easy
+Source PPT: Unit 4 _Water Pollution.pdf
 
-Unit: 4
-CO: CO4
-Q85. If you have a sequence classification problem with 5 classes, what should be the activation function of the final Dense layer?
-A. Sigmoid
-B. Tanh
-C. ReLU
-D. Softmax
+Q9. Oil spills form a thick layer on the water surface primarily because they possess which physical property?
+A. They attract marine birds
+B. They are easily decomposed
+C. They do not dissolve in water
+D. They increase dissolved oxygen
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q10. In poor nations, outbreaks of cholera and other diseases are often a result of which specific water management failure?
+A. High concentrations of chemicals from industry
+B. Poor drinking water treatment from contaminated waters
+C. Excessive use of fertilizers leading to eutrophication
+D. Discharge of coolant from power plants
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q11. Ocean and marine dumping, involving items like plastic and rubber, primarily harms sea animals because these waste types possess which characteristic?
+A. They increase the water temperature substantially
+B. They take time to decompose
+C. They are highly volatile
+D. They instantly dissolve in water
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q12. The discharge of coolant from power plants causes thermal pollution, leading directly to which effect?
+A. Increase in photosynthetic rate
+B. Lowering of dissolved oxygen
+C. Bioaccumulation of heavy metals
+D. Formation of photochemical smog
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q13. The atmosphere protects the Earth and allows life to exist by preventing which phenomena?
+A. Being burned by intense heat during the day or frozen by very low temperatures at night
+B. The dispersal of particulate matter globally
+C. The formation of secondary pollutants like smog
+D. Acidification of soils and lakes
+Correct Answer: A
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q14. In the AQI Categories table, what is the description assigned to an AQI Range of 51–100?
+A. Good
+B. Acceptable
+C. Poor
+D. Severe
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q15. Pollutants like SO2, NO2, CO, and CH4 are classified under which state of matter?
+A. Particulate
+B. Primary
+C. Gaseous
+D. Secondary
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q16. Primary pollutants are defined as those gases or particles that are emitted in what manner?
+A. By chemical reaction in the atmosphere
+B. Directly emitted from sources
+C. Only by natural events
+D. Through evaporation of organic compounds
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q17. Photochemical smog is an example of which type of pollutant?
+A. Primary pollutant
+B. Particulate pollutant
+C. Secondary pollutant
+D. Indoor pollutant
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q18. Carbon Monoxide (CO) pollution, sourced from forest fires and automobile exhaust, is known to cause which major effect?
+A. Corrosion of teeth
+B. Blood poisoning
+C. Liver and kidney damage
+D. Irritation of throats and eyes
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q19. Sulphur dioxide, primarily sourced from Sulphuric acid plants and power houses, causes which specific respiratory effect?
+A. Damage to the brain and nervous system
+B. Asthma
+C. Mental retardness in children
+D. Lungs problem
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q20. What is the primary source listed for Mercury pollution?
+A. Lead paint industry
+B. Nitric acid plants
+C. Mining industry
+D. Automobile exhausts
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q21. Lead exposure is linked to which specific health effect in children?
+A. Corrosion of teeth
+B. Respiratory irritation
+C. Mental retardness in child
+D. Blood poisoning
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q22. Which process involves rain carrying and depositing Nitrogen from air pollutants onto rivers and soils, leading to algae growth?
+A. Acidification
+B. Ground-level ozone formation
+C. Eutrophication
+D. Particulate matter deposition
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q23. When sulphuric acid, an air pollutant, combines with water droplets in clouds, the resulting acidic water droplets form what phenomenon?
+A. Photochemical smog
+B. Ground-level ozone
+C. Acid rain
+D. Wind erosion
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q24. Long-term health effects resulting from particulate matter exposure include chronic respiratory disease, heart disease, and damage to which set of internal organs?
+A. Eyes, nose, and throat
+B. Brain, nerves, liver, or kidneys
+C. Teeth and gums
+D. Thyroid and breast
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q25. Which natural event that pollutes the air is listed among the sources of pollution?
+A. Burning Fossil Fuels
+B. Emissions from industries
+C. Volcanic eruptions
+D. Waste incinerators
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q26. What type of dangerous gases are found in fumes from car exhaust?
+A. Sulphuric acid, ozone, and mercury
+B. Carbon monoxide, oxides of nitrogen, hydrocarbons and particulates
+C. Xenon-135 and strontium isotopes
+D. Cadmium, lead, and phosphates
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q27. The creation of Ground-level ozone ($\text{O}_3$) results from which atmospheric process?
+A. Natural radioactivity release
+B. Chemical reactions involving air pollutants
+C. Wind erosion of dust particles
+D. Combustion of coal
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q28. Acid rain affects plants by causing which specific damage?
+A. Stimulating excessive nitrogen growth
+B. Destroying the leaves of plants
+C. Increasing the pH of the soil
+D. Causing tissue to turn blue
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q29. At the individual level, using energy (light, water, boiler, kettle, and fire woods) wisely helps cut down pollution because:
+A. It reduces crop dusting requirements
+B. Less cars are required on the road
+C. Lots of fossil fuels are burned to generate electricity
+D. It minimizes chemical runoffs into water sources
+Correct Answer: C
+Difficulty: Hard
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q30. What is the AQI description for the range 301+?
+A. Acceptable
+B. Health warnings
+C. Serious health effects (Severe)
+D. May cause health issues
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q31. According to the classification provided, discarded electronic devices like computers and TVs fall under which waste category?
+A. Domestic waste
+B. Nuclear waste
+C. E-waste
+D. Bio-medical waste
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q32. How much additional landfill area is required every year due to solid waste in India?
+A. 7.2 million tonnes
+B. One Sq km
+C. 150 million tonnes
+D. Rs 1600 crore
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q33. What percentage increase in municipal solid waste did Mumbai experience between 1981–91?
+A. 3200 tonne
+B. 67%
+C. 5355 tonne
+D. 12.3 million
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q34. In India, waste collection is primarily carried out by which entity?
+A. Local raddiwala / kabadiwala
+B. MCD- Sophisticated DWM vehicle
+C. The city municipality
+D. Individual households
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q35. The cloudburst in Mumbai (2005) was exacerbated by solid waste management issues, specifically the blockage of sewage lines due to:
+A. Imported scrap from Iran
+B. Large no. of plastic bags
+C. Consumption of contaminated foods
+D. Accumulation of chemical sludge
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q36. Stray animals consuming plastic bags suffer due to which mechanism?
+A. Reduction in the number of migratory birds
+B. Blocks the food movement in their stomach
+C. Lead poisoning causing mental retardness
+D. Genetic damage from nuclear waste
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q37. Developed countries often choose to dump hazardous/toxic waste into developing countries primarily because of:
+A. The availability of sophisticated DWM vehicles
+B. Strict environment regulation norms in developed countries
+C. High cost of recycling globally
+D. Incomplete incineration processes
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q38. Approximately how many distilleries discharge spent wash per year in India?
+A. 2500
+B. 300
+C. 7.2 million
+D. 4,00,000
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q39. Waste breaks down in landfills to form which potent greenhouse gas?
+A. Carbon monoxide
+B. Sulphur dioxide
+C. Methane
+D. Ozone
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q40. What is the primary benefit mentioned regarding making paper from waste (recycling)?
+A. Saves 50% energy
+B. Reduces environmental degradation by 100%
+C. Saves energy equivalent to 100 litres of oil
+D. Increases the volume of garbage
+Correct Answer: A
+Difficulty: Easy
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q41. The waste management hierarchy (3 R’s) includes Reduce, Reuse, and what third concept?
+A. Remove
+B. Repair
+C. Recover
+D. Recycle
 Correct Answer: D
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 4_Solid Waste Management.pdf
 
-Unit: 4
-CO: CO4
-Q86. In the context of the `WindowGenerator` class (Source), if `input_width=24`, `label_width=1`, and `shift=24`, does the label overlap with the input?
-A. Yes, they overlap completely.
-B. No, the label immediately follows the input window (non-overlapping, immediately adjacent).
-C. Yes, by 1 step.
-D. No, there is a gap between them.
+Q42. Open dumps are considered highly problematic because they are unsanitary, smelly, and primarily cause which hazards?
+A. Result in high-temperature, rapid decomposition
+B. Increase Vermin and pests
+C. Prevent water infiltration and leaching
+D. Generate heat energy for electricity
 Correct Answer: B
-Type: Code
 Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
 
-Unit: 4
-CO: CO4
-Q87. What happens if you try to use `GridSearchCV` with a Keras model that has multiple inputs?
-A. It works automatically.
-B. It fails because scikit-learn wrappers typically expect a single `X` array; you may need to wrap inputs or use manual loops.
-C. It requires the `n_jobs` parameter to be set to 0.
-D. It only works with `RandomizedSearchCV`.
+Q43. Which composting method utilizes special kinds of earthworms and food scraps?
+A. Aerobic composting
+B. Anaerobic composting
+C. Vermicomposting
+D. Municipal composting
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q44. A key objective of Sanitary Landfills (a linear system) is to prevent which environmental issue?
+A. Generation of high temperatures
+B. Water infiltration and leaching of toxic fluids
+C. The need for government legislation
+D. Reduction in the volume of waste
 Correct Answer: B
-Type: Theory
+Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q45. Incineration is a contentious method because incomplete burning can produce which specific hazardous gas?
+A. Methane
+B. Carbon monoxide gas
+C. Xenon-135
+D. Hydrogen sulfide
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q46. Which material is explicitly stated as NOT suitable for incineration?
+A. Paper
+B. Food scraps
+C. Batteries, glass etc.
+D. Hazardous sludge
+Correct Answer: C
 Difficulty: Hard
+Source PPT: Unit 4_Solid Waste Management.pdf
 
-Unit: 4
-CO: CO4
-Q88. Which line of code correctly compiles a Keras RNN model for a regression task?
-A. `model.compile(optimizer='adam', loss='mse', metrics=['accuracy'])`
-B. `model.compile(optimizer='adam', loss='categorical_crossentropy')`
-C. `model.compile(optimizer='adam', loss='mse', metrics=['mae'])`
-D. `model.compile(optimizer='sgd', loss='binary_crossentropy')`
+Q47. The concept of "More Profit With Zero Waste" involves evolving a closed system where:
+A. Waste collection is performed solely by the municipality
+B. Recycling technologies are made compulsory
+C. Matter & energy circulate within
+D. The volume of garbage is significantly reduced by burning
 Correct Answer: C
-Type: Code
-Difficulty: Medium
+Difficulty: Hard
+Source PPT: Unit 4_Solid Waste Management.pdf
 
-Unit: 4
-CO: CO4
-Q89. In a text classification model using embeddings, what does `input_length` in the Embedding layer specify?
-A. The size of the vocabulary.
-B. The size of the embedding vector.
-C. The length of the input sequences (number of tokens).
-D. The batch size.
+Q48. What challenge related to waste management is cited regarding the lack of specific guidance in the regulatory structure?
+A. Education & voluntary compliance
+B. Technological interventions
+C. No Institutions & regulatory framework
+D. No market action for waste reduction
 Correct Answer: C
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q90. Which of the following is a key advantage of using `tf.data.Dataset` pipelines for RNN training?
-A. It automatically tunes hyperparameters.
-B. It allows for efficient prefetching, batching, and shuffling of large sequence datasets that don't fit in memory.
-C. It guarantees convergence.
-D. It removes the need for padding.
-Correct Answer: B
-Type: Theory
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q91. Given `SimpleRNN(units=64)`, what is the dimension of the hidden state vector?
-A. 32
-B. 64
-C. 128
-D. Variable
-Correct Answer: B
-Type: Numerical
-Difficulty: Easy
-
-Unit: 4
-CO: CO4
-Q92. What is the primary function of the `tanh` activation in the candidate cell state $\tilde{C}_t$ calculation of an LSTM?
-A. To gate the information (0 to 1).
-B. To regulate the network by outputting values in $[-1, 1]$, preventing values from growing indefinitely.
-C. To force values to be positive.
-D. To output probabilities.
-Correct Answer: B
-Type: Theory
 Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
 
-Unit: 4
-CO: CO4
-Q93. Code Snippet:
-```python
-encoder_input = Input(shape=(None, 10))
-encoder = LSTM(64, return_state=True)
-encoder_outputs, state_h, state_c = encoder(encoder_input)
-```
-What are `state_h` and `state_c`?
-A. The output sequence and the last output.
-B. The hidden state and the cell state of the last time step.
-C. The hidden state of the first and last time step.
-D. The forward and backward states.
+Q49. Which phenomenon is considered one of the two major nuclear disasters in the world categorized as a nuclear holocaust?
+A. Chernobyl incident
+B. Hiroshima incident
+C. Three Mile Island incident
+D. Fukushima incident
 Correct Answer: B
-Type: Code
-Difficulty: Medium
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
 
-Unit: 4
-CO: CO4
-Q94. If `return_sequences=True` is used in an LSTM layer connected to a `Dense` layer for per-step classification, what wrapper is often used on the Dense layer in older Keras versions (though not strictly necessary in TF2)?
-A. `TimeDistributed`
-B. `Bidirectional`
-C. `Lambda`
-D. `Flatten`
+Q50. Radiation pollution refers to the increase in natural radiation levels due to which factor?
+A. Natural radioactive decay of unstable isotopes
+B. Human activities
+C. Cosmic rays from outer space
+D. Visible light and radio waves
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q51. The percentage of release radiation involving activities like mining, processing, and storage of radioactive materials is approximately:
+A. 100%
+B. 50%
+C. 20%
+D. 5%
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q52. Radioactive radon-222, soil, rocks, air, water, and food are listed as examples of which source of radioactivity?
+A. Anthropogenic sources
+B. Man made disaster sources
+C. Nuclear fission sources
+D. Natural Resources
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q53. Genetic damage caused by radiation results from which specific mechanism?
+A. Burns and eye cataract formation
+B. Inducing mutations in the DNA
+C. Penetrating the environment during uranium mining
+D. Causing cancer of the bone and thyroid
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q54. Somatic damage caused by radiation includes burns, miscarriages, eye cataract, and cancer of which specific internal organ group?
+A. Brain, nerves, and liver
+B. Bone, thyroid, breast, lungs and skin
+C. Kidney and nervous system
+D. Stomach and intestine
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q55. Nuclear energy is produced by two methods, one being nuclear fission, which uses what substance to create energy?
+A. Plutonium
+B. Graphite
+C. Uranium
+D. Xenon-135
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q56. The Chernobyl incident is categorized as a case of which type of disaster?
+A. Nuclear holocaust
+B. Man made disaster using uranium bomb
+C. Nuclear power plant accident
+D. Natural disaster
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q57. The Hiroshima incident involved the use of which specific type of atomic bomb?
+A. Plutonium bomb (Fat Man)
+B. Uranium bomb (Little Boy)
+C. RBMK reactor
+D. Xenon-135 bomb
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q58. The Nagasaki incident involved the use of which specific type of atomic bomb?
+A. Uranium bomb (Little Boy)
+B. Plutonium bomb (Fat Man)
+C. RBMK reactor
+D. Graphite moderated reactor
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q59. The RBMK reactor used at the Chernobyl Nuclear Power Plant was cooled by water and moderated by what material?
+A. Xenon-135
+B. Graphite
+C. Uranium
+D. Cadmium
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q60. During the Chernobyl experiment, the power fell too low, allowing the concentration of which substance to rise?
+A. Plutonium
+B. Uranium fuel
+C. Xenon-135
+D. Strontium
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q61. A contributing factor to the Chernobyl disaster was the rushed construction of the reactor using only partial containment, which allowed what to happen?
+A. Coolant to rapidly heat up
+B. The concentration of xenon-135 to rise
+C. The radiation to escape
+D. The control rods to become deformed
+Correct Answer: C
+Difficulty: Hard
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q62. Highly radioactive compounds that accumulate in the food chain following a nuclear incident include some isotopes of:
+A. Xenon and Carbon
+B. Iodine and strontium
+C. Mercury and Lead
+D. Cadmium and Sulphur
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q63. The Chernobyl disaster released how many tons of radioactive gasses into the atmosphere?
+A. 10 tons
+B. 190 tons
+C. 8900 pounds
+D. 500,000 tons
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q64. According to US estimates cited in the source, how many people died in the Hiroshima bombing?
+A. 140,000
+B. 60,000 to 70,000
+C. 42,000
+D. 100,000
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q65. The Bhopal Gas Tragedy occurred on which date?
+A. August 6th, 1945
+B. April 26, 1986
+C. 3rd December 1984
+D. 1950s
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4 _Bhopal Gas Tragedy.pdf
+
+Q66. The chemical responsible for the Bhopal Gas Tragedy, Methyl Isocyanate (MIC), was released in what approximate quantity?
+A. 27 tons
+B. 190 tons
+C. 8900 pounds
+D. 5 to 10 times the average dose
 Correct Answer: A
-Type: Theory
-Difficulty: Medium
-
-Unit: 4
-CO: CO4
-Q95. Why are RNNs generally slower to train than CNNs or Transformers?
-A. They have more parameters.
-B. Their sequential nature prevents parallelization across time steps.
-C. They require more memory.
-D. They use sigmoid functions.
-Correct Answer: B
-Type: Theory
 Difficulty: Easy
+Source PPT: Unit 4 _Bhopal Gas Tragedy.pdf
 
-Unit: 4
-CO: CO4
-Q96. For a time series forecasting task using an LSTM, if you want to predict the next 5 steps based on the previous 10 steps using a "Single-shot" approach, what is the output size of the final Dense layer (assuming 1 feature)?
-A. 1
-B. 5
-C. 10
-D. 50
+Q67. What was the physical form and state of Methyl Isocyanate ($\text{CH}_3\text{NCO}$) mentioned in the source?
+A. Solid, Toxic
+B. Liquid form, Volatile
+C. Gas, Colourless
+D. Particulate, Corrosive
 Correct Answer: B
-Type: Numerical
 Difficulty: Medium
+Source PPT: Unit 4 _Bhopal Gas Tragedy.pdf
 
-Unit: 4
-CO: CO4
-Q97. In the context of the paper "Comparing LSTM and GRU Models", what did the authors find regarding the **training time** of GRUs vs LSTMs?
-A. GRUs were slower to train.
-B. GRUs were faster to train due to fewer parameters.
-C. There was no difference.
-D. LSTM was faster because of CuDNN optimization.
+Q68. Exposure to Methyl Isocyanate (MIC) is linked to which specific reproductive hazard?
+A. Increased fertility in men and women
+B. Association between exposure and miscarriages
+C. Rapid weight gain in infants
+D. Corrosion of the reproductive system
 Correct Answer: B
-Type: Theory
-Difficulty: Easy
+Difficulty: Medium
+Source PPT: Unit 4 _Bhopal Gas Tragedy.pdf
 
-Unit: 4
-CO: CO4
-Q98. What is the shape of the bias vector in a `SimpleRNN` layer with `units=U`?
-A. `(U,)`
-B. `(2*U,)`
-C. `(input_dim,)`
-D. `(U, U)`
+Q69. Traces of many toxins were found in the breast milk of mothers exposed during the Bhopal tragedy, leading to transmission to whom?
+A. The environment through waste
+B. The recipient babies
+C. Farm animals
+D. Local marine life
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4 _Bhopal Gas Tragedy.pdf
+
+Q70. Minamata Disease is described as a case study of which environmental mechanism?
+A. Eutrophication
+B. Acidification
+C. Biomagnification
+D. Thermal pollution
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Minamata.pdf
+
+Q71. The Chisso Corporation caused Minamata disease primarily by releasing waste containing which substance?
+A. Cadmium
+B. Methyl Isocyanate
+C. Mercury
+D. Lead
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Minamata.pdf
+
+Q72. The Chisso plant produced acetaldehyde using mercury in what capacity?
+A. As a coolant
+B. As a fuel source
+C. As a catalyst
+D. As a raw material
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4_Minamata.pdf
+
+Q73. What is the definition of a teratogen, in the context of Mercury poisoning from Minamata?
+A. A substance that causes cancer
+B. A substance that interferes with development
+C. A substance that causes blood poisoning
+D. A substance that causes respiratory irritation
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Minamata.pdf
+
+Q74. Symptoms of Minamata poisoning listed in the source include motor problems, impaired vision, sensitivity to light, and which other cardiovascular symptom?
+A. Cardiac arrest
+B. Tachycardia
+C. High blood pressure
+D. Blue tinted skin
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Minamata.pdf
+
+Q75. Itai-Itai disease means "ouch-ouch" in Japanese, specifically referring to pain related to the loss of which biological substance?
+A. Oxygen
+B. Calcium
+C. Mercury
+D. Cadmium
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Itai Itai.pdf
+
+Q76. Itai-Itai disease was an epidemic caused by a river polluted with waste from a factory, leading to the accumulation of Cadmium (Cd) in which primary food source?
+A. Fish and shellfish
+B. Drinking water
+C. Rice fields
+D. Leafy vegetables consumed directly
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4_Itai Itai.pdf
+
+Q77. Cadmium is primarily a by-product of the smelting of which ores?
+A. Iron, Nickel, Silver
+B. Zinc, lead, copper ores
+C. Uranium, Thorium, Radon
+D. Gold, Tin, Aluminum
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Itai Itai.pdf
+
+Q78. In the human body, Cadmium toxicity exhibits its primary effects on which organ system?
+A. The endocrine system
+B. Kidneys
+C. Respiratory system
+D. Nervous system
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Itai Itai.pdf
+
+Q79. Which respiratory conditions are listed as symptoms of Cadmium inhalation?
+A. Asthma and irritation of throats
+B. Corrosion of teeth
+C. Bronchitis and Interstitial pneumonitis
+D. Lungs problem and coughing
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4_Itai Itai.pdf
+
+Q80. For a one-pack-a-day smoker, the amount of cadmium absorbed from tobacco smoke is roughly how many times the amount absorbed from the average daily diet?
+A. 2 times
+B. 5 to 10 times
+C. 20 times
+D. 50 times
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 4_Itai Itai.pdf
+
+Q81. Blue Baby Syndrome occurs most frequently in infants under what age?
+A. One month
+B. Six months of age
+C. One year
+D. Five years
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Blue Baby Syndrome.pdf
+
+Q82. The blue color tint of the skin in Blue Baby Syndrome indicates what physiological state?
+A. High levels of methemoglobin
+B. Excessive cadmium exposure
+C. Poor oxygen levels
+D. Lead poisoning
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4_Blue Baby Syndrome.pdf
+
+Q83. In Blue Baby Syndrome, consumed nitrates are converted into what substance in the digestive system?
+A. Methemoglobin
+B. Nitrite
+C. Cadmium
+D. Hemoglobin
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Blue Baby Syndrome.pdf
+
+Q84. Nitrites reacting with hemoglobin create dangerously high levels of methemoglobin, which is problematic because this enzyme cannot perform which function?
+A. Convert nitrates back to nitrites
+B. Carry oxygen through the blood like hemoglobin does
+C. Cause the tissue to turn blue
+D. Interrupt fetus development
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 4_Blue Baby Syndrome.pdf
+
+Q85. In Blue Baby Syndrome, if symptoms become apparent later, a serious heart defect is usually the culprit, and the infant should be taken quickly to which specific facility?
+A. A rural health center
+B. A pediatric cardiac center
+C. A facility specializing in heavy metal poisoning
+D. A toxicology department
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Blue Baby Syndrome.pdf
+
+Q86. Rural areas often produce higher numbers of Blue Baby Syndrome cases due to high levels of which substance in the ground water?
+A. Mercury
+B. Nitrates
+C. Sulphur
+D. Lead
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Blue Baby Syndrome.pdf
+
+Q87. According to the source, how many victims of Minamata disease were formally recognized?
+A. 1,000
+B. 2,246
+C. 120,000
+D. 500,000
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Minamata.pdf
+
+Q88. What was the name of the plane that dropped the "Little Boy" bomb on Hiroshima?
+A. Fat Man
+B. Enola Gay
+C. Chernobyl 4
+D. RBMK
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q89. Which disorder associated with Methyl Isocyanate exposure is caused by the build-up of fluids in the lungs?
+A. Cancer
+B. Miscarriages
+C. Asthma
+D. Reproductive Hazard
+Correct Answer: C
+Difficulty: Medium
+Source PPT: Unit 4 _Bhopal Gas Tragedy.pdf
+
+Q90. Which classification of waste includes discarded materials from nuclear power plants?
+A. E-waste
+B. Bio-medical waste
+C. Construction waste
+D. Nuclear waste
+Correct Answer: D
+Difficulty: Easy
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q91. What effect of air pollution is defined by chemical reactions creating acidic compounds that harm vegetation and buildings?
+A. Eutrophication
+B. Acidification
+C. Particulate matter formation
+D. Blood poisoning
+Correct Answer: B
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q92. The leakage of pollutants (Nitrates & Phosphates) from fertilizers into nearby water bodies is generally known as:
+A. Direct discharge
+B. Sewage discharge
+C. Runoffs
+D. Thermal pollution
+Correct Answer: C
+Difficulty: Easy
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q93. The displacement of other metals from metalloenzymes by Cadmium (Cd) is a mechanism associated with which primary toxic effect?
+A. Pulmonary edema
+B. Kidney toxicity
+C. Osteomalacia
+D. Brain damage
+Correct Answer: B
+Difficulty: Hard
+Source PPT: Unit 4_Itai Itai.pdf
+
+Q94. Why is recycling stated as not a solution to all waste problems?
+A. It produces heat energy for generating electricity
+B. The cost of recycling is too high for many items
+C. It only addresses bio-medical waste
+D. It increases the volume of garbage
+Correct Answer: B
+Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q95. The term "Nuclear energy is a nonrenewable resource" is justified by which statement in the source?
+A. Once the uranium is used, it is gone.
+B. Nuclear fission uses uranium to create energy.
+C. It can be produced by two different methods.
+D. It creates genetic damage in the DNA.
 Correct Answer: A
-Type: Numerical
-Difficulty: Easy
+Difficulty: Hard
+Source PPT: Unit 4_Nuclear Hazards.pdf
 
-Unit: 4
-CO: CO4
-Q99. Which gate in the LSTM is responsible for solving the **Vanishing Gradient** problem by allowing the gradient to pass through unchanged (if the gate is open)?
-A. The input gate via the additive update.
-B. The forget gate (when set to 1) preserving the cell state.
-C. The output gate.
-D. The candidate gate.
+Q96. What is the definition of waste provided in the context of Solid Waste Management?
+A. Material which is highly hazardous or toxic
+B. Any material which is not needed by the owner, producer or processor.
+C. Discarded electronic devices only
+D. Liquid discharge from tanneries and distilleries
 Correct Answer: B
-Type: Theory
+Difficulty: Easy
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+### Multiple Correct MCQs (24 Total)
+
+Q97. Water pollution, along with air pollution, is described as which major environmental concern? (Choose ALL correct options)
+A. The most imperative environmental concern
+B. The third most important environmental concern
+C. The second most imperative environmental concern
+D. The contamination of water bodies
+Correct Answers: C, D
+Difficulty: Easy
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q98. According to the acronym SECTORS, which two components are explicitly listed as causes of water pollution? (Choose ALL correct options)
+A. Thermal Pollution
+B. Biological Oxygen Demand
+C. Solid Waste
+D. Agricultural runoffs only
+Correct Answers: A, C
+Difficulty: Easy
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q99. Sewage discharged into the ocean contains which components and causes which primary effects? (Choose ALL correct options)
+A. Contains pathogen and nutrients
+B. Causes Eutrophication
+C. Reduces dissolved oxygen
+D. Contains high levels of mercury
+Correct Answers: A, B
 Difficulty: Medium
+Source PPT: Unit 4 _Water Pollution.pdf
 
-Unit: 4
-CO: CO4
-Q100. Consider the following code for a character-level text generation model:
-```python
-model.add(LSTM(128, input_shape=(maxlen, len(chars))))
-model.add(Dense(len(chars), activation='softmax'))
-```
-If `len(chars)` (vocab size) is 50, what does the model output?
-A. A single character index.
-B. A probability distribution over the 50 characters for the next time step.
-C. A sequence of 50 characters.
-D. A scalar value representing the likelihood of the sequence.
-Correct Answer: B
-Type: Code
+Q100. Which activities are included in the definition of "Anthropogenic sources" of radioactivity? (Choose ALL correct options)
+A. Cosmic rays from outer space
+B. Nuclear power plants
+C. Diagnostic kits
+D. Radioactive radon-222
+Correct Answers: B, C
 Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q101. Which health issues are categorized as long-term effects resulting from exposure to particulate matter in the air? (Choose ALL correct options)
+A. Headaches and allergic reactions
+B. Chronic respiratory disease
+C. Lung cancer
+D. Irritation to the eyes, nose and throat
+Correct Answers: B, C
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q102. Which are listed examples of natural events that pollute the air? (Choose ALL correct options)
+A. Evaporation of organic compounds
+B. Burning Fossil Fuels
+C. Forest fires
+D. Emissions from manufacturing activities
+Correct Answers: A, C
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q103. Which actions are recommended at the individual level to help prevent air pollution? (Choose ALL correct options)
+A. Use the bus, train or bike when commuting
+B. Recycle and re-use things
+C. Force companies to build energy efficient cars
+D. Invest in wind and solar energy
+Correct Answers: A, B
+Difficulty: Easy
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q104. What are the consequences of oil spills forming a thick layer on the water surface? (Choose ALL correct options)
+A. Prevents marine plants from receiving enough light for photosynthesis
+B. Is extremely harmful to local marine life
+C. Increases the percentage of dissolved oxygen
+D. Causes immediate eutrophication
+Correct Answers: A, B
+Difficulty: Medium
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q105. Eutrophication due to air pollutants involves which processes? (Choose ALL correct options)
+A. Rain carrying and depositing Nitrogen on rivers and soils
+B. Adversely affecting nutrients in the soil and water bodies
+C. Causing ground-level ozone formation
+D. Resulting in algae growth in lakes and water bodies
+Correct Answers: A, B, D
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q106. In the context of waste management impacts, which potential outcomes are attributed to waste? (Choose ALL correct options)
+A. Waste breaks down in landfills to form methane
+B. Change in climate due to biodegradable waste
+C. Destruction of ozone layer due to biodegradable waste
+D. Preventing water infiltration in landfills
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q107. Which are benefits associated with recycling efforts? (Choose ALL correct options)
+A. Reduce environmental degradation
+B. Saves energy that would have gone into waste handling & product manufacture
+C. Increase the need for new raw materials
+D. Make money out of waste
+Correct Answers: A, B, D
+Difficulty: Easy
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q108. Sanitary landfills achieve which benefits compared to open dumps? (Choose ALL correct options)
+A. Reduce Vermin and pests
+B. Reduce smell, toxic gases
+C. Contaminate soil, water and air
+D. Prevent water pollution
+Correct Answers: A, B, D
+Difficulty: Medium
+Source PPT: Unit 4_Solid Waste Management.pdf
+
+Q109. Which factors are explicitly listed as reasons for the accident at Chernobyl? (Choose ALL correct options)
+A. Disabled all safety systems
+B. Operators unaware of the xenon poisoning
+C. Use of highly enriched uranium fuel
+D. Insufficient communication between safety officers and operators
+Correct Answers: A, B, D
+Difficulty: Medium
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q110. Which are examples of somatic damage caused by exposure to radiations? (Choose ALL correct options)
+A. Burns
+B. Miscarriages
+C. Mutations in the DNA
+D. Cancer of the bone, thyroid, breast, lungs and skin
+Correct Answers: A, B, D
+Difficulty: Medium
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q111. Which two cities experienced nuclear holocaust incidents during World War II? (Choose ALL correct options)
+A. Chernobyl
+B. Hiroshima
+C. Minamata
+D. Nagasaki
+Correct Answers: B, D
+Difficulty: Easy
+Source PPT: Unit 4_Nuclear Hazards.pdf
+
+Q112. The effects of Methyl Isocyanate (MIC) exposure include which health issues? (Choose ALL correct options)
+A. Irritation to the lungs, causing coughing and/or shortness of breathing
+B. Caused mutation (genetic changes)
+C. Lowering of dissolved oxygen in blood
+D. Caused Asthma
+Correct Answers: A, B, D
+Difficulty: Medium
+Source PPT: Unit 4 _Bhopal Gas Tragedy.pdf
+
+Q113. Which conditions are listed as medical conditions resulting from Cadmium poisoning? (Choose ALL correct options)
+A. Osteoporosis
+B. Renal failure
+C. Hepatitis
+D. Itai-Itai disease
+Correct Answers: A, B, D
+Difficulty: Easy
+Source PPT: Unit 4_Itai Itai.pdf
+
+Q114. Blue Baby Syndrome (Methemoglobinemia) symptoms, other than blue-tinted skin, include: (Choose ALL correct options)
+A. Low tolerance for exercise
+B. Fatigue
+C. Bone pain related to calcium loss
+D. Difficulty breathing or eating
+Correct Answers: A, B, D
+Difficulty: Medium
+Source PPT: Unit 4_Blue Baby Syndrome.pdf
+
+Q115. Minamata Disease, caused by Mercury poisoning, damaged which major human systems? (Choose ALL correct options)
+A. The Nervous System (NS)
+B. The endocrine system
+C. The digestive system
+D. The kidneys
+Correct Answers: A, B, D
+Difficulty: Medium
+Source PPT: Unit 4_Minamata.pdf
+
+Q116. When cadmium bioaccumulates, it is extremely toxic even in low concentrations. What are common exposure sources mentioned? (Choose ALL correct options)
+A. Tobacco smoke
+B. Low levels found in grains, cereals, leafy vegetables
+C. Waste from the Chisso Corporation
+D. Lead paint industry waste
+Correct Answers: A, B
+Difficulty: Medium
+Source PPT: Unit 4_Itai Itai.pdf
+
+Q117. Which impacts are associated with Water Pollution? (Choose ALL correct options)
+A. Death of aquatic animals
+B. Destruction of ecosystems
+C. Disruption of food-chains
+D. Ground-level ozone formation
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q118. Which entities are the strict laws helping minimize water pollution usually directed at? (Choose ALL correct options)
+A. Industries
+B. Hospitals
+C. Schools
+D. Communities for recycling
+Correct Answers: A, B, C
+Difficulty: Easy
+Source PPT: Unit 4 _Water Pollution.pdf
+
+Q119. In terms of primary pollutants, what specific substances are mentioned as pumped into the air to make it unclean? (Choose ALL correct options)
+A. Carbon monoxide from automobile exhausts
+B. Sulphur dioxide from coal combustion
+C. Photochemical smog
+D. Ground-level ozone
+Correct Answers: A, B
+Difficulty: Medium
+Source PPT: Unit 4_Air Pollution.pdf
+
+Q120. Which two types of environmental damage are explicitly mentioned as resulting from Cadmium toxicity? (Choose ALL correct options)
+A. Skeletal effects (Osteoporosis and osteomalacia)
+B. Cancer (Possible kidney carcinogen)
+C. Severe muscle pain (Itai-Itai symptom)
+D. Damage to the growing fetus (Reproductive hazard)
+Correct Answers: A, B, C
+Difficulty: Medium
+Source PPT: Unit 4_Itai Itai.pdf
